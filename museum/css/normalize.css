@@ -7,10 +7,27 @@
  * 1. Correct the line height in all browsers.
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
-
+* {
+    box-sizing: border-box;
+    border: none;
+}
+ul {
+    margin-block-start: 0;
+    margin-block-end: 0;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 0px;
+}
 html {
+    border: none;
   line-height: 1.15; /* 1 */
   -webkit-text-size-adjust: 100%; /* 2 */
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  margin-block-start: 0;
+    margin-block-end: 0;
+    margin-inline-start: 0;
+    margin-inline-end: 0;
 }
 
 /* Sections
@@ -21,7 +38,10 @@ html {
  */
 
 body {
-  margin: 0;
+    border: none;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 /**
@@ -30,6 +50,7 @@ body {
 
 main {
     display: block;
+    box-sizing: border-box;
 }
 /**
  * Correct the font size and margin on `h1` elements within `section` and
@@ -260,7 +281,14 @@ progress {
 textarea {
   overflow: auto;
 }
-
+ul, h1, h2, h3 {
+    padding: 0;
+    margin: 0;
+}
+p {
+    margin-block-start:0;
+    margin-block-end:0;
+}
 /**
  * 1. Add the correct box sizing in IE 10.
  * 2. Remove the padding in IE 10.
@@ -270,6 +298,13 @@ textarea {
 [type="radio"] {
   box-sizing: border-box; /* 1 */
   padding: 0; /* 2 */
+}
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+	display: none;
+}
+input[type="number" i] {
+    padding: 0;
 }
 
 /**
