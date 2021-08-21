@@ -196,6 +196,7 @@ a {
 .wrapper {
   width: 75%;
   max-width: 1440px;
+  min-width: 320px;
   padding: 75px 0;
   display: flex;
   margin: 0 auto;
@@ -410,9 +411,6 @@ button {
   color: #000000;
   width: 30%;
 }
-.card .card-container {
-  width: 100%;
-}
 .card .card-container .img-container {
   width: 100%;
 }
@@ -448,19 +446,17 @@ button {
 }
 @media screen and (max-width: 900px) {
   .card .card-container {
-    width: 60%;
-    margin: 0 auto;
+    width: fit-content;
   }
 }
 @media screen and (max-width: 1280px) {
   .card {
-    width: 45%;
-    white-space: normal;
+    width: fit-content;
   }
 }
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 940px) {
   .card {
-    width: 100%;
+    margin: 0 auto;
   }
 }
 .card:hover .img-container .img-container__title::before {
@@ -583,7 +579,6 @@ button {
 @media screen and (max-width: 1500px) {
   .explore-wrapper .explore-description {
     width: 100%;
-    margin-bottom: 50px;
   }
 }
 @media screen and (max-width: 768px) {
@@ -676,6 +671,7 @@ button {
   width: 100%;
   align-items: flex-start;
   padding-top: 100px;
+  gap: 50px;
 }
 .tickets-wrapper .tickets-container .tickets-img-container {
   width: 750px;
@@ -855,6 +851,7 @@ button {
 @media screen and (max-width: 900px) {
   .video-wrapper .video-description .video-description__title {
     width: 100%;
+    margin-top: 0;
   }
 }
 .video-wrapper .video-description .video-description__text {
@@ -866,11 +863,14 @@ button {
 @media screen and (max-width: 900px) {
   .video-wrapper .video-description .video-description__text {
     width: 100%;
+    margin-top: 0;
+    margin-bottom: 20px;
   }
 }
 @media screen and (max-width: 900px) {
   .video-wrapper .video-description {
     flex-direction: column;
+    order: -1;
   }
 }
 
@@ -953,6 +953,7 @@ button {
 @media screen and (max-width: 900px) {
   .welcome-wrapper .welcome-block .welcome-block__text {
     font: 20px/23px Roboto-Light;
+    text-align: center;
   }
 }
 .welcome-wrapper .welcome-block-bg {
