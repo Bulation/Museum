@@ -1,0 +1,78 @@
+.card {
+    color: #000000;
+    width: 30%;
+    .card__text {
+        margin: 10px 0;
+    }
+    .card__virtual-tour {
+        @include font(Roboto-Thin, 22px, 26px, 200);
+        margin-top: 20px;
+        @media screen and (max-width: 900px) {
+            @include font(Roboto-Thin, 18px, 21px, 200);
+            margin-top: 30px;
+        }
+        @media screen and (max-width: 1280px) {
+            @include font(Roboto-Thin, 20px, 23px, 200);
+        }
+    }
+    .card__panorama-view {
+        @include font(Roboto-Thin, 18px, 21px, 200);
+        @media screen and (max-width: 1280px) {
+            @include font(Roboto-Thin, 16px, 19px, 200);
+        }
+    }
+    @media screen and (max-width: 940px) {
+        margin: 0 auto;
+    }
+    @media screen and (max-width: 1280px) {
+        width: fit-content;
+    }
+    &:hover {
+        .img-container__title {
+            &::before {
+                width: 100%;
+            }
+        }
+    }
+    @media screen and (min-width: 1000px) and (max-width: 1280px) {
+        &:hover {
+            .img-container__title {
+                &::before {
+                    width: 440px;
+                }
+            }
+        }
+    }
+}
+.card-container {
+    @media screen and (max-width: 900px) {
+        width: fit-content;
+    }
+}
+.img-container {
+    width: 100%;
+    .img-container__img {
+        max-width: 100%;
+    }
+    .img-container__title {
+        margin-top: 25px;
+        width: 100%;
+        position: relative;
+        letter-spacing: 5px;
+        &::before {
+            content: "";
+            position: absolute;
+            width: 70%;
+            height: 2px;
+            bottom: -10px;
+            background-color: $color-primary;
+            transition: width 1s;
+        }
+        @media screen and (max-width: 1280px) {
+            @include font(Forum, 28px, 31px, 400);
+        }
+        @media screen and (max-width: 900px) {
+            @include font(Forum, 22px, 24px, 400);
+        }
+    }
+}

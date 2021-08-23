@@ -1,0 +1,25 @@
+%layout {
+    width: $width;
+    max-width: $max-width;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    @media screen and (max-width: 900px) {
+        width: 100%;
+    }
+}
+%nav {
+    display: flex;
+    @include font(Roboto-Thin, 22px, 50px, 200);
+    list-style-type: none;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    letter-spacing: 2px;
+}
+%list-hover {
+    color: $color-primary;
+    border-bottom: 1px solid $color-primary;
+}

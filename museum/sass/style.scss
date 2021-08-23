@@ -1,0 +1,23 @@
+@import 'abstracts/mixins';
+@import 'abstracts/variables.scss';
+@import 'abstracts/placeholders.scss';
+
+@import 'base/a.scss';
+@import 'base/h.scss';
+@import 'base/typography';
+
+@import 'layout/header.scss';
+@import 'layout/main.scss';
+@import 'layout/navigation.scss';
+@import 'layout/footer.scss';
+
+@import 'components/buttons.scss';
+@import 'components/logo.scss';
+@import 'components/card.scss';
+@import 'components/contacts.scss';
+@import 'components/explore.scss';
+@import 'components/socials.scss';
+@import 'components/tickets.scss';
+@import 'components/video.scss';
+@import 'components/visiting.scss';
+@import 'components/welcome.scss';

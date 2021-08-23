@@ -1,0 +1,35 @@
+.explore-wrapper {
+    justify-content: space-between;
+    gap: 50px;
+    @media screen and (max-width: 1500px) {
+        flex-direction: column;
+    }
+}
+.explore-description {
+    width: 47%;
+    @media screen and (max-width: 768px) {
+        width: calc(100% - 40px);
+    }
+    @media screen and (max-width: 1500px) {
+        width: 100%;
+    }
+}
+.explore__title {
+    margin-bottom: 105px;
+    @media screen and (max-width: 768px) {
+        @include font(Forum, 28px, 42px, 400);
+    }
+}
+.explore__text {
+    @include font(Roboto-Light, 22px, 38.5px, 300);
+    margin: 23px 0;
+    .explore__text_yellow {
+        color: $color-span;
+    }
+}
+.explore-image {
+    width: 750px;
+    @media screen and (max-width: 1500px) {
+        width: 100%;
+    }
+}

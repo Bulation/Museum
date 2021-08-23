@@ -1,0 +1,27 @@
+.logo-link {
+    color: #FFFFFF;
+    letter-spacing: 5px;
+    width: fit-content;
+    text-transform: uppercase;
+    position: relative;
+    cursor: pointer;
+    transition: color 1s;
+    &::before {
+        content: " ";
+        position: absolute;
+        width: 49px;
+        height: 26px;
+        background: url(../assets/svg/logo.svg) center no-repeat;
+        top: 10px;
+        transition: background 1s;
+    }
+    &:hover {
+        color: $color-primary;
+        &::before {
+            background: url("../assets/svg/logo-hover.svg") center no-repeat;
+        }
+    }
+}
+.logo-link__title {
+    margin-left: 70px;
+}

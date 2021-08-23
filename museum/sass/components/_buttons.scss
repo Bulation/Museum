@@ -1,0 +1,78 @@
+button {
+    cursor: pointer;
+    padding: 0;
+}
+.play-container__button {
+    margin-left: 66.53px;
+}
+.previous {
+    width: 27px;
+    height: 30px;
+    background: url('../assets/svg/previous.svg') no-repeat;
+}
+.small-play {
+    width: 23px;
+    height: 30px;
+    background: url('../assets/svg/small-play.svg') no-repeat;
+}
+.next {
+    width: 27px;
+    height: 30px;
+    background: url('../assets/svg/next.svg') no-repeat;
+}
+.play {
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 60.09px 0 60.09px 91.43px;
+    border-color: transparent transparent transparent #fff;
+    background-color: transparent;
+}
+.volume {
+    width: 38px;
+    height: 30px;
+    background: url('../assets/svg/volume.svg') no-repeat;
+}
+.extend {
+    width: 36px;
+    height: 36px;
+    background: url('../assets/svg/extend.svg') no-repeat;
+}
+.amount-buy {
+    width: 175px;
+    height: 50px;
+    float: right;
+    @include font(Roboto-Light, 22px, 26px, 300);
+    letter-spacing: 2px;
+    text-align: center;
+    background-color: #FFFFFF;
+    margin-top: 50px;
+    border-radius: 2px;
+    cursor: pointer;
+    transition: background-color 1s;
+    &:hover {
+        background-color: $color-primary;
+    }
+    @media screen and (max-width: 768px) {
+        float: left;
+    }
+    @media screen and (max-width: 900px) {
+        @include font(Roboto-Light, 16px, 19px, 300);
+    }
+    @media screen and (max-width: 1280px) {
+        @include font(Roboto-Light, 20px, 23px, 300);
+    }
+}
+.amount-number-buttons__minus {
+    width: 18px;
+    color: #FFFFFF;
+    background-color: #000000;
+    text-align: center;
+    @include font(Roboto-Regular, 32px, 38px, 400);
+    margin-left: 14px;
+}
+.amount-number-buttons__plus {
+    @extend .amount-number-buttons__minus;
+    margin-left: 0;
+    margin-right: 14px;
+}

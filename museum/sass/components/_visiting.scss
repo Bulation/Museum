@@ -1,0 +1,22 @@
+.visiting-wrapper {
+    flex-direction: column;
+}
+.title-underline::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    bottom: -30px;
+    height: 3px;
+    background-color: #710707;
+}
+.visiting-flex-container {
+    @extend %nav;
+    width: 100%;
+    flex-wrap: wrap;
+    padding-top: 103px;
+    align-items: flex-start;
+    gap: 72px 20px;
+    @media screen and (max-width: 900px) {
+        flex-direction: column;
+    }
+}

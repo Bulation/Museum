@@ -1,0 +1,17 @@
+h1 {
+    @include font(Forum, 28px, 50px, 400);
+    text-transform: uppercase;
+}
+h2 {
+    @include font(Forum, 80px, 90px, 400);
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    position: relative;
+    @media screen and (max-width: 1280px) {
+        @include font(Forum, 40px, 60px, 400);
+    }
+}
+h3 {
+    @include font(Forum, 32px, 35px, 400);
+    text-transform: uppercase;
+}

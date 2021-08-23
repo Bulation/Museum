@@ -1,0 +1,133 @@
+.tickets-wrapper {
+    flex-direction: column;
+    @media screen and (max-width: 768px) {
+        margin-left: 20px;
+    }
+}
+.tickets__title {
+    width: 100%;
+}
+.tickets-container {
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    padding-top: 100px;
+    gap: 50px;
+    @media screen and (max-width: 1000px) {
+        flex-direction: column;
+    }
+}
+.tickets-img-container {
+    width: 750px;
+    .tickets-img-container__img {
+        object-fit: contain;
+        @media screen and (max-width: 1500px) {
+            max-width: 100%;
+        }
+    }
+    @media screen and (max-width: 1500px) {
+        width: 100%;
+    }
+}
+.payment {
+    width: 46%;
+    display: flex;
+    justify-content: space-between;
+    .ticket-type__label {
+        display: block;
+        margin-top: 50px;
+        @include font (Roboto-Light, 22px, 26px, 300);
+        cursor: pointer;
+        @media screen and (max-width: 900px) {
+            @include font (Roboto-Light, 18px, 21px, 300);
+        }
+        @media screen and (max-width: 1280px) {
+            @include font (Roboto-Light, 20px, 23px, 300);
+        }
+    }
+    .ticket-type__radio {
+        margin-right: 23px;
+        @include font (Roboto-Light, 22px, 26px, 300);
+    }
+    @media screen and (max-width: 1024px) {
+        width: 100%;
+    }
+}
+.payment__title {
+    @include font (Roboto-Bold, 28px, 33px, bold);
+    text-transform: none;
+    @media screen and (max-width: 900px) {
+        @include font (Roboto-Bold, 16px, 19px, bold);
+    }
+    @media screen and (max-width: 1280px) {
+        @include font (Roboto-Bold, 24px, 28px, bold);
+    }
+}
+.amount {
+    width: 150px;
+    .payment__title {
+        text-align: right;
+        @media screen and (max-width: 768px) {
+            text-align: left;
+        }
+    }
+    .amount-number__text {
+        @include font (Roboto-Light, 22px, 26px, 300);
+        @media screen and (max-width: 900px) {
+            @include font (Roboto-Light, 16px, 19px, 300);
+        }
+        @media screen and (max-width: 1280px) {
+            @include font (Roboto-Light, 20px, 23px, 300);
+        }
+    }
+    .amount__price {
+        @include font (Roboto-Bold, 28px, 33px, 700);
+        text-align: right;
+        letter-spacing: 1.65px;
+        @media screen and (max-width: 768px) {
+            text-align: left;
+        }
+        @media screen and (max-width: 900px) {
+            @include font (Roboto-Bold, 16px, 19px, 700);
+        }
+        @media screen and (max-width: 1280px) {
+            @include font (Roboto-Bold, 24px, 28px, 700);
+        }
+    }
+    @media screen and (max-width: 1000px) {
+        margin-top: 20px;
+    }
+}
+.amount-number-basic {
+    margin-top: 11px;
+}
+.amount-number-buttons {
+    width: 150px;
+    height: 50px;
+    background-color: #000000;
+    border: 1px solid #FFFFFF;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 14px;
+    .amount-number-buttons__number {
+        width: 85px;
+        background-color: #000000;
+        color: #FFFFFF;
+        text-align: center;
+        border: none;
+        @include font(Roboto-Light, 22px, 26px, 300)
+    }
+}
+.amount-number-senior {
+    margin-top: 35px;
+    margin-bottom: 50px;
+    .amount-number__text {
+        @include font(Roboto-Light, 22px, 26px, 300)
+    }
+}
+.ticket-type {
+    @media screen and (max-width: 1000px) {
+        margin-top: 20px;
+    }
+}
