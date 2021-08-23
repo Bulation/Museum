@@ -214,6 +214,7 @@ h3 {
 
 .footer-nav-list__link {
   color: #fff;
+  border: 1px solid transparent;
   transition: color 1s, border-bottom 1s;
 }
 .footer {
