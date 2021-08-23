@@ -430,6 +430,7 @@ button {
   height: 2px;
   bottom: -10px;
   background-color: #9D8665;
+  transition: all, 1s;
 }
 @media screen and (max-width: 1280px) {
   .card .card-container .img-container .img-container__title {
@@ -461,7 +462,6 @@ button {
 }
 .card:hover .img-container .img-container__title::before {
   width: 100%;
-  transition: width, 1s;
 }
 @media screen and (min-width: 1000px) and (max-width: 1280px) {
   .card:hover .img-container .img-container__title::before {
