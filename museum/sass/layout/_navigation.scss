@@ -1,7 +1,7 @@
 .header-nav {
     width: 50%;
     @media screen and (max-width: 900px) {
-        width: 100%;
+        display: none;
     }
 }
 .header-nav-list {
@@ -29,30 +29,30 @@
         }
     }
 }
+
+
 .footer-nav {
-    width: 42%;
-    @media screen and (max-width: 1280px) {
+    width: 33%;
+    margin-right: 50px;
+    @media screen and (max-width: 1200px) {
         width: 100%;
+        margin-bottom: 42px;
+        margin-right: 0;
+    }
+    @media screen and (max-width: 600px) {
+        margin-top: 40px;
     }
 }
 .footer-nav-list {
     @extend %nav;
-    width: 87%;
     height: 156px;
+    column-gap: 20px;
     flex-direction: column;
     flex-wrap: wrap;
     align-items: flex-start;
-    @media screen and (max-width: 600px) {
-        flex-direction: column;
-        flex-wrap: nowrap;
-        height: auto;
-        padding: 20px 0;
-    }
-    @media screen and (max-width: 1280px) {
-        width: 100%;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
+    @media screen and (max-width: 420px) {
+        height: 70px;
+        column-gap: 0px;
     }
 }
 .footer-nav-list__link {

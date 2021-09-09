@@ -1,6 +1,19 @@
 .video-wrapper {
     flex-direction: column;
 }
+.video {
+    max-width: 1440px;
+    width: 100%;
+    cursor: pointer;
+}
+.video-player {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
 .video-container {
     width: 100%;
     height: 629px;
@@ -11,16 +24,25 @@
     justify-content: center;
 }
 .play-container {
+    position: absolute;
+    cursor: pointer;
+    transition: opacity 0.2s ease-out;
     width: 220px;
     height: 220px;
     border-radius: 50%;
     border: 10px solid #fff;
     display: flex;
     align-items: center;
+    &:hover {
+        opacity: 0.5;
+    }
 }
 .video-buttons {
     width: 100%;
     background-color: #000000;
+    position: absolute;
+    bottom:0;
+    transition: all 0.3s;
 }
 .video-buttons-container {
     width: calc(100% - 40px);
@@ -30,7 +52,8 @@
     align-items: center;
 }
 .video-bar {
-    width: 56.94%;
+    flex-grow: 20;
+    margin-right: 40px;
     cursor: pointer;
     @media screen and (max-width: 900px) {
         width: 35%;
@@ -38,14 +61,16 @@
 }
 .volume-bar {
     width: 10.76%;
+    flex-grow:1;
     cursor: pointer;
+    margin-right: 10px;
 }
 .video-description {
     @extend %layout;
     width: 100%;
+    padding-bottom: 75px;
     .video-description__title {
         width: 45%;
-        margin-top: 40px;
         @media screen and (max-width: 900px) {
             width: 100%;
             margin-top: 0;
@@ -54,16 +79,11 @@
     .video-description__text {
         @include font(Roboto-Light, 22px, 38.5px, 300);
         color: #000000;
-        margin-top: 40px;
         width: 50%;
         @media screen and (max-width: 900px)  {
             width: 100%;
             margin-top: 0;
             margin-bottom: 20px;
         }
-    }
-    @media screen and (max-width: 900px) {
-        flex-direction: column;
-        order: -1;
     }
 }

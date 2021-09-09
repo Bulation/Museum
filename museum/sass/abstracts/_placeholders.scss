@@ -7,7 +7,7 @@
     justify-content: space-between;
     align-items: center;
     @media screen and (max-width: 900px) {
-        width: 100%;
+        width: calc(100% - 40px);
     }
 }
 %nav {
@@ -18,6 +18,12 @@
     align-items: center;
     width: 100%;
     letter-spacing: 2px;
+    @media screen and (max-width: 768px) {
+        @include font(Roboto-Thin, 18px, 50px, 200);
+    }
+    @media screen and (max-width: 420px) {
+        @include font(Roboto-Thin, 16px, 30px, 200);
+    }
 }
 %list-hover {
     color: $color-primary;

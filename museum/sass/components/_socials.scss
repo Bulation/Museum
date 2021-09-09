@@ -1,27 +1,33 @@
 .socials {
     width: fit-content;
     list-style-type: none;
-    display: flex;
     align-self: flex-end;
+    display: flex;
+    flex-wrap: wrap;
     .socials__item {
         width: 48px;
         height: 48px;
         border: 1px solid #666666;
         border-radius: 50%;
-        margin: 0 12px;
+        margin: 0 24px;
+        margin-left: 0;
         &:hover {
             border-color: $color-primary;
             background-color: $color-primary;
         }
         transition: border-color 1s,
                     background-color 1s;
+        @media screen and (max-width: 420px) {
+            margin: 0 2.5px;
+            align-self: center;
+        }
     }
     .socials__link {
         width: 100%;
         height: 100%;
     }
-    @media screen and (max-width: 1280px) {
-        align-self: center;
+    @media screen and (max-width: 420px) {
+        margin: 0 auto;
     }
 }
 

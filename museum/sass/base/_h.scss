@@ -12,6 +12,9 @@ h2 {
     }
 }
 h3 {
-    @include font(Forum, 32px, 35px, 400);
+    @include font(Forum, 28px, 35px, 400);
+    @media screen and (max-width: 420px) {
+        @include font(Forum, 16px, 35px, 400);
+    }
     text-transform: uppercase;
 }

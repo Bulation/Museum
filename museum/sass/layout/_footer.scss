@@ -3,20 +3,51 @@
     width: 100%;
     .logo-link {
         align-self: flex-start;
+        margin-right: 50px;
         &::before {
             top: 0;
-        }
-        @media screen and (max-width: 1280px) {
-            align-self: center;
         }
     }
 }
 .footer-container {
     @extend %layout;
-    padding: 75px 0;
-    @media screen and (max-width: 1280px) {
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
+    flex-wrap: nowrap;
+    padding: 75px 0 50px;
+    @media screen and (max-width: 768px) {
+        flex-wrap: wrap;
+    }
+}
+.copyrights {
+    width: 100%;
+    @include font(Roboto-Thin, 22px, 22px, 200);
+    letter-spacing: 2px;
+    color: #fff;
+    a {
+        color: #fff;
+    }
+    border-top: 3px solid #666666;
+    @media screen and (max-width: 420px) {
+        @include font(Roboto-Thin, 16px, 22px, 200);
+    }
+}
+.school {
+    @media screen and (max-width: 600px) {
+        display: none;
+    }
+}
+.copyrights-wrapper {
+    justify-content: space-between;
+    padding: 50px 0;
+}
+.link-wrapper {
+    width: 76%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    @media screen and (max-width: 1200px) {
+        width: 50%;
+    }
+    @media screen and (max-width: 600px) {
+        width: 100%;
     }
 }
