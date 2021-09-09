@@ -84,9 +84,6 @@ button {
     &:hover {
         background-color: $color-primary;
     }
-    @media screen and (max-width: 768px) {
-        float: left;
-    }
     @media screen and (max-width: 900px) {
         @include font(Roboto-Light, 16px, 19px, 300);
     }

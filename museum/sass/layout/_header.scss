@@ -4,13 +4,63 @@
 }
 .header-container {
     @extend %layout;
-    padding: 75px 0;
-    @media screen and (max-width: 900px) {
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
+    padding: 58px 0;
+}
+.hamburger {
+    display: none;
+    width: 31px;
+    height: 25px;
+    @media screen and (max-width: 1024px) {
+        display: inline-block;
     }
-    @media screen and (max-width: 1280px) {
-        width: calc(100% - 40px);
+}
+.hamburger__line {
+    display: inline-block;
+    background: #ffffff;
+    border-radius: 5px;
+    width: 31px;
+    height: 3px;
+    position: relative;
+    &::before {
+        content: '';
+        position: absolute;
+        top: -11px;
+        width: 31px;
+        height: 3px;
+        background: #ffffff;
+        border-radius: 5px;
+    }
+    &::after {
+        content: '';
+        position: absolute;
+        width: 31px;
+        height: 3px;
+        bottom: -11px;
+        background: #ffffff;
+        border-radius: 5px;
+    }
+}
+.close {
+    position: relative;
+    width: 30px;
+    height: 31px;
+    &::before {
+        content: '';
+        position: absolute;
+        transform: rotate(-45deg);
+        width: 3px;
+        left: 15px;
+        height: 31px;
+        background: #ffffff;
+        border-radius: 5px;
+    }
+    &::after {
+        content: '';
+        position: absolute;
+        transform: rotate(45deg);
+        width: 3px;
+        left: 15px;
+        height: 31px;
+        background: #ffffff;
     }
 }
