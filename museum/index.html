@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="assets/img/favicon.ico">
     <title>Louvre</title>
 </head>
 <body>
@@ -33,7 +34,33 @@
                     <p class="welcome-block__text">From the castle to the museum</p>
                     <a class="welcome-block-link" href="tours/tour1.html" target="_blank">Discover the Louvre</a>
                 </div>
-                <div class="welcome-block-bg"></div>
+                <div class="welcome-block-slider-container">
+                    <img class="active" src="assets/img/welcome-slider/1.jpg" alt="Mona Lisa">
+                    <img src="assets/img/welcome-slider/2.jpg" alt="La Liberté guidant le peuple">
+                    <img src="assets/img/welcome-slider/3.jpg" alt="La belle ferronniere">
+                    <img src="assets/img/welcome-slider/4.jpg" alt="El drama en la pintura">
+                    <img src="assets/img/welcome-slider/5.jpg" alt="Astronomer">
+                </div>
+                <div class="slider-pagination-container">
+                    <div class="slider-pagination">
+                        <div class="welcome-slide-num">
+                            <span class="welcome-slide-num__current-num">01</span>
+                            <span class="welcome-slide-num__separator">|</span>
+                            <span class="welcome-slide-num__length">05</span>
+                        </div>
+                        <div class="carousel-pagination">
+                            <div class="slide-pagination__active slide-pagination"></div>
+                            <div class="slide-pagination"></div>
+                            <div class="slide-pagination"></div>
+                            <div class="slide-pagination"></div>
+                            <div class="slide-pagination"></div>
+                        </div>
+                        <div class="arrows">
+                            <span class="arrow arrow_left">&larr;</span>
+                            <span class="arrow arrow_right">&rarr;</span>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
         <section id="visiting" class="section section_white">
@@ -43,7 +70,7 @@
                     <a class="card" href="tours/tour2.html" target="_blank">
                         <div class="card-container">
                             <div class="img-container">
-                                <img class="img-container__img" src="assets/img/royalpalace.jpg" alt="Royal Palace">
+                                <img class="img-container__img" src="assets/img/virtual-tour/royalpalace.jpg" alt="Royal Palace">
                                 <h3 class="img-container__title">Royal Palace</h3>
                             </div>
                             <p class="card__text card__virtual-tour">360° Virtual Tour</p>
@@ -53,7 +80,7 @@
                     <a class="card" href="tours/tour3.html" target="_blank">
                         <div class="card-container">
                             <div class="img-container">
-                                <img class="img-container__img" src="assets/img/denonwing.jpg" alt="Denon Wing">
+                                <img class="img-container__img" src="assets/img/virtual-tour/denonwing.jpg" alt="Denon Wing">
                                 <h3 class="img-container__title">Denon Wing</h3>
                             </div>
                             <p class="card__text card__virtual-tour">360° Virtual Tour</p>
@@ -63,7 +90,7 @@
                     <a class="card" href="tours/tour4.html" target="_blank">
                         <div class="card-container">
                             <div class="img-container">
-                                <img class="img-container__img" src="assets/img/colonnadeperrault.jpg" alt="Colonnade Perrault">
+                                <img class="img-container__img" src="assets/img/virtual-tour/colonnadeperrault.jpg" alt="Colonnade Perrault">
                                 <h3 class="img-container__title">Colonnade Perrault</h3>
                             </div>
                             <p class="card__text card__virtual-tour">360° Virtual Tour</p>
@@ -73,7 +100,7 @@
                     <a class="card" href="tours/tour5.html" target="_blank">
                         <div class="card-container">
                             <div class="img-container">
-                                <img class="img-container__img" src="assets/img/greekhall.jpg" alt="Greek hall">
+                                <img class="img-container__img" src="assets/img/virtual-tour/greekhall.jpg" alt="Greek hall">
                                 <h3 class="img-container__title">Greek hall</h3>
                             </div>
                             <p class="card__text card__virtual-tour">360° Virtual Tour</p>
@@ -83,7 +110,7 @@
                     <a class="card" href="tours/tour6.html" target="_blank">
                         <div class="card-container">
                             <div class="img-container">
-                                <img class="img-container__img" src="assets/img/monalisa.jpg" alt="Mona Lisa">
+                                <img class="img-container__img" src="assets/img/virtual-tour/monalisa.jpg" alt="Mona Lisa">
                                 <h3 class="img-container__title">Mona Lisa</h3>
                             </div>
                             <p class="card__text card__virtual-tour">360° Virtual Tour</p>
@@ -93,7 +120,7 @@
                     <a class="card" href="tours/tour7.html" target="_blank">
                         <div class="card-container">
                             <div class="img-container">
-                                <img class="img-container__img" src="assets/img/nightpalace.jpg" alt="Night Palace">
+                                <img class="img-container__img" src="assets/img/virtual-tour/nightpalace.jpg" alt="Night Palace">
                                 <h3 class="img-container__title">Night Palace</h3>
                             </div>
                             <p class="card__text card__virtual-tour">360° Virtual Tour</p>
@@ -112,8 +139,7 @@
                     <p class="explore__text">The cleaning provoked furious protests, not because the picture had been damaged in any way, but because it looked different.</p>
                 </div>
                 <picture class="explore-image">
-                    <source srcset="assets/img/explore-adaptive.png" type="image/png" media="(max-width:768px)">
-                    <img class="explore-image__img" src="assets/img/explore.png" alt="Explore">
+                    <img class="explore-image__img" src="assets/img/explore/explore.png" alt="Explore">
                 </picture>
             </div>
         </section>
@@ -128,10 +154,11 @@
                     <div class="play-container">
                         <button class="play play-container__button"></button>
                     </div>
+                    <input type="range" min="0" max='100' value="0" step="1" name="currentTime" class="video-bar-adaptive">
                     <div class="video-buttons">
                         <div class="video-buttons-container">
                             <button class="small-play"></button>
-                            <input type="range" min="0" max='100' value="0" step="1" name="currentTime" class="video-bar">
+                            <input type="range" min="0" max='100' value="0" step="1" name="currentTime" class="video-bar-desktop">
                             <button class="volume"></button>
                             <input type="range" min="0" max="1" value="0.5" step="0.01" name="volume" class="volume-bar">
                             <button class="fullscreen"></button>
@@ -140,14 +167,14 @@
                 </div>
             </div>
         </section>
-        <section id="tickets" class="section">
+        <section id="tickets" class="section section_white">
             <div class="wrapper tickets-wrapper">
                 <h2 class="tickets__title title-underline">Buy tickets</h2>
                 <div class="tickets-container">
                     <div class="tickets-img-container"><img class="tickets-img-container__img" src="assets/img/tickets.png" alt="tickets"></div>
                     <div class="payment">
                         <div class="ticket-type">
-                            <h3 class="payment__title">Ticket Type</h3>
+                            <h3 class="payment-title ticket-payment-title">Ticket Type</h3>
                             <label class="ticket-type__label"> 
                                 <input class="ticket-type__radio" type="radio" name="ticket" value="Permanent exhibition" checked>Permanent exhibition
                             </label>
@@ -159,7 +186,7 @@
                             </label>
                         </div>
                         <div class="amount">
-                            <h3 class="payment__title">Amount</h3>
+                            <h3 class="payment-title">Amount</h3>
                             <div class="amount-number amount-number-basic">
                                 <p class="amount-number__text">Basic 18+</p>
                                 <div class="amount-number-buttons">
@@ -176,7 +203,7 @@
                                     <button class="amount-number-buttons__plus" type="button" onclick="this.previousElementSibling.stepUp()">+</button>
                                 </div>
                             </div>
-                            <p class="amount__price">Total €220</p>
+                            <p class="amount-price"><span>Total €</span><span class="amount-price__value">220</span></p>
                             <button class="amount-buy">Buy Now</button>
                         </div>
                     </div>
@@ -226,7 +253,7 @@
         <div class="copyrights">
             <div class="wrapper copyrights-wrapper">
                 <time>&copy; 2021</time>
-                <a class="school" href="rs.school">The Rolling Scopes School</a>
+                <a class="school" href="https://rs.school">The Rolling Scopes School</a>
                 <a href="https://github.com/Bulation">Bulation</a>
             </div>
         </div>

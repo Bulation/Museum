@@ -15,8 +15,11 @@
     flex-wrap: wrap;
     padding-top: 103px;
     align-items: flex-start;
-    gap: 72px 20px;
-    @media screen and (max-width: 900px) {
-        flex-direction: column;
+    gap: 75px 0;
+    @media screen and (max-width: 1024px) {
+        justify-content: space-evenly;
+    }
+    @media screen and (max-width: 768px) {
+        gap: 40px 0;
     }
 }

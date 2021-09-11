@@ -2,7 +2,7 @@
     color: #FFFFFF;
     letter-spacing: 5px;
     position: relative;
-    z-index: 2;
+    z-index: 3;
     width: fit-content;
     text-transform: uppercase;
     position: relative;
@@ -16,6 +16,9 @@
         background: url(../assets/svg/logo.svg) center no-repeat;
         top: 10px;
         transition: background 1s;
+        @media screen and (max-width: 420px) {
+            top: -10px;
+        }
     }
     &:hover {
         color: $color-primary;

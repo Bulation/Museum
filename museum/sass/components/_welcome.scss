@@ -1,67 +1,166 @@
 .welcome-wrapper {
-    height: 750px;
-    padding: 114px 0 246px;
-    background: url('../assets/img/bg-welcome.jpg') right top no-repeat;
-    background-size: 69.44% 750px;
-    @media screen and (max-width: 1280px) {
-        background-size: 690px 516px;
-        height: 516px;
-    }
-    @media screen and (max-width: 900px) {
+    padding: 0 0 60px;
+    position: relative;
+    justify-content: flex-end;
+    @media screen and (max-width: 768px) {
         flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        background: none;
-        height: 750px;
-        padding: 0;
     }
 }
 .welcome-block {
     letter-spacing: 2px;
+    position: absolute;
+    z-index:1;
+    left: 0;
+    padding-top: 150px;
+    @media screen and (max-width: 1024px) {
+        padding-top: 50px;
+    }
+    @media screen and (max-width: 768px) {
+        position: static;
+        padding-top: 0;
+    }
     .welcome-block__title {
-        @media screen and (max-width: 900px) {
+        @media screen and (max-width: 768px) {
             text-align: center;
         }
     }
     .welcome-block__text {
         @include font(Roboto-Light, 28px, 33px, 300);
-        margin: 26px 0 76px;
+        margin: 25px 0 75px;
         letter-spacing: 2px;
-        @media screen and (max-width: 900px) {
-            @include font(Roboto-Light, 20px, 23px, 300);
-            text-align: center;
-        }
-        @media screen and (max-width: 1280px) {
+        @media screen and (max-width: 1024px) {
             @include font(Roboto-Light, 24px, 28px, 300);
+            margin: 25px 0 50px;
+        }
+        @media screen and (max-width: 768px) {
+            text-align: center;
+            @include font(Roboto-Light, 20px, 23px, 300);
+        }
+        @media screen and (max-width: 420px) {
+            @include font(Roboto-Light, 16px, 19px, 300);
         }
     }
 }
 
 .welcome-block-link {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 360px;
-    height: 75px;
+    width: fit-content;
+    padding: 25px 64px;
     background-color: #710707;
     border-radius: 10px;
     color: #FFFFFF;
-    @include font(Roboto-Thin, 22px, 26px, 200);
+    @include font(Roboto-Thin, 22px, 26px, 300);
     letter-spacing: 2px;
     cursor: pointer;
     transition: background-color 1s;
     &:hover {
         background-color: $color-primary;
     }
-}
-.welcome-block-bg {
-    display: none;
-    @media screen and (max-width: 900px) {
-        display: block;
-        width: 100%;
-        height: 750px;
-        background: url(../assets/img/bg-welcome.jpg) center no-repeat;
-        background-size: cover;
-        margin-top: 42px;
+    @media screen and (max-width: 1024px) {
+        padding: 18px 45px;
+        @include font(Roboto-Thin, 20px, 23px, 300);
     }
+    @media screen and (max-width: 768px) {
+        display: none;
+    }
+}
+.welcome-block-slider-container {
+    position: relative;
+    max-width: 68.35%;
+    img {
+        display: none;
+    }
+    .active {
+        display: inline;
+        max-width: 100%;
+    }
+    @media screen and (max-width: 1024px) {
+        max-width: 700px;
+    }
+    @media screen and (max-width: 768px) {
+        max-width: 100%;
+    }
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 300px;
+        height: 100%;
+        background: linear-gradient(left, rgba(0,0,0,1), rgba(0,0,0,0));
+        @media screen and (max-width: 1024px) {
+            width: 120px;
+        }
+        @media screen and (max-width: 768px) {
+            width: 0;
+        }
+    }
+}
+.slider-pagination-container {
+    background-color: #000000;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    @media screen and (max-width: 768px) {
+        width: 100%;
+    }
+}
+.slider-pagination {
+    display: flex;
+    justify-content: center;
+    gap: 57px;
+    margin: 40px 74px;
+    @media screen and (max-width: 1024px) {
+        margin: 40px 75px 40px 224px;
+        gap: 45px;
+    }
+    @media screen and (max-width: 768px) {
+        margin: 30px auto;
+    }
+    @media screen and (max-width: 420px) {
+        gap: 25px;
+        margin: 20px auto;
+    }
+}
+
+.welcome-slide-num {
+    @include font(Roboto, 22px, 40px, 400);
+    @media screen and (max-width: 1024px) {
+        @include font(Roboto, 20px, 40px, 400);
+    }
+    @media screen and (max-width: 420px) {
+        @include font(Roboto, 16px, 40px, 400);
+    }
+    .welcome-slide-num__separator {
+        padding: 0 5px;
+    }
+}
+
+.slide-pagination {
+    width: 16px;
+    height: 16px;
+    background-color: #ffffff;
+    @media screen and (max-width: 1024px) {
+        width: 12px;
+        height: 12px;
+    }
+}
+
+.carousel-pagination {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 25px;
+    @media screen and (max-width: 420px) {
+        gap: 10px;
+    }
+}
+.slide-pagination__active {
+    background-color: #D2B183;
+}
+
+.arrows {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
 }

@@ -4,7 +4,7 @@
 }
 .header-container {
     @extend %layout;
-    padding: 58px 0;
+    padding: 49px 0;
 }
 .hamburger {
     display: none;
@@ -44,6 +44,7 @@
     position: relative;
     width: 30px;
     height: 31px;
+    z-index: 3;
     &::before {
         content: '';
         position: absolute;

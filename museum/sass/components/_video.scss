@@ -30,40 +30,101 @@
     width: 220px;
     height: 220px;
     border-radius: 50%;
-    border: 10px solid #fff;
+    border: 9px solid #fff;
     display: flex;
     align-items: center;
     &:hover {
         opacity: 0.5;
+    }
+    @media screen and (max-width: 1024px) {
+        width: 152px;
+        height: 152px;
+        border: 6px solid #fff;
+    }
+    @media screen and (max-width: 768px) {
+        width: 80px;
+        height: 80px;
+        border: 3px solid #fff;
+    }
+    @media screen and (max-width: 420px) {
+        width: 50px;
+        height: 50px;
+        border: 2px solid #fff;
     }
 }
 .video-buttons {
     width: 100%;
     background-color: #000000;
     position: absolute;
-    bottom:0;
+    bottom: 0;
     transition: all 0.3s;
 }
 .video-buttons-container {
-    width: calc(100% - 40px);
+    width: calc(100% - 60px);
     display: flex;
     margin: 25px auto;
     justify-content: space-between;
     align-items: center;
+    @media screen and (max-width: 1024px) {
+        width: calc(100% - 80px);
+        margin: 15px auto;
+    }
+    @media screen and (max-width: 768px) {
+        width: calc(100% - 60px);
+        margin: 12px auto;
+    }
+    @media screen and (max-width: 420px) {
+        width: calc(100% - 40px);
+        margin: 16px auto;
+    }
 }
-.video-bar {
-    flex-grow: 20;
-    margin-right: 40px;
+input[type="range"]::-webkit-slider-thumb {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: #FFFFFF;
+    appearance: none;
+    @media screen and (max-width: 1024px) {
+        width: 13px;
+        height: 13px;
+    }
+    @media screen and (max-width: 420px) {
+        width: 10px;
+        height: 10px;
+    }
+}
+input[type="range"] {
+    height: 8px;
+    appearance: none;
+    background: linear-gradient(to right, $color-bg-video-active 0%, $color-bg-video-active 40%, $color-bg-video 40%, $color-bg-video 100%);;
+    @media screen and (max-width: 1024px) {
+        height: 5px;
+    }
+    @media screen and (max-width: 420px) {
+        height: 4px;
+    }
+}
+.video-bar-adaptive {
+    width: 100%;
+}
+.video-bar-desktop {
+    flex-grow: 32;
+    margin-right: 50px;
     cursor: pointer;
-    @media screen and (max-width: 900px) {
-        width: 35%;
+    @media screen and (max-width: 1024px) {
+        margin-right: 31px;
+    }
+    @media screen and (max-width: 768px) {
+        display: none;
     }
 }
 .volume-bar {
-    width: 10.76%;
-    flex-grow:1;
+    flex-grow: 1;
     cursor: pointer;
-    margin-right: 10px;
+    margin-right: 50px;
+    @media screen and (max-width: 1024px) {
+        margin-right: 30px;
+    }
 }
 .video-description {
     @extend %layout;
@@ -80,10 +141,9 @@
         @include font(Roboto-Light, 22px, 38.5px, 300);
         color: #000000;
         width: 50%;
-        @media screen and (max-width: 900px)  {
-            width: 100%;
-            margin-top: 0;
-            margin-bottom: 20px;
+        @media screen and (max-width: 1024px) {
+            display: none;
         }
     }
+    
 }
