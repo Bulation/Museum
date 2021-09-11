@@ -820,11 +820,10 @@ button {
     border-radius: 50%;
     margin: 0 24px;
     margin-left: 0;
-    -webkit-transition: border-color 1s, background-color 1s;
-    transition: border-color 1s, background-color 1s; }
+    -webkit-transition: border-color 1s;
+    transition: border-color 1s; }
     .socials .socials__item:hover {
-      border-color: #9D8665;
-      background-color: #9D8665; }
+      border-color: #9D8665; }
     @media screen and (max-width: 420px) {
       .socials .socials__item {
         margin: 0 2.5px;
@@ -838,19 +837,54 @@ button {
       margin: 0 auto; } }
 
 .socials__youtube-link {
-  background: url("../assets/svg/youtube.svg") center no-repeat; }
+  background-color: #ffffff;
+  -webkit-mask: url("../assets/svg/youtube.svg") center no-repeat;
+          mask: url("../assets/svg/youtube.svg") center no-repeat;
+  -webkit-transition: background-color 1s;
+  transition: background-color 1s; }
+  .socials__youtube-link:hover {
+    border-color: #9D8665;
+    background-color: #9D8665; }
 
 .socials__instagram-link {
-  background: url("../assets/svg/instagram.svg") center no-repeat; }
+  background-color: #ffffff;
+  -webkit-mask: url("../assets/svg/instagram.svg") center no-repeat;
+          mask: url("../assets/svg/instagram.svg") center no-repeat;
+  -webkit-transition: background-color 1s;
+  transition: background-color 1s; }
+  .socials__instagram-link:hover {
+    border-color: #9D8665;
+    background-color: #9D8665; }
 
 .socials__facebook-link {
-  background: url("../assets/svg/facebook.svg") center no-repeat; }
+  background-color: #ffffff;
+  -webkit-mask: url("../assets/svg/facebook.svg") center no-repeat;
+          mask: url("../assets/svg/facebook.svg") center no-repeat;
+  -webkit-transition: background-color 1s;
+  transition: background-color 1s; }
+  .socials__facebook-link:hover {
+    border-color: #9D8665;
+    background-color: #9D8665; }
 
 .socials__twitter-link {
-  background: url("../assets/svg/twitter.svg") center no-repeat; }
+  background-color: #ffffff;
+  -webkit-mask: url("../assets/svg/twitter.svg") center no-repeat;
+          mask: url("../assets/svg/twitter.svg") center no-repeat;
+  -webkit-transition: background-color 1s;
+  transition: background-color 1s; }
+  .socials__twitter-link:hover {
+    border-color: #9D8665;
+    background-color: #9D8665; }
 
 .socials__pinterest-link {
-  background: url("../assets/svg/pinterest.svg") center no-repeat; }
+  background-color: #ffffff;
+  -webkit-mask: url("../assets/svg/pinterest.svg") center no-repeat;
+          mask: url("../assets/svg/pinterest.svg") center no-repeat;
+  -webkit-transition: background-color 1s;
+  transition: background-color 1s; }
+  .socials__pinterest-link:hover {
+    border-color: #9D8665;
+    background-color: #9D8665; }
 
 .tickets-wrapper {
   -webkit-box-orient: vertical;
