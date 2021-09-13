@@ -11,6 +11,13 @@
         background: #000000;
         width: 300px;
     }
+    @media screen and (max-width: 768px) {
+        width: 100%;
+        padding-top: 145px;
+    }
+    @media screen and (max-width: 768px) {
+        padding-top: 125px;
+    }
 }
 .transform {
     transform: translateX(0%);
@@ -21,8 +28,12 @@
     @media screen and (max-width: 1024px) {
         flex-direction: column;
         align-items: flex-start;
-        padding-left: 55px;
+        width: calc(100% - 110px);
+        margin: 0 auto;
         gap: 25px;
+    }
+    @media screen and (max-width: 420px) {
+        width: 310px;
     }
 }
 .header-nav-list__item {
@@ -58,45 +69,49 @@
     border: 1px solid transparent;
     transition: color 1s,
                 border-bottom 1s;
-    &:hover {
-        @extend %list-hover;
-        @media screen and (max-width: 900px) {
-            border: 1px solid $color-primary;
+    @media screen and (min-width: 1024px) {
+        &:hover {
+            @include hover($color-primary);
         }
     }
 }
 
 
+
 .footer-nav {
     width: 33%;
-    margin-right: 50px;
-    @media screen and (max-width: 1200px) {
-        width: 100%;
-        margin-bottom: 42px;
-        margin-right: 0;
+    @media screen and (max-width: 1024px) {
+        width: 43%;
     }
-    @media screen and (max-width: 600px) {
-        margin-top: 40px;
+    @media screen and (max-width: 768px) {
+        width: 100%;
     }
 }
 .footer-nav-list {
     @extend %nav;
-    height: 156px;
-    column-gap: 20px;
+    height: 134px;
+    row-gap: 25px;
     flex-direction: column;
     flex-wrap: wrap;
     align-items: flex-start;
     @media screen and (max-width: 420px) {
         height: 70px;
-        column-gap: 0px;
+        align-items: center;
+        text-align: center;
     }
-}
-.footer-nav-list__link {
-    color: #fff;
-    border: 1px solid transparent;
-    transition: color 1s,
-                border-bottom 1s;
-    &:hover {
-        @extend %list-hover;
+    .footer-nav-list__link {
+        color: #fff;
+        border: 1px solid transparent;
+        transition: color 1s,
+                    border-bottom 1s;
+        &:hover {
+            @include hover($color-primary);
+        }
+        @media screen and (max-width: 768px) {
+            @include font(Roboto-Thin, 18px, 21px, 200);
+        }
+        @media screen and (max-width: 420px) {
+            @include font(Roboto-Thin, 16px, 19px, 200);
+        }
     }
 }

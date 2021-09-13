@@ -3,11 +3,15 @@ const hamburgerLine = document.querySelector('.hamburger__line')
 const sideMenu = document.querySelector(".header-nav");
 const sideMenuItems = document.querySelectorAll(".header-nav-list__item");
 const body = document.body;
+const socials = document.querySelector('.socials')
+const menuImg = document.querySelector(".adaptive-menu-img-container");
 
 hamburger.addEventListener("click", toggleHamburger);
 body.addEventListener("click", hideMenuByClickOnBody);
 
 function toggleHamburger(e) {
+  menuImg.classList.toggle('hidden');
+  socials.classList.toggle('socials-menu');
   hamburgerLine.classList.toggle("hamburger__line");
   hamburgerLine.classList.toggle("close");
   sideMenu.classList.toggle("transform");

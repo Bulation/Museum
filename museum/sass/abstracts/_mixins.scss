@@ -4,3 +4,7 @@
     line-height: $line-height;
     font-weight: $weight;
 }
+@mixin hover($color-primary) {
+    color: $color-primary;
+    border-bottom: 1px solid $color-primary;
+}

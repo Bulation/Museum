@@ -34,7 +34,7 @@
         width: 280px;
     }
     &:hover {
-        .img-container__title {
+        .card__title {
             &::before {
                 width: 100%;
             }
@@ -46,17 +46,18 @@
     .img-container__img {
         max-width: 100%;
     }
-    .img-container__title {
-        width: 100%;
-        position: relative;
-        &::before {
-            content: "";
-            position: absolute;
-            width: 70%;
-            height: 2px;
-            bottom: -10px;
-            background-color: $color-primary;
-            transition: width 1s;
-        }
+}
+.card__title {
+    width: 100%;
+    position: relative;
+    margin-top: 25px;
+    &::before {
+        content: "";
+        position: absolute;
+        width: 70%;
+        height: 2px;
+        bottom: -10px;
+        background-color: $color-primary;
+        transition: width 1s;
     }
 }

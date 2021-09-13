@@ -1,5 +1,4 @@
 .socials {
-    width: fit-content;
     list-style-type: none;
     align-self: flex-end;
     display: flex;
@@ -18,6 +17,9 @@
         @media screen and (max-width: 420px) {
             margin: 0 2.5px;
             align-self: center;
+        }
+        &:last-child {
+            margin: 0;
         }
     }
     .socials__link {
@@ -38,5 +40,20 @@
             border-color: $color-primary;
             background-color: $color-primary;
         }
+    }
+}
+
+.socials-menu {
+    @media screen and (max-width: 768px) {
+        position: absolute;
+        bottom: 35px;
+        left: 0;
+        right: 0;
+        justify-content: center;
+        width: 100%;
+        z-index: 4;
+    }
+    @media screen and (max-width: 420px) {
+        bottom: 24px;
     }
 }

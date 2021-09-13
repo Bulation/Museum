@@ -3,18 +3,23 @@
     width: 100%;
     .logo-link {
         align-self: flex-start;
-        margin-right: 50px;
-        &::before {
-            top: 0;
-        }
     }
 }
 .footer-container {
     @extend %layout;
     flex-wrap: nowrap;
     padding: 75px 0 50px;
+    @media screen and (max-width: 1024px) {
+        gap: 45px;
+    }
     @media screen and (max-width: 768px) {
+        gap: 80px;
+    }
+    @media screen and (max-width: 700px) {
         flex-wrap: wrap;
+    }
+    @media screen and (max-width: 420px) {
+        gap: 40px;
     }
 }
 .copyrights {
@@ -44,10 +49,8 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    @media screen and (max-width: 1200px) {
-        width: 50%;
-    }
-    @media screen and (max-width: 600px) {
+    gap: 40px;
+    @media screen and (max-width: 700px) {
         width: 100%;
     }
 }

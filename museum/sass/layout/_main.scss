@@ -15,6 +15,7 @@
 .wrapper {
     width: $width;
     max-width: 1440px;
+    min-width: 320px;
     padding: 75px 0;
     display: flex;
     margin: 0 auto;
