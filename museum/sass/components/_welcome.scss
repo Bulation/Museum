@@ -135,7 +135,7 @@
     }
 }
 
-.slide-pagination {
+.slide__bullet {
     width: 16px;
     height: 16px;
     background-color: #ffffff;
@@ -154,7 +154,7 @@
         gap: 10px;
     }
 }
-.slide-pagination__active {
+.slide__bullet_active {
     background-color: #D2B183;
 }
 

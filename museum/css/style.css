@@ -1554,12 +1554,12 @@ input[type="range"] {
   .welcome-slide-num .welcome-slide-num__separator {
     padding: 0 5px; }
 
-.slide-pagination {
+.slide__bullet {
   width: 16px;
   height: 16px;
   background-color: #ffffff; }
   @media screen and (max-width: 1024px) {
-    .slide-pagination {
+    .slide__bullet {
       width: 12px;
       height: 12px; } }
 
@@ -1578,7 +1578,7 @@ input[type="range"] {
     .carousel-pagination {
       gap: 10px; } }
 
-.slide-pagination__active {
+.slide__bullet_active {
   background-color: #D2B183; }
 
 .arrows {
