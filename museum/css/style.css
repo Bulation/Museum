@@ -1592,3 +1592,12 @@ input[type="range"] {
       -ms-flex-pack: justify;
           justify-content: space-between;
   gap: 20px; }
+
+.parallax {
+  width: 100%;
+  height: 400px;
+  background-image: url(../assets/img/parallax.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat; }
