@@ -1038,13 +1038,28 @@ button {
   font-size: 22px;
   line-height: 26px;
   font-weight: 300;
-  cursor: pointer; }
+  cursor: pointer;
+  position: relative; }
 .ticket-type .ticket-type__radio {
   margin-right: 23px;
-  font-family: Roboto-Light;
-  font-size: 22px;
-  line-height: 26px;
-  font-weight: 300; }
+  opacity: 0; }
+  .ticket-type .ticket-type__radio:checked ~ .ticket-type__checkmark:after {
+    content: '';
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background-color: #000000; }
+.ticket-type .ticket-type__checkmark {
+  position: absolute;
+  top: 3px;
+  left: 0;
+  width: 17px;
+  height: 17px;
+  border-radius: 50%;
+  border: 2px solid #000000; }
 
 .payment {
   display: -webkit-box;
@@ -1157,10 +1172,6 @@ button {
   @media screen and (max-width: 420px) {
     .amount-number-senior {
       margin-top: 20px; } }
-
-@media screen and (max-width: 1000px) {
-  .ticket-type {
-    margin-top: 20px; } }
 
 .video-wrapper {
   -webkit-box-orient: vertical;
@@ -1594,6 +1605,9 @@ input[type="range"] {
       -ms-flex-pack: justify;
           justify-content: space-between;
   gap: 20px; }
+  .arrows .arrows__arrow {
+    color: #ffffff;
+    background-color: #000000; }
 
 .parallax {
   width: 100%;

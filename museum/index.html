@@ -64,8 +64,8 @@
                             <div class="slide__bullet"></div>
                         </div>
                         <div class="arrows">
-                            <span class="arrows__arrow arrows__arrow_left">&larr;</span>
-                            <span class="arrows__arrow arrows__arrow_right">&rarr;</span>
+                            <button class="arrows__arrow arrows__arrow_left">&larr;</button>
+                            <button class="arrows__arrow arrows__arrow_right">&rarr;</button>
                         </div>
                     </div>
                 </div>
@@ -183,13 +183,16 @@
                         <div class="ticket-type">
                             <h3 class="payment-title ticket-payment-title">Ticket Type</h3>
                             <label class="ticket-type__label"> 
-                                <input class="ticket-type__radio" type="radio" name="ticket" value="Permanent exhibition" checked>Permanent exhibition
+                                <input class="ticket-type__radio" type="radio" name="ticket" value="Permanent exhibition" checked="checked">Permanent exhibition
+                                <span class="ticket-type__checkmark"></span>
                             </label>
                             <label class="ticket-type__label">
                                 <input class="ticket-type__radio" type="radio" name="ticket" value="Temporary exhibition">Temporary exhibition
+                                <span class="ticket-type__checkmark"></span>
                             </label>
                             <label class="ticket-type__label">
                                 <input class="ticket-type__radio" type="radio" name="ticket" value="Combined Admission">Combined Admission
+                                <span class="ticket-type__checkmark"></span>
                             </label>
                         </div>
                         <div class="amount">
