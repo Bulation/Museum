@@ -8,6 +8,9 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="icon" href="assets/img/favicon.ico">
     <title>Louvre</title>
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.css' rel='stylesheet' />
+
 </head>
 <body>
     <header class="header">
@@ -64,8 +67,8 @@
                             <div class="slide__bullet"></div>
                         </div>
                         <div class="arrows">
-                            <button class="arrows__arrow arrows__arrow_left">&larr;</button>
-                            <button class="arrows__arrow arrows__arrow_right">&rarr;</button>
+                            <button class="arrows__arrow arrows__arrow_left"></button>
+                            <button class="arrows__arrow arrows__arrow_right"></button>
                         </div>
                     </div>
                 </div>
@@ -158,7 +161,7 @@
                     <p class="video-description__text">Enter and visit one of the most famous museums in the world and enjoy masterpieces such as Mona Lisa or Hammurabi's Code</p>
                 </div>
                 <div class="video-player">
-                    <video class="video" src="assets/video/video.mp4" poster='assets/img/poster.png'></video>
+                    <video class="video" src="assets/video/video.mp4" poster='assets/img/poster.jpg'></video>
                     <div class="play-container">
                         <button class="play play-container__button"></button>
                     </div>
@@ -178,7 +181,12 @@
             <div class="wrapper tickets-wrapper">
                 <h2 class="tickets__title title-underline">Buy tickets</h2>
                 <div class="tickets-container">
-                    <div class="tickets-img-container"><img class="tickets-img-container__img" src="assets/img/tickets.png" alt="tickets"></div>
+                    <div class="tickets-img-container">
+                        <picture class="explore-image">
+                            <source class="tickets-img-container__img" srcset="assets/img/tickets.png" alt="tickets" media="(min-width: 421px)">
+                            <img class="tickets-img-container__img" src="assets/img/tickets420.jpg" alt="tickets">
+                        </picture>    
+                    </div>
                     <div class="payment">
                         <div class="ticket-type">
                             <h3 class="payment-title ticket-payment-title">Ticket Type</h3>
@@ -201,7 +209,7 @@
                                 <p class="amount-number__text">Basic 18+</p>
                                 <div class="amount-number-buttons">
                                     <button class="amount-number-buttons__minus" type="button" onclick="this.nextElementSibling.stepDown()">–</button>
-                                    <input class="amount-number-buttons__number" type="number" min="1" step="1" value="1">
+                                    <input class="amount-number-buttons__number" type="number" min="0" step="1" max="20" value="1" pattern="[0-9]{,2}">
                                     <button class="amount-number-buttons__plus" type="button" onclick="this.previousElementSibling.stepUp()">+</button>
                                 </div>
                             </div>
@@ -209,7 +217,7 @@
                                 <p class="amount-number__text">Senior 65+</p>
                                 <div class="amount-number-buttons">
                                     <button class="amount-number-buttons__minus" type="button" onclick="this.nextElementSibling.stepDown()">–</button>
-                                    <input class="amount-number-buttons__number" type="number" min="1" step="1" value="1">
+                                    <input class="amount-number-buttons__number" type="number" min="0" step="1" max="20" value="1" pattern="[0-9]{,2}">
                                     <button class="amount-number-buttons__plus" type="button" onclick="this.previousElementSibling.stepUp()">+</button>
                                 </div>
                             </div>
@@ -233,7 +241,7 @@
                             <a class="address__link" href="mailto:info@louvre.fr">mail: info@louvre.fr</a> 
                         </address>
                     </div>
-                    <div class="contacts-container__map"></div>
+                    <div id="map" class="contacts-container__map"></div>
                 </div>
             </div>
         </section>
@@ -273,5 +281,7 @@
     </footer>
     <script src="menu.js"></script>
     <script src="progress.js"></script>
+    <script src="tickets.js"></script>
+    <script src="map.js"></script>
 </body>
 </html>

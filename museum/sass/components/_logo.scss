@@ -13,19 +13,26 @@
         position: absolute;
         width: 49px;
         height: 26px;
-        background: url(../assets/svg/logo.svg) center no-repeat;
-        transition: background 1s;
+        background-color: #ffffff;
+        mask: url(../assets/svg/logo.svg) center no-repeat;
+        transition: background-color 1s;
         @media screen and (max-width: 420px) {
-            top: -10px;
+            width: 29px;
+            height: 16px;
+            mask: url(../assets/svg/logo420.svg) center no-repeat;
+            left: -15px;
         }
     }
     &:hover {
         color: $color-primary;
         &::before {
-            background: url("../assets/svg/logo-hover.svg") center no-repeat;
+            background-color: $color-primary;
         }
     }
 }
 .logo-link__title {
     margin-left: 70px;
+    @media screen and (max-width: 420px) {
+        margin-left: 30px;
+    }
 }

@@ -1,23 +1,33 @@
 .explore-wrapper {
     justify-content: space-between;
-    gap: 50px;
-    @media screen and (max-width: 1500px) {
+    @media screen and (max-width: 1440px) {
         flex-direction: column;
     }
 }
 .explore-description {
-    width: 47%;
+    width: 48%;
+    margin-right: 60px;
+    @media screen and (max-width: 1440px) {
+        width: 100%;
+        margin-right: 0;
+    }
     @media screen and (max-width: 768px) {
         width: calc(100% - 40px);
+        margin: 0;
     }
-    @media screen and (max-width: 1500px) {
-        width: 100%;
+    p:last-child {
+        @media screen and (max-width: 1024px) {
+            display: none;
+        }
     }
 }
 .explore__title {
-    margin-bottom: 105px;
+    margin-bottom: 103px;
+    @media screen and (max-width: 1024px) {
+        margin-bottom: 83px;
+    }
     @media screen and (max-width: 768px) {
-        @include font(Forum, 28px, 42px, 400);
+        margin-bottom: 63px;
     }
 }
 .explore__text {
@@ -25,6 +35,13 @@
     margin: 23px 0;
     .explore__text_yellow {
         color: $color-span;
+    }
+    @media screen and (max-width: 1024px) {
+        font-size: 20px;
+        margin: 0;
+    }
+    @media screen and (max-width: 768px) {
+        display: none;
     }
 }
 .explore-image {
@@ -34,5 +51,7 @@
     }
     img {
         max-width: 100%;
+        display: block;
+        margin: 0 auto;
     }
 }

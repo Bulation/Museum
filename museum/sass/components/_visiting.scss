@@ -8,9 +8,15 @@
     bottom: -30px;
     height: 3px;
     background-color: #710707;
+    @media screen and (max-width: 1024px) {
+        bottom: -20px;
+    }
 }
 .visiting-flex-container {
-    @extend %nav;
+    display: flex;
+    @include font(Roboto-Thin, 22px, 26px, 200);
+    justify-content: space-between;
+    align-items: center;
     width: 100%;
     flex-wrap: wrap;
     padding-top: 103px;
@@ -18,8 +24,11 @@
     gap: 75px 0;
     @media screen and (max-width: 1024px) {
         justify-content: space-evenly;
+        padding-top: 83px;
+        gap: 45px 0;
     }
     @media screen and (max-width: 768px) {
-        gap: 40px 0;
+        gap: 25px 0;
+        padding-top: 63px;
     }
 }

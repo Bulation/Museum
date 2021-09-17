@@ -4,6 +4,33 @@
     .card__text {
         margin: 10px 0;
     }
+    .card__title {
+        width: 100%;
+        position: relative;
+        margin-top: 25px;
+        &::before {
+            content: "";
+            position: absolute;
+            width: 70%;
+            height: 2px;
+            bottom: -10px;
+            background-color: $color-primary;
+            transition: width 1s;
+            @media screen and (max-width: 1024px) {
+                width: 45%;
+            }
+            @media screen and (max-width: 768px) {
+                width: 55%;
+            }
+        }
+        @media screen and (max-width: 1024px) {
+            letter-spacing: 3px;
+        }
+        @media screen and (max-width: 420px) {
+            @include font(Forum, 18px, 20px, 400);
+            letter-spacing: 5px;
+        }
+    }
     .card__virtual-tour {
         @include font(Roboto-Thin, 22px, 26px, 200);
         margin-top: 20px;
@@ -12,7 +39,7 @@
         }
         @media screen and (max-width: 768px) {
             @include font(Roboto-Thin, 18px, 21px, 200);
-            margin-top: 30px;
+            margin-top: 22px;
         }
         @media screen and (max-width: 420px) {
             @include font(Roboto-Thin, 16px, 19px, 200);
@@ -45,19 +72,5 @@
     width: 100%;
     .img-container__img {
         max-width: 100%;
-    }
-}
-.card__title {
-    width: 100%;
-    position: relative;
-    margin-top: 25px;
-    &::before {
-        content: "";
-        position: absolute;
-        width: 70%;
-        height: 2px;
-        bottom: -10px;
-        background-color: $color-primary;
-        transition: width 1s;
     }
 }
