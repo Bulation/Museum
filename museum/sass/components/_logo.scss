@@ -20,7 +20,6 @@
             width: 29px;
             height: 16px;
             mask: url(../assets/svg/logo420.svg) center no-repeat;
-            left: -15px;
         }
     }
     &:hover {
@@ -33,6 +32,6 @@
 .logo-link__title {
     margin-left: 70px;
     @media screen and (max-width: 420px) {
-        margin-left: 30px;
+        margin-left: 45px;
     }
 }

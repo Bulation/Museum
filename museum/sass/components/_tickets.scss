@@ -128,13 +128,14 @@
     @media screen and (max-width: 420px) {
         @include font (Roboto-Bold, 16px, 19px, 700);
         text-align: center;
+        letter-spacing: 0;
     }
     .amount-price__value {
         @media screen and (max-width: 1024px) {
             padding-left: 13px;
         }
         @media screen and (max-width: 420px) {
-            padding-left: 0;
+            padding-left: 3px;
         }
     }
 }
