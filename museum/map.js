@@ -8,16 +8,6 @@ let obj = {
   zoom: 16,
 }
 const mapContainer = document.querySelector(".contacts-wrapper");
-console.log(mapContainer);
-if (parseInt(mapContainer.offsetWidth) <= 420) {
-  obj.center = [2.3362, 48.86093];
-} 
-else if (parseInt(mapContainer.offsetWidth) <= 768) {
-  obj.center = [2.337, 48.8613];
-} 
-else if (parseInt(mapContainer.offsetWidth) <= 1024) {
-  obj.center = [2.3374, 48.8613];
-}
 let map = new mapboxgl.Map(obj);
 
 map.addControl(new mapboxgl.NavigationControl());

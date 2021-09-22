@@ -155,6 +155,10 @@
     justify-content: space-around;
     align-items: center;
     margin-top: 15px;
+    input[type="number"]::-webkit-outer-spin-button,
+    input[type="number"]::-webkit-inner-spin-button {
+	    display: none;
+    }
     .amount-number-buttons__number {
         width: 85px;
         background-color: #ffffff;
