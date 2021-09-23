@@ -14,12 +14,12 @@
         width: 49px;
         height: 26px;
         background-color: #ffffff;
-        mask: url(../assets/svg/logo.svg) center no-repeat;
+        mask: url(../assets/svg/logo/logo.svg) center no-repeat;
         transition: background-color 1s;
         @media screen and (max-width: 420px) {
             width: 29px;
             height: 16px;
-            mask: url(../assets/svg/logo420.svg) center no-repeat;
+            mask: url(../assets/svg/logo/logo420.svg) center no-repeat;
         }
     }
     &:hover {

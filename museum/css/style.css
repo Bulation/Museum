@@ -729,7 +729,7 @@ form {
       height: 41px;
       position: absolute;
       top: -41px;
-      background: url(../assets/svg/formlogo.svg); }
+      background: url(../assets/svg/form/formlogo.svg); }
 
 .booking-form-timing {
   width: 190px;
@@ -750,21 +750,21 @@ form {
 
 .booking-form-date {
   margin-right: 15px;
-  background: url(../assets/svg/calendar.svg) no-repeat 15px 15px; }
+  background: url(../assets/svg/form/calendar.svg) no-repeat 15px 15px; }
   .booking-form-date::before {
     content: "Date"; }
   .booking-form-date::-webkit-calendar-picker-indicator {
-    background: url(../assets/svg/date.svg) no-repeat 0 5px; }
+    background: url(../assets/svg/form/date.svg) no-repeat 0 5px; }
   @media screen and (max-width: 1000px) {
     .booking-form-date {
       margin-right: 23px; } }
 
 .booking-form-time {
-  background: url(../assets/svg/clock.svg) no-repeat 15px 15px; }
+  background: url(../assets/svg/form/clock.svg) no-repeat 15px 15px; }
   .booking-form-time::before {
     content: "Time"; }
   .booking-form-time::-webkit-calendar-picker-indicator {
-    background: url(../assets/svg/date.svg) no-repeat 0px 5px;
+    background: url(../assets/svg/form/date.svg) no-repeat 0px 5px;
     width: 22px; }
   @media screen and (max-width: 600px) {
     .booking-form-time {
@@ -802,13 +802,13 @@ form {
       width: 100%; } }
 
 .booking-form-name {
-  background: url(../assets/svg/name.svg) no-repeat 15px 15px; }
+  background: url(../assets/svg/form/name.svg) no-repeat 15px 15px; }
 
 .booking-form-email {
-  background: url(../assets/svg/email.svg) no-repeat 15px 17px; }
+  background: url(../assets/svg/form/email.svg) no-repeat 15px 17px; }
 
 .booking-form-phone {
-  background: url(../assets/svg/phone.svg) no-repeat 15px 11px; }
+  background: url(../assets/svg/form/phone.svg) no-repeat 15px 11px; }
 
 .form-entry-ticket {
   border: 1px solid #030303;
@@ -868,7 +868,7 @@ form {
     height: 17px;
     right: 15px;
     top: 15px;
-    background: url(../assets/svg/date.svg); }
+    background: url(../assets/svg/form/date.svg); }
 
 .booking-form-tickets {
   display: block;
@@ -880,7 +880,7 @@ form {
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
-  background: url(../assets/svg/ticket.svg) no-repeat;
+  background: url(../assets/svg/form/ticket.svg) no-repeat;
   background-position: 15px 15px; }
   .booking-form-tickets:focus {
     outline: none; }
@@ -900,7 +900,7 @@ form {
   height: 17px;
   right: 15px;
   top: 15px;
-  background: url(../assets/svg/date_active.svg); }
+  background: url(../assets/svg/form/date_active.svg); }
 
 .select-list {
   position: relative;
@@ -959,13 +959,13 @@ form {
       width: 15px;
       height: 15px; }
   .form-overview-header .form-overview__date::before {
-    background: url(../assets/svg/calendar.svg); }
+    background: url(../assets/svg/form/calendar.svg); }
   .form-overview-header .form-overview__time {
     margin: 5px 0; }
     .form-overview-header .form-overview__time::before {
-      background: url(../assets/svg/clock.svg); }
+      background: url(../assets/svg/form/clock.svg); }
   .form-overview-header .form-overview__ticket::before {
-    background: url(../assets/svg/check.svg); }
+    background: url(../assets/svg/form/check.svg); }
 
 .form-overview-ticket-price {
   font-family: Roboto-Regular;
@@ -1040,7 +1040,7 @@ form {
     -webkit-appearance: none;
             appearance: none;
     opacity: 1;
-    background: url(../assets/svg/datearrows.svg);
+    background: url(../assets/svg/form/datearrows.svg);
     width: 28px;
     height: 35px; }
   @media screen and (max-width: 600px) {
@@ -1112,11 +1112,11 @@ form {
   width: 55px;
   height: 16px;
   margin: 20px 0 15px;
-  background: url(../assets/svg/visa.svg); }
+  background: url(../assets/svg/form/visa.svg); }
 .cards .cards__mastercard {
   width: 53px;
   height: 32px;
-  background: url(../assets/svg/mastercard.svg); }
+  background: url(../assets/svg/form/mastercard.svg); }
 
 .form-button {
   font-family: Roboto-Regular;
@@ -1219,16 +1219,16 @@ form {
     width: 49px;
     height: 26px;
     background-color: #ffffff;
-    -webkit-mask: url(../assets/svg/logo.svg) center no-repeat;
-            mask: url(../assets/svg/logo.svg) center no-repeat;
+    -webkit-mask: url(../assets/svg/logo/logo.svg) center no-repeat;
+            mask: url(../assets/svg/logo/logo.svg) center no-repeat;
     -webkit-transition: background-color 1s;
     transition: background-color 1s; }
     @media screen and (max-width: 420px) {
       .logo-link::before {
         width: 29px;
         height: 16px;
-        -webkit-mask: url(../assets/svg/logo420.svg) center no-repeat;
-                mask: url(../assets/svg/logo420.svg) center no-repeat; } }
+        -webkit-mask: url(../assets/svg/logo/logo420.svg) center no-repeat;
+                mask: url(../assets/svg/logo/logo420.svg) center no-repeat; } }
   .logo-link:hover {
     color: #9D8665; }
     .logo-link:hover::before {
@@ -1541,8 +1541,8 @@ form {
 
 .socials__youtube-link {
   background-color: #ffffff;
-  -webkit-mask: url("../assets/svg/youtube.svg") center no-repeat;
-          mask: url("../assets/svg/youtube.svg") center no-repeat;
+  -webkit-mask: url("../assets/svg/socials/youtube.svg") center no-repeat;
+          mask: url("../assets/svg/socials/youtube.svg") center no-repeat;
   -webkit-transition: background-color 1s;
   transition: background-color 1s; }
   .socials__youtube-link:hover {
@@ -1551,8 +1551,8 @@ form {
 
 .socials__instagram-link {
   background-color: #ffffff;
-  -webkit-mask: url("../assets/svg/instagram.svg") center no-repeat;
-          mask: url("../assets/svg/instagram.svg") center no-repeat;
+  -webkit-mask: url("../assets/svg/socials/instagram.svg") center no-repeat;
+          mask: url("../assets/svg/socials/instagram.svg") center no-repeat;
   -webkit-transition: background-color 1s;
   transition: background-color 1s; }
   .socials__instagram-link:hover {
@@ -1561,8 +1561,8 @@ form {
 
 .socials__facebook-link {
   background-color: #ffffff;
-  -webkit-mask: url("../assets/svg/facebook.svg") center no-repeat;
-          mask: url("../assets/svg/facebook.svg") center no-repeat;
+  -webkit-mask: url("../assets/svg/socials/facebook.svg") center no-repeat;
+          mask: url("../assets/svg/socials/facebook.svg") center no-repeat;
   -webkit-transition: background-color 1s;
   transition: background-color 1s; }
   .socials__facebook-link:hover {
@@ -1571,8 +1571,8 @@ form {
 
 .socials__twitter-link {
   background-color: #ffffff;
-  -webkit-mask: url("../assets/svg/twitter.svg") center no-repeat;
-          mask: url("../assets/svg/twitter.svg") center no-repeat;
+  -webkit-mask: url("../assets/svg/socials/twitter.svg") center no-repeat;
+          mask: url("../assets/svg/socials/twitter.svg") center no-repeat;
   -webkit-transition: background-color 1s;
   transition: background-color 1s; }
   .socials__twitter-link:hover {
@@ -1581,8 +1581,8 @@ form {
 
 .socials__pinterest-link {
   background-color: #ffffff;
-  -webkit-mask: url("../assets/svg/pinterest.svg") center no-repeat;
-          mask: url("../assets/svg/pinterest.svg") center no-repeat;
+  -webkit-mask: url("../assets/svg/socials/pinterest.svg") center no-repeat;
+          mask: url("../assets/svg/socials/pinterest.svg") center no-repeat;
   -webkit-transition: background-color 1s;
   transition: background-color 1s; }
   .socials__pinterest-link:hover {
@@ -2330,12 +2330,12 @@ input[type="range"] {
     .arrows {
       gap: 15px; } }
   .arrows .arrows__arrow_left {
-    background: url(../assets/img/arrow_left.png); }
+    background: url(../assets/img/arrows/arrow_left.png); }
   .arrows .arrows__arrow_right {
-    background: url(../assets/img/arrow_right.png); }
+    background: url(../assets/img/arrows/arrow_right.png); }
     @media screen and (max-width: 420px) {
       .arrows .arrows__arrow_right {
-        background: url(../assets/img/arrow_right420.png); } }
+        background: url(../assets/img/arrows/arrow_right420.png); } }
 
 .parallax {
   width: 100%;

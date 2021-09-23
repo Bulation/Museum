@@ -189,12 +189,12 @@
         gap: 15px;
     }
     .arrows__arrow_left {
-        background: url(../assets/img/arrow_left.png);
+        background: url(../assets/img/arrows/arrow_left.png);
     }
     .arrows__arrow_right {
-        background: url(../assets/img/arrow_right.png);
+        background: url(../assets/img/arrows/arrow_right.png);
         @media screen and (max-width: 420px) {
-            background: url(../assets/img/arrow_right420.png);
+            background: url(../assets/img/arrows/arrow_right420.png);
         }
     }
 }
