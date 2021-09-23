@@ -653,14 +653,16 @@ button {
 form {
   background: #fff;
   position: fixed;
-  left: -50%;
+  left: -51%;
   top: 50%;
   width: 100%;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  z-index: 4; }
+  z-index: 4;
+  overflow-y: scroll;
+  max-height: 100vh; }
 
 .form_active {
   left: 50%; }
@@ -1119,7 +1121,9 @@ form {
   padding: 11px 85px;
   background: #710707;
   -ms-flex-item-align: end;
-      align-self: flex-end; }
+      align-self: flex-end;
+  position: relative;
+  overflow: hidden; }
   @media screen and (max-width: 1000px) {
     .form-button {
       font-family: Roboto-Regular;
@@ -1153,7 +1157,7 @@ form {
     position: absolute;
     -webkit-transform: rotate(-45deg);
             transform: rotate(-45deg);
-    width: 3px;
+    width: 1px;
     left: 15px;
     height: 31px;
     background: #030303; }
@@ -1162,11 +1166,33 @@ form {
     position: absolute;
     -webkit-transform: rotate(45deg);
             transform: rotate(45deg);
-    width: 3px;
+    width: 1px;
     left: 15px;
     height: 31px;
     background: #030303; }
 
+.ripple {
+  position: absolute;
+  background-color: #ffffff;
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  -webkit-transform: translate(-50%, -50%) scale(0);
+          transform: translate(-50%, -50%) scale(0);
+  -webkit-animation: scale 0.5s ease-out;
+          animation: scale 0.5s ease-out; }
+
+@-webkit-keyframes scale {
+  to {
+    -webkit-transform: translate(-50%, -50%) scale(2);
+            transform: translate(-50%, -50%) scale(2);
+    opacity: 0; } }
+
+@keyframes scale {
+  to {
+    -webkit-transform: translate(-50%, -50%) scale(2);
+            transform: translate(-50%, -50%) scale(2);
+    opacity: 0; } }
 .logo-link {
   color: #FFFFFF;
   letter-spacing: 5px;
