@@ -467,6 +467,13 @@ h3 {
   @media screen and (max-width: 768px) {
     .copyrights-wrapper {
       padding: 40px 0; } }
+  .copyrights-wrapper a {
+    border: 1px solid transparent;
+    -webkit-transition: color 1s, border-bottom 1s;
+    transition: color 1s, border-bottom 1s; }
+    .copyrights-wrapper a:hover {
+      color: #9D8665;
+      border-bottom: 1px solid #9D8665; }
 
 .link-wrapper {
   width: 76%;

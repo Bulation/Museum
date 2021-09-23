@@ -48,6 +48,14 @@
     @media screen and (max-width: 768px) {
         padding: 40px 0;
     }
+    a {
+        border: 1px solid transparent;
+        transition: color 1s,
+                    border-bottom 1s;
+        &:hover {
+            @include hover($color-primary);
+        }
+    }
 }
 .link-wrapper {
     width: 76%;
