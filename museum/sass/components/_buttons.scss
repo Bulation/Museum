@@ -149,7 +149,7 @@ button {
     color: #000000;
     background-color: #ffffff;
     text-align: center;
-    @include font(Roboto-Regular, 32px, 38px, 400);
+    @include font(Roboto-Regular, 32px, 38px, 300);
     margin-left: 14px;
 }
 .amount-number-buttons__plus {

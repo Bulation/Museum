@@ -12,7 +12,7 @@
 }
 %nav {
     display: flex;
-    @include font(Roboto-Thin, 22px, 26px, 200);
+    @include font(Roboto-Thin, 22px, 26px, 100);
     list-style-type: none;
     justify-content: space-between;
     align-items: center;

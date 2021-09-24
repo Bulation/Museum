@@ -26,7 +26,7 @@
 }
 .copyrights {
     width: 100%;
-    @include font(Roboto-Thin, 22px, 22px, 200);
+    @include font(Roboto-Thin, 22px, 22px, 100);
     letter-spacing: 2px;
     color: #fff;
     a {
@@ -34,7 +34,7 @@
     }
     border-top: 3px solid #666666;
     @media screen and (max-width: 420px) {
-        @include font(Roboto-Thin, 16px, 22px, 200);
+        @include font(Roboto-Thin, 16px, 22px, 100);
     }
 }
 .school {

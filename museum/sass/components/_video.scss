@@ -126,13 +126,6 @@ input[type="range"] {
 }
 .video-bar {
     background: linear-gradient(to right, $color-bg-video-active 0%, $color-bg-video-active 0%, $color-bg-video 0%, $color-bg-video 100%);
-}
-.video-bar-adaptive {
-    @media screen and (min-width: 769px) {
-        display: none;
-    }
-}
-.video-bar-desktop {
     flex-grow: 32;
     margin-right: 50px;
     cursor: pointer;

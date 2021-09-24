@@ -25,7 +25,7 @@
 .header-nav-list {
     @extend %nav;
     gap: 55px;
-    @include font(Roboto-Thin, 22px, 26px, 200);
+    @include font(Roboto-Thin, 22px, 26px, 100);
     @media screen and (max-width: 1024px) {
         flex-direction: column;
         align-items: flex-start;
@@ -76,9 +76,6 @@
         }
     }
 }
-
-
-
 .footer-nav {
     width: 33%;
     @media screen and (max-width: 1024px) {
@@ -95,12 +92,12 @@
     flex-direction: column;
     flex-wrap: wrap;
     align-items: flex-start;
-    @include font(Roboto-Thin, 22px, 26px, 200);
+    @include font(Roboto-Thin, 22px, 26px, 100);
     @media screen and (max-width: 768px) {
-        @include font(Roboto-Thin, 18px, 21px, 200);
+        @include font(Roboto-Thin, 18px, 21px, 100);
     }
     @media screen and (max-width: 420px) {
-        @include font(Roboto-Thin, 16px, 19px, 200);
+        @include font(Roboto-Thin, 16px, 19px, 100);
     }
     @media screen and (max-width: 420px) {
         height: 70px;
