@@ -2303,9 +2303,6 @@ input[type="range"] {
     height: 100%;
     background: -webkit-gradient(linear, left top, right top, from(#000000), color-stop(16.19%, rgba(0, 0, 0, 0.5)), color-stop(30.73%, rgba(0, 0, 0, 0)));
     background: linear-gradient(90deg, #000000 0%, rgba(0, 0, 0, 0.5) 16.19%, rgba(0, 0, 0, 0) 30.73%); }
-    @media screen and (max-width: 1024px) {
-      .welcome-block-slider-container::before {
-        width: 120px; } }
     @media screen and (max-width: 768px) {
       .welcome-block-slider-container::before {
         width: 0; } }
