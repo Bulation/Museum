@@ -2127,6 +2127,83 @@ input[type="range"] {
       .video-description .video-description__text {
         display: none; } }
 
+.youtube-videos {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 40px 0; }
+  @media screen and (min-width: 421px) and (max-width: 768px) {
+    .youtube-videos {
+      margin: 20px 0; } }
+
+.video-slider-pagination {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  list-style-type: none; }
+  .video-slider-pagination .video-slider__slide {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #999999;
+    margin: 0 10px;
+    cursor: pointer; }
+    @media screen and (max-width: 768px) {
+      .video-slider-pagination .video-slider__slide {
+        width: 10px;
+        height: 10px; } }
+    @media screen and (max-width: 420px) {
+      .video-slider-pagination .video-slider__slide {
+        width: 8px;
+        height: 8px; } }
+  .video-slider-pagination .video-slider__slide_active {
+    background-color: #333333; }
+  .video-slider-pagination .video-slider__previous-slide {
+    width: 10px;
+    height: 12px;
+    background: url(../assets/svg/previous.svg);
+    margin: 0 10px;
+    cursor: pointer; }
+    @media screen and (max-width: 420px) {
+      .video-slider-pagination .video-slider__previous-slide {
+        width: 7px;
+        height: 8px; } }
+  .video-slider-pagination .video-slider__next-slide {
+    width: 10px;
+    height: 12px;
+    margin: 0 10px;
+    background: url(../assets/svg/next.svg);
+    cursor: pointer; }
+    @media screen and (max-width: 420px) {
+      .video-slider-pagination .video-slider__next-slide {
+        width: 7px;
+        height: 8px; } }
+
+.video-frame {
+  width: 31%;
+  height: 254px; }
+  @media screen and (max-width: 1024px) {
+    .video-frame {
+      height: 170px; } }
+  @media screen and (max-width: 768px) {
+    .video-frame {
+      width: 48%;
+      height: 199px; }
+      .video-frame:last-child {
+        display: none; } }
+  @media screen and (max-width: 420px) {
+    .video-frame {
+      height: 101px; } }
+  .video-frame iframe {
+    width: 100%;
+    height: 100%; }
+
 .visiting-wrapper {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
