@@ -61,15 +61,18 @@
 .contacts-container__map {
     width: 66.66%;
     height: 620px;
+    background: url(../assets/img/contacts.png);
     @media screen and (max-width: 1024px) {
         height: 454px;
     }
     @media screen and (max-width: 768px) {
         width: 100%;
         height: 476px;
+        background: url(../assets/img/contacts-768.png);
     }
     @media screen and (max-width: 420px) {
         height: 248px;
+        background: url(../assets/img/contacts-420.png);
     }
 }
 .mapboxgl-ctrl-attrib-inner {
