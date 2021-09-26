@@ -472,11 +472,9 @@ h3 {
   @media screen and (max-width: 768px) {
     .copyrights-wrapper {
       padding: 40px 0; } }
-  .copyrights-wrapper .copyrights-wrapper__school {
-    margin-left: 15.5px; }
-    @media screen and (max-width: 600px) {
-      .copyrights-wrapper .copyrights-wrapper__school {
-        display: none; } }
+  @media screen and (max-width: 600px) {
+    .copyrights-wrapper .copyrights-wrapper__school {
+      display: none; } }
   .copyrights-wrapper a {
     border: 1px solid transparent;
     -webkit-transition: color 1s, border-bottom 1s;
