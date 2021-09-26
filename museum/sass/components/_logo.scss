@@ -28,9 +28,27 @@
             background-color: $color-primary;
         }
     }
+    
+}
+.header-logo-link {
+    &:before {
+        @media screen and (min-width: 421px) and (max-width: 768px) {
+            top: 30px;
+        }
+    }
+    @media screen and (min-width: 421px) and (max-width: 768px) {
+        padding-top: 20px;
+    }
+}
+.footer-logo-link {
+    &:before {
+        @media screen and (min-width: 421px) and (max-width: 768px) {
+            top: 10px;
+        }
+    }
 }
 .logo-link__title {
-    margin-left: 70px;
+    margin-left: 75px;
     @media screen and (max-width: 420px) {
         margin-left: 45px;
     }

@@ -229,6 +229,9 @@ input[type="range"] {
             height: 8px;
         }
     }
+    @media screen and (min-width: 421px) and (max-width: 768px) {
+        margin-bottom: 40px;
+    }
 }
 .video-frame {
     width: 31%;

@@ -8,7 +8,7 @@
 .footer-container {
     @extend %layout;
     flex-wrap: nowrap;
-    padding: 75px 0 50px;
+    padding: 75px 0 25px;
     @media screen and (max-width: 1024px) {
         gap: 45px;
         padding-top: 60px;
@@ -33,13 +33,11 @@
         color: #fff;
     }
     border-top: 3px solid #666666;
+    @media screen and (max-width: 768px) {
+        border-top: 1px solid #666666;
+    }
     @media screen and (max-width: 420px) {
         @include font(Roboto-Thin, 16px, 22px, 100);
-    }
-}
-.school {
-    @media screen and (max-width: 600px) {
-        display: none;
     }
 }
 .copyrights-wrapper {
@@ -47,6 +45,12 @@
     padding: 50px 0;
     @media screen and (max-width: 768px) {
         padding: 40px 0;
+    }
+    .copyrights-wrapper__school {
+        margin-left: 15.5px;
+        @media screen and (max-width: 600px) {
+            display: none;
+        }
     }
     a {
         border: 1px solid transparent;
@@ -58,11 +62,14 @@
     }
 }
 .link-wrapper {
-    width: 76%;
+    width: 76.5%;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     gap: 40px;
+    @media screen and (max-width: 768px) {
+        width: 59%;
+    }
     @media screen and (max-width: 700px) {
         width: 100%;
     }

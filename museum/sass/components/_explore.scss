@@ -5,11 +5,14 @@
     }
 }
 .explore-description {
-    width: 48%;
+    width: 47.7%;
     margin-right: 60px;
     @media screen and (max-width: 1440px) {
         width: 100%;
         margin-right: 0;
+    }
+    @media screen and (max-width: 1024px) {
+        margin-bottom: 62px;
     }
     @media screen and (max-width: 768px) {
         width: calc(100% - 40px);

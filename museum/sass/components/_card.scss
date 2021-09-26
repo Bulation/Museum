@@ -2,7 +2,7 @@
     color: #000000;
     width: 30.5%;
     .card__text {
-        margin: 10px 0;
+        margin-top: 10px;
     }
     .card__title {
         width: 100%;
@@ -25,9 +25,6 @@
         }
         @media screen and (max-width: 1024px) {
             letter-spacing: 3px;
-        }
-        @media screen and (max-width: 768px) {
-            margin-top: 15px;
         }
         @media screen and (max-width: 420px) {
             @include font(Forum, 18px, 20px, 400);
@@ -79,6 +76,7 @@
 .img-container {
     width: 100%;
     .img-container__img {
+        display: block;
         max-width: 100%;
     }
 }

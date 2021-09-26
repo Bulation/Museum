@@ -1,5 +1,8 @@
 .logo-link__title {
     @include font(Forum, 28px, 31px, 400);
+    @media screen and (max-width: 768px) {
+        @include font(Forum, 28px, 50px, 400);
+    }
     @media screen and (max-width: 420px) {
         @include font(Forum, 16px, 18px, 400);
     }

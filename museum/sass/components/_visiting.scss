@@ -1,11 +1,14 @@
 .visiting-wrapper {
     flex-direction: column;
+    @media screen and (min-width:421px) and (max-width: 768px) {
+        padding-bottom: 80px;
+    }
 }
 .title-underline::before {
     content: "";
     position: absolute;
     width: 100%;
-    bottom: -30px;
+    bottom: -25px;
     height: 3px;
     background-color: #710707;
     @media screen and (max-width: 1024px) {
@@ -25,10 +28,10 @@
     @media screen and (max-width: 1024px) {
         justify-content: space-evenly;
         padding-top: 83px;
-        gap: 45px 0;
+        gap: 60px 0;
     }
     @media screen and (max-width: 768px) {
-        gap: 30px 0;
+        gap: 40px 0;
         padding-top: 63px;
     }
 }
