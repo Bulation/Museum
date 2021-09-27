@@ -1233,7 +1233,11 @@ form {
   -ms-flex-item-align: end;
       align-self: flex-end;
   position: relative;
-  overflow: hidden; }
+  overflow: hidden;
+  -webkit-transition: background 0.3s;
+  transition: background 0.3s; }
+  .form-button:hover {
+    background: #9D8665; }
   @media screen and (max-width: 1000px) {
     .form-button {
       font-family: Roboto-Regular;

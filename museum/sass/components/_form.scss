@@ -438,6 +438,10 @@ form {
     align-self: flex-end;
     position: relative;
     overflow: hidden;
+    transition: background 0.3s;
+    &:hover {
+        background: $color-primary;
+    }
     @media screen and (max-width: 1000px) {
         @include font(Roboto-Regular, 20px, 23px, 300);
     }
