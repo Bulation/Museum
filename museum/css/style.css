@@ -1438,12 +1438,19 @@ form {
       width: 280px; } }
   .card:hover .card__title::before {
     width: 100%; }
+  .card:hover .img-container__img {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1); }
 
 .img-container {
   width: 100%; }
   .img-container .img-container__img {
     display: block;
-    max-width: 100%; }
+    max-width: 100%;
+    -webkit-transition: -webkit-transform 1s;
+    transition: -webkit-transform 1s;
+    transition: transform 1s;
+    transition: transform 1s, -webkit-transform 1s; }
 
 .contacts-wrapper {
   -webkit-box-orient: vertical;
@@ -2233,8 +2240,12 @@ input[type="range"] {
     height: 12px;
     border-radius: 50%;
     background-color: #999999;
+    -webkit-transition: background 0.2s ease-out;
+    transition: background 0.2s ease-out;
     margin: 0 10px;
     cursor: pointer; }
+    .video-slider-pagination .video-slider__slide:hover {
+      background-color: #333333; }
     @media screen and (max-width: 768px) {
       .video-slider-pagination .video-slider__slide {
         width: 10px;
@@ -2520,7 +2531,10 @@ input[type="range"] {
 .slide__bullet {
   width: 16px;
   height: 16px;
-  background-color: #ffffff; }
+  background-color: #ffffff;
+  cursor: pointer;
+  -webkit-transition: background 0.2s ease-out;
+  transition: background 0.2s ease-out; }
   @media screen and (max-width: 1024px) {
     .slide__bullet {
       width: 12px;
@@ -2529,6 +2543,8 @@ input[type="range"] {
     .slide__bullet {
       width: 7px;
       height: 7px; } }
+  .slide__bullet:hover {
+    background-color: #D2B183; }
 
 .carousel-pagination {
   display: -webkit-box;
@@ -2561,10 +2577,14 @@ input[type="range"] {
   gap: 20px; }
   .arrows .arrows__arrow {
     width: 30px;
-    height: 8px; }
+    height: 8px;
+    -webkit-transition: opacity 0.2s ease-out;
+    transition: opacity 0.2s ease-out; }
     @media screen and (max-width: 420px) {
       .arrows .arrows__arrow {
         width: 20px; } }
+    .arrows .arrows__arrow:hover {
+      opacity: 0.5; }
   @media screen and (max-width: 420px) {
     .arrows {
       gap: 15px; } }

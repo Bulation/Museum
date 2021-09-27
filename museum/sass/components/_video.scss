@@ -195,8 +195,12 @@ input[type="range"] {
         height: 12px;
         border-radius: 50%;
         background-color: #999999;
+        transition: background 0.2s ease-out;
         margin: 0 10px;
         cursor: pointer;
+        &:hover {
+            background-color: #333333;
+        }
         @media screen and (max-width: 768px) {
             width: 10px;
             height: 10px;

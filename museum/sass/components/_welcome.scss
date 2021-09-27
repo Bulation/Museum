@@ -148,6 +148,8 @@
     width: 16px;
     height: 16px;
     background-color: #ffffff;
+    cursor: pointer;
+    transition: background 0.2s ease-out;;
     @media screen and (max-width: 1024px) {
         width: 12px;
         height: 12px;
@@ -155,6 +157,9 @@
     @media screen and (max-width: 420px) {
         width: 7px;
         height: 7px;
+    }
+    &:hover {
+        background-color: #D2B183;
     }
 }
 
@@ -179,8 +184,12 @@
     .arrows__arrow {
         width: 30px;
         height: 8px;
+        transition: opacity 0.2s ease-out;
         @media screen and (max-width: 420px) {
             width: 20px;
+        }
+        &:hover {
+            opacity: 0.5;
         }
     }
     @media screen and (max-width: 420px) {
