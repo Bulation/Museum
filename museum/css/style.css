@@ -411,6 +411,9 @@ h3 {
     width: -moz-fit-content;
     width: fit-content; }
   .footer-nav-list .footer-nav-list__link {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
     color: #fff;
     border: 1px solid transparent;
     -webkit-transition: color 1s, border-bottom 1s;
@@ -2145,8 +2148,8 @@ input[type="range"] {
       height: 4px; } }
 
 .video-bar {
-  background: -webkit-gradient(linear, left top, right top, from(#710707), color-stop(0%, #710707), color-stop(0%, #C4C4C4), to(#C4C4C4));
-  background: linear-gradient(to right, #710707 0%, #710707 0%, #C4C4C4 0%, #C4C4C4 100%);
+  background: -webkit-gradient(linear, left top, right top, from(#710707), color-stop(54%, #710707), color-stop(54%, #C4C4C4), to(#C4C4C4));
+  background: linear-gradient(to right, #710707 0%, #710707 54%, #C4C4C4 54%, #C4C4C4 100%);
   -webkit-box-flex: 32;
       -ms-flex-positive: 32;
           flex-grow: 32;
@@ -2168,8 +2171,8 @@ input[type="range"] {
           flex-grow: 1;
   cursor: pointer;
   margin-right: 50px;
-  background: -webkit-gradient(linear, left top, right top, from(#710707), color-stop(50%, #710707), color-stop(50%, #C4C4C4), to(#C4C4C4));
-  background: linear-gradient(to right, #710707 0%, #710707 50%, #C4C4C4 50%, #C4C4C4 100%); }
+  background: -webkit-gradient(linear, left top, right top, from(#710707), color-stop(44%, #710707), color-stop(44%, #C4C4C4), to(#C4C4C4));
+  background: linear-gradient(to right, #710707 0%, #710707 44%, #C4C4C4 44%, #C4C4C4 100%); }
   @media screen and (max-width: 1024px) {
     .volume-bar {
       margin-right: 30px; } }
