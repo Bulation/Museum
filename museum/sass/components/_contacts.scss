@@ -1,5 +1,8 @@
 .contacts-wrapper {
     flex-direction: column;
+    @media screen and (min-width: 421px) and (max-width: 768px) {
+        padding-bottom: 67px;
+    }
 }
 .contacts-container {
     @extend %layout;
