@@ -802,247 +802,266 @@ form {
       -webkit-box-direction: normal;
       -ms-flex-direction: column;
       flex-direction: column; } }
-  .form-container .booking-form-header {
-    border-bottom: 3px solid #740C11; }
-    .form-container .booking-form-header .booking-form-header__text {
-      margin-bottom: 10px;
-      color: #710707; }
-    .form-container .booking-form-header .booking-form-header__title {
-      letter-spacing: 0;
-      position: relative;
-      font-family: Forum;
-      font-size: 50px;
-      line-height: 55px;
-      font-weight: 300;
-      margin-bottom: 15px; }
-      @media screen and (max-width: 420px) {
-        .form-container .booking-form-header .booking-form-header__title {
-          font-family: Forum;
-          font-size: 32px;
-          line-height: 35px;
-          font-weight: 300; } }
-      .form-container .booking-form-header .booking-form-header__title:before {
-        content: '';
-        width: 85px;
-        height: 41px;
-        position: absolute;
-        top: -41px;
-        background: url(../assets/svg/form/formlogo.svg); }
-  .form-container .booking-form-timing {
-    width: 190px;
-    height: 45px;
-    position: relative; }
-    .form-container .booking-form-timing::before {
-      position: absolute;
-      left: 45px;
-      top: 13px; }
-    .form-container .booking-form-timing::-webkit-datetime-edit {
-      opacity: 0; }
-    @media screen and (max-width: 1000px) {
-      .form-container .booking-form-timing {
-        width: 251px; } }
-    @media screen and (max-width: 600px) {
-      .form-container .booking-form-timing {
-        width: 100%; } }
-  .form-container .booking-form-date {
-    margin-right: 15px;
-    background: url(../assets/svg/form/calendar.svg) no-repeat 15px 15px; }
-    .form-container .booking-form-date::before {
-      content: "Date"; }
-    .form-container .booking-form-date:-webkit-calendar-picker-indicator {
-      background: url(../assets/svg/form/date.svg) no-repeat 0 5px; }
-    @media screen and (max-width: 1000px) {
-      .form-container .booking-form-date {
-        margin-right: 23px; } }
-  .form-container .booking-form-time {
-    background: url(../assets/svg/form/clock.svg) no-repeat 15px 15px; }
-    .form-container .booking-form-time::before {
-      content: "Time"; }
-    .form-container .booking-form-time::-webkit-calendar-picker-indicator {
-      background: url(../assets/svg/form/date.svg) no-repeat 0px 5px;
-      width: 22px; }
-    @media screen and (max-width: 600px) {
-      .form-container .booking-form-time {
-        margin-top: 20px; } }
-  .form-container .booking-form-main {
-    padding-top: 60px; }
-    .form-container .booking-form-main .booking-form__input {
-      margin-top: 20px;
-      padding: 13px 0 13px 43px;
-      width: 100%; }
-      .form-container .booking-form-main .booking-form__input::-webkit-input-placeholder {
-        color: #030303; }
-      .form-container .booking-form-main .booking-form__input:-ms-input-placeholder {
-        color: #030303; }
-      .form-container .booking-form-main .booking-form__input::-ms-input-placeholder {
-        color: #030303; }
-      .form-container .booking-form-main .booking-form__input::placeholder {
-        color: #030303; }
-    @media screen and (max-width: 1000px) {
-      .form-container .booking-form-main {
-        padding-top: 40px; } }
-  .form-container .booking {
-    padding-top: 41px;
-    max-width: 400px;
-    margin-right: 40px; }
-    @media screen and (max-width: 1000px) {
-      .form-container .booking {
-        max-width: 530px;
-        margin: 0 auto;
-        padding-bottom: 51px; } }
-    @media screen and (max-width: 600px) {
-      .form-container .booking {
-        width: 100%; } }
-  .form-container .booking-form-name {
-    background: url(../assets/svg/form/name.svg) no-repeat 15px 15px; }
-  .form-container .booking-form-email {
-    background: url(../assets/svg/form/email.svg) no-repeat 15px 17px; }
-  .form-container .booking-form-phone {
-    background: url(../assets/svg/form/phone.svg) no-repeat 15px 11px; }
-  .form-container .form-entry-ticket {
-    border: 1px solid #030303;
-    padding: 10px 15px 15px; }
-    .form-container .form-entry-ticket .form-entry-ticket__title {
-      font-family: Forum;
-      font-size: 18px;
-      line-height: 20px;
-      font-weight: 300;
-      color: #9D8665;
-      margin: 0;
-      padding-bottom: 5px;
-      border-bottom: 2px solid #740C11; }
-  .form-container .ticket-basic {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
-    margin: 15px 0 18px 0; }
-  .form-container .ticket-number-buttons {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex; }
-    .form-container .ticket-number-buttons .ticket-number-buttons__minus, .form-container .ticket-number-buttons .ticket-number-buttons__plus {
-      width: 35px;
-      height: 25px;
-      color: #ffffff;
-      background-color: #000000; }
-    .form-container .ticket-number-buttons .ticket-number-buttons__number {
-      width: 35px;
-      height: 25px;
-      color: #000000;
-      text-align: center;
-      background-color: #ffffff; }
-      .form-container .ticket-number-buttons .ticket-number-buttons__number::-webkit-inner-spin-button {
-        display: none; }
-  .form-container .ticket-senior {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
-    justify-content: space-between; }
-  .form-container .select-container {
+
+.booking-form-header {
+  border-bottom: 3px solid #740C11; }
+  .booking-form-header .booking-form-header__text {
+    margin-bottom: 10px;
+    color: #710707; }
+  .booking-form-header .booking-form-header__title {
+    letter-spacing: 0;
     position: relative;
-    margin: 20px 0; }
-    .form-container .select-container::after {
-      position: absolute;
+    font-family: Forum;
+    font-size: 50px;
+    line-height: 55px;
+    font-weight: 300;
+    margin-bottom: 15px; }
+    @media screen and (max-width: 420px) {
+      .booking-form-header .booking-form-header__title {
+        font-family: Forum;
+        font-size: 32px;
+        line-height: 35px;
+        font-weight: 300; } }
+    .booking-form-header .booking-form-header__title:before {
       content: '';
-      width: 17px;
-      height: 17px;
-      right: 15px;
-      top: 15px;
-      background: url(../assets/svg/form/date.svg); }
-  .form-container .booking-form-tickets {
-    display: block;
-    width: 100%;
-    position: relative;
-    z-index: 1;
-    border: 1px solid #030303;
-    padding: 13px 0 13px 45px;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    background: url(../assets/svg/form/ticket.svg) no-repeat;
-    background-position: 15px 15px; }
-    .form-container .booking-form-tickets:focus {
-      outline: none; }
-    .form-container .booking-form-tickets option {
-      font-family: Roboto-Light;
-      font-size: 18px;
-      line-height: 21px;
-      font-weight: 300;
-      display: block; }
-      .form-container .booking-form-tickets option:first-child {
-        display: none; }
-  .form-container .select-container-focus::after {
+      width: 85px;
+      height: 41px;
+      position: absolute;
+      top: -41px;
+      background: url(../assets/svg/form/formlogo.svg); }
+
+.booking-form-timing {
+  width: 190px;
+  height: 45px;
+  position: relative; }
+  .booking-form-timing::before {
+    position: absolute;
+    left: 45px;
+    top: 13px; }
+  .booking-form-timing::-webkit-datetime-edit {
+    opacity: 0; }
+  @media screen and (max-width: 1000px) {
+    .booking-form-timing {
+      width: 251px; } }
+  @media screen and (max-width: 600px) {
+    .booking-form-timing {
+      width: 100%; } }
+
+.booking-form-date {
+  margin-right: 15px;
+  background: url(../assets/svg/form/calendar.svg) no-repeat 15px 15px; }
+  .booking-form-date::before {
+    content: "Date"; }
+  .booking-form-date:-webkit-calendar-picker-indicator {
+    background: url(../assets/svg/form/date.svg) no-repeat 0 5px; }
+  @media screen and (max-width: 1000px) {
+    .booking-form-date {
+      margin-right: 23px; } }
+
+.booking-form-time {
+  background: url(../assets/svg/form/clock.svg) no-repeat 15px 15px; }
+  .booking-form-time::before {
+    content: "Time"; }
+  .booking-form-time::-webkit-calendar-picker-indicator {
+    background: url(../assets/svg/form/date.svg) no-repeat 0px 5px;
+    width: 22px; }
+  @media screen and (max-width: 600px) {
+    .booking-form-time {
+      margin-top: 20px; } }
+
+.booking-form-main {
+  padding-top: 60px; }
+  .booking-form-main .booking-form__input {
+    margin-top: 20px;
+    padding: 13px 0 13px 43px;
+    width: 100%; }
+    .booking-form-main .booking-form__input::-webkit-input-placeholder {
+      color: #030303; }
+    .booking-form-main .booking-form__input:-ms-input-placeholder {
+      color: #030303; }
+    .booking-form-main .booking-form__input::-ms-input-placeholder {
+      color: #030303; }
+    .booking-form-main .booking-form__input::placeholder {
+      color: #030303; }
+  @media screen and (max-width: 1000px) {
+    .booking-form-main {
+      padding-top: 40px; } }
+
+.booking {
+  padding-top: 41px;
+  max-width: 400px;
+  margin-right: 40px; }
+  @media screen and (max-width: 1000px) {
+    .booking {
+      max-width: 530px;
+      margin: 0 auto;
+      padding-bottom: 51px; } }
+  @media screen and (max-width: 600px) {
+    .booking {
+      width: 100%; } }
+
+.booking-form-name {
+  background: url(../assets/svg/form/name.svg) no-repeat 15px 15px; }
+
+.booking-form-email {
+  background: url(../assets/svg/form/email.svg) no-repeat 15px 17px; }
+
+.booking-form-phone {
+  background: url(../assets/svg/form/phone.svg) no-repeat 15px 11px; }
+
+.form-entry-ticket {
+  border: 1px solid #030303;
+  padding: 10px 15px 15px; }
+  .form-entry-ticket .form-entry-ticket__title {
+    font-family: Forum;
+    font-size: 18px;
+    line-height: 20px;
+    font-weight: 300;
+    color: #9D8665;
+    margin: 0;
+    padding-bottom: 5px;
+    border-bottom: 2px solid #740C11; }
+
+.ticket-basic {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  margin: 15px 0 18px 0; }
+
+.ticket-number-buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+  .ticket-number-buttons .ticket-number-buttons__minus, .ticket-number-buttons .ticket-number-buttons__plus {
+    width: 35px;
+    height: 25px;
+    color: #ffffff;
+    background-color: #000000; }
+  .ticket-number-buttons .ticket-number-buttons__number {
+    width: 35px;
+    height: 25px;
+    color: #000000;
+    text-align: center;
+    background-color: #ffffff; }
+    .ticket-number-buttons .ticket-number-buttons__number::-webkit-inner-spin-button {
+      display: none; }
+
+.ticket-senior {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between; }
+
+.select-container {
+  position: relative;
+  margin: 20px 0; }
+  .select-container::after {
     position: absolute;
     content: '';
     width: 17px;
     height: 17px;
     right: 15px;
     top: 15px;
-    background: url(../assets/svg/form/date_active.svg); }
-  .form-container .select-list {
-    position: relative;
-    top: 45px;
-    left: 0; }
-  .form-container .form-overview {
-    padding: 25px 30px;
-    width: 530px;
-    margin: 0 auto;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    border: 1px solid #030303; }
-    @media screen and (max-width: 1000px) {
-      .form-container .form-overview {
-        padding: 25px 15px; } }
-    @media screen and (max-width: 600px) {
-      .form-container .form-overview {
-        width: 100%; } }
-  .form-container .form-overview-header {
-    background: url(../assets/img/formlouvre.jpg) no-repeat right top;
+    background: url(../assets/svg/form/date.svg); }
+
+.booking-form-tickets {
+  display: block;
+  width: 100%;
+  position: relative;
+  z-index: 1;
+  border: 1px solid #030303;
+  padding: 13px 0 13px 45px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: url(../assets/svg/form/ticket.svg) no-repeat;
+  background-position: 15px 15px; }
+  .booking-form-tickets:focus {
+    outline: none; }
+  .booking-form-tickets option {
     font-family: Roboto-Light;
     font-size: 18px;
     line-height: 21px;
-    font-weight: 300; }
+    font-weight: 300;
+    display: block; }
+    .booking-form-tickets option:first-child {
+      display: none; }
+
+.select-container-focus::after {
+  position: absolute;
+  content: '';
+  width: 17px;
+  height: 17px;
+  right: 15px;
+  top: 15px;
+  background: url(../assets/svg/form/date_active.svg); }
+
+.select-list {
+  position: relative;
+  top: 45px;
+  left: 0; }
+
+.form-overview {
+  padding: 25px 30px;
+  width: 530px;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  border: 1px solid #030303; }
+  @media screen and (max-width: 1000px) {
+    .form-overview {
+      padding: 25px 15px; } }
   @media screen and (max-width: 600px) {
-    .form-container {
+    .form-overview {
+      width: 100%; } }
+
+.form-overview-header {
+  background: url(../assets/img/formlouvre.jpg) no-repeat right top;
+  font-family: Roboto-Light;
+  font-size: 18px;
+  line-height: 21px;
+  font-weight: 300; }
+  @media screen and (max-width: 600px) {
+    .form-overview-header {
       background-size: 120px 96px; } }
-  .form-container .form-overview__title-overview {
+  .form-overview-header .form-overview__title-overview {
     font-family: Roboto-Medium;
     font-size: 32px;
     line-height: 38px;
     font-weight: 500;
     letter-spacing: 0;
     text-transform: none; }
-  .form-container .form-overview__title-louvre {
+  .form-overview-header .form-overview__title-louvre {
     font-family: Roboto-Medium;
     font-size: 22px;
     line-height: 26px;
     font-weight: 500;
     margin: 2px 0 10px 0; }
-  .form-container .form-overview__text {
+  .form-overview-header .form-overview__text {
     position: relative;
     padding-left: 30px; }
-  .form-container:before {
-    position: absolute;
-    top: 0;
-    left: 0;
-    content: '';
-    width: 15px;
-    height: 15px; }
-  .form-container .form-overview__date::before {
+    .form-overview-header .form-overview__text:before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      content: '';
+      width: 15px;
+      height: 15px; }
+  .form-overview-header .form-overview__date::before {
     background: url(../assets/svg/form/calendar.svg); }
-  .form-container .form-overview__time {
+  .form-overview-header .form-overview__time {
     margin: 5px 0; }
-    .form-container .form-overview__time::before {
+    .form-overview-header .form-overview__time::before {
       background: url(../assets/svg/form/clock.svg); }
 
 .form-overview__ticket::before {
