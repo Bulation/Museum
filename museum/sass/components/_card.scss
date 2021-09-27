@@ -71,6 +71,9 @@
                 width: 100%;
             }
         }
+        .img-container__img {
+            transform: scale(1.1);
+        }
     }
 }
 .img-container {
@@ -78,6 +81,7 @@
     .img-container__img {
         display: block;
         max-width: 100%;
+        transition: transform 1s;
     }
 }
 
