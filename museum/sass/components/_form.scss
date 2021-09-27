@@ -34,6 +34,7 @@ form {
     }
     @media screen and (max-width: 1000px) {
         flex-direction: column;
+        width: calc(100% - 60px);
     }
 }
 
@@ -111,7 +112,7 @@ form {
     padding-top: 60px;
     .booking-form__input {
         margin-top: 20px;
-        padding: 13px 0 13px 43px;
+        padding: 11px 0 11px 43px;
         width: 100%;
     }
     .booking-form__input::placeholder {
