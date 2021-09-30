@@ -1,8 +1,9 @@
 @mixin font($family, $size, $line-height, $weight) {
-    font-family: $family;
+    font-family: $family, Verdana, Arial, sans-serif;
     font-size: $size;
     line-height: $line-height;
     font-weight: $weight;
+    font-display: swap;
 }
 @mixin hover($color-primary) {
     color: $color-primary;
