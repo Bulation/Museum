@@ -21,10 +21,11 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  font-family: Roboto-Thin;
+  font-family: Roboto-Thin, Verdana, Arial, sans-serif;
   font-size: 22px;
   line-height: 26px;
   font-weight: 100;
+  font-display: swap;
   list-style-type: none;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
@@ -40,76 +41,87 @@ a {
   display: block; }
 
 .logo-link__title {
-  font-family: Forum;
+  font-family: Forum, Verdana, Arial, sans-serif;
   font-size: 28px;
   line-height: 31px;
   font-weight: 400;
+  font-display: swap;
   text-transform: uppercase; }
   @media screen and (max-width: 768px) {
     .logo-link__title {
-      font-family: Forum;
+      font-family: Forum, Verdana, Arial, sans-serif;
       font-size: 28px;
       line-height: 50px;
-      font-weight: 400; } }
+      font-weight: 400;
+      font-display: swap; } }
   @media screen and (max-width: 420px) {
     .logo-link__title {
-      font-family: Forum;
+      font-family: Forum, Verdana, Arial, sans-serif;
       font-size: 16px;
       line-height: 18px;
-      font-weight: 400; } }
+      font-weight: 400;
+      font-display: swap; } }
 
 h2 {
-  font-family: Forum;
+  font-family: Forum, Verdana, Arial, sans-serif;
   font-size: 80px;
   line-height: 90px;
   font-weight: 400;
+  font-display: swap;
   text-transform: uppercase;
   letter-spacing: 5px;
   position: relative; }
   @media screen and (max-width: 1024px) {
     h2 {
-      font-family: Forum;
+      font-family: Forum, Verdana, Arial, sans-serif;
       font-size: 50px;
       line-height: 75px;
-      font-weight: 400; } }
+      font-weight: 400;
+      font-display: swap; } }
   @media screen and (max-width: 768px) {
     h2 {
-      font-family: Forum;
+      font-family: Forum, Verdana, Arial, sans-serif;
       font-size: 40px;
       line-height: 60px;
-      font-weight: 400; } }
+      font-weight: 400;
+      font-display: swap; } }
   @media screen and (max-width: 420px) {
     h2 {
-      font-family: Forum;
+      font-family: Forum, Verdana, Arial, sans-serif;
       font-size: 28px;
       line-height: 40px;
-      font-weight: 400; } }
+      font-weight: 400;
+      font-display: swap; } }
 
 h3 {
-  font-family: Forum;
+  font-family: Forum, Verdana, Arial, sans-serif;
   font-size: 32px;
   line-height: 35px;
   font-weight: 400;
+  font-display: swap;
   letter-spacing: 5px;
   text-transform: uppercase; }
   @media screen and (max-width: 1024px) {
     h3 {
-      font-family: Forum;
+      font-family: Forum, Verdana, Arial, sans-serif;
       font-size: 28px;
       line-height: 31px;
-      font-weight: 400; } }
+      font-weight: 400;
+      font-display: swap; } }
   @media screen and (max-width: 768px) {
     h3 {
-      font-family: Forum;
+      font-family: Forum, Verdana, Arial, sans-serif;
       font-size: 22px;
       line-height: 24px;
-      font-weight: 400; } }
+      font-weight: 400;
+      font-display: swap; } }
   @media screen and (max-width: 420px) {
     h3 {
-      font-family: Forum;
+      font-family: Forum, Verdana, Arial, sans-serif;
       font-size: 16px;
       line-height: 35px;
-      font-weight: 400; } }
+      font-weight: 400;
+      font-display: swap; } }
 
 @font-face {
   font-family: Roboto-Thin;
@@ -305,10 +317,11 @@ h3 {
 
 .header-nav-list {
   gap: 55px;
-  font-family: Roboto-Thin;
+  font-family: Roboto-Thin, Verdana, Arial, sans-serif;
   font-size: 22px;
   line-height: 26px;
-  font-weight: 100; }
+  font-weight: 100;
+  font-display: swap; }
   @media screen and (max-width: 1024px) {
     .header-nav-list {
       -webkit-box-orient: vertical;
@@ -321,10 +334,11 @@ h3 {
       width: calc(100% - 110px);
       margin: 0 auto;
       gap: 25px;
-      font-family: Roboto-Light;
+      font-family: Roboto-Light, Verdana, Arial, sans-serif;
       font-size: 20px;
       line-height: 23px;
-      font-weight: 300; } }
+      font-weight: 300;
+      font-display: swap; } }
   @media screen and (max-width: 420px) {
     .header-nav-list {
       width: 310px; } }
@@ -383,28 +397,31 @@ h3 {
   -webkit-column-count: 2;
           column-count: 2;
   letter-spacing: 2px;
-  font-family: Roboto-Thin;
+  font-family: Roboto-Thin, Verdana, Arial, sans-serif;
   font-size: 22px;
   line-height: 26px;
-  font-weight: 100; }
+  font-weight: 100;
+  font-display: swap; }
   @media screen and (max-width: 768px) {
     .footer-nav-list {
       -webkit-column-gap: 75px;
               column-gap: 75px;
-      font-family: Roboto-Thin;
+      font-family: Roboto-Thin, Verdana, Arial, sans-serif;
       font-size: 18px;
       line-height: 21px;
-      font-weight: 100; } }
+      font-weight: 100;
+      font-display: swap; } }
   @media screen and (max-width: 420px) {
     .footer-nav-list {
       -webkit-column-gap: 19%;
               column-gap: 19%;
       -webkit-column-count: 3;
               column-count: 3;
-      font-family: Roboto-Thin;
+      font-family: Roboto-Thin, Verdana, Arial, sans-serif;
       font-size: 16px;
       line-height: 19px;
-      font-weight: 100; } }
+      font-weight: 100;
+      font-display: swap; } }
   .footer-nav-list .footer-nav-list__item {
     margin-bottom: 25px;
     width: -webkit-fit-content;
@@ -451,10 +468,11 @@ h3 {
 
 .copyrights {
   width: 100%;
-  font-family: Roboto-Thin;
+  font-family: Roboto-Thin, Verdana, Arial, sans-serif;
   font-size: 22px;
   line-height: 22px;
   font-weight: 100;
+  font-display: swap;
   letter-spacing: 2px;
   color: #fff;
   border-top: 3px solid #666666; }
@@ -465,10 +483,11 @@ h3 {
       border-top: 1px solid #666666; } }
   @media screen and (max-width: 420px) {
     .copyrights {
-      font-family: Roboto-Thin;
+      font-family: Roboto-Thin, Verdana, Arial, sans-serif;
       font-size: 16px;
       line-height: 22px;
-      font-weight: 100; } }
+      font-weight: 100;
+      font-display: swap; } }
 
 .copyrights-wrapper {
   -webkit-box-pack: justify;
@@ -632,10 +651,11 @@ button {
   padding: 12px 0;
   width: 175px;
   float: right;
-  font-family: Roboto-Light;
+  font-family: Roboto-Light, Verdana, Arial, sans-serif;
   font-size: 22px;
   line-height: 26px;
   font-weight: 300;
+  font-display: swap;
   letter-spacing: 2px;
   text-align: center;
   color: #fff;
@@ -655,20 +675,22 @@ button {
       margin-top: 40px; } }
   @media screen and (max-width: 420px) {
     .amount-buy {
-      font-family: Roboto-Light;
+      font-family: Roboto-Light, Verdana, Arial, sans-serif;
       font-size: 16px;
       line-height: 19px;
-      font-weight: 300; } }
+      font-weight: 300;
+      font-display: swap; } }
 
 .amount-number-buttons__minus, .amount-number-buttons__plus {
   width: 18px;
   color: #000000;
   background-color: #ffffff;
   text-align: center;
-  font-family: Roboto-Regular;
+  font-family: Roboto-Regular, Verdana, Arial, sans-serif;
   font-size: 32px;
   line-height: 38px;
   font-weight: 300;
+  font-display: swap;
   margin-left: 14px; }
 
 .amount-number-buttons__plus {
@@ -789,10 +811,11 @@ form {
       -ms-flex-pack: center;
           justify-content: center;
   color: #030303;
-  font-family: Roboto-Regular;
+  font-family: Roboto-Regular, Verdana, Arial, sans-serif;
   font-size: 18px;
   line-height: 21px;
-  font-weight: 300; }
+  font-weight: 300;
+  font-display: swap; }
   .form-container input {
     border: 1px solid #030303; }
     .form-container input:focus {
@@ -816,17 +839,19 @@ form {
   .booking-form-header .booking-form-header__title {
     letter-spacing: 0;
     position: relative;
-    font-family: Forum;
+    font-family: Forum, Verdana, Arial, sans-serif;
     font-size: 50px;
     line-height: 55px;
     font-weight: 300;
+    font-display: swap;
     margin-bottom: 15px; }
     @media screen and (max-width: 420px) {
       .booking-form-header .booking-form-header__title {
-        font-family: Forum;
+        font-family: Forum, Verdana, Arial, sans-serif;
         font-size: 32px;
         line-height: 35px;
-        font-weight: 300; } }
+        font-weight: 300;
+        font-display: swap; } }
     .booking-form-header .booking-form-header__title::before {
       content: '';
       width: 85px;
@@ -918,10 +943,11 @@ form {
   border: 1px solid #030303;
   padding: 10px 15px 15px; }
   .form-entry-ticket .form-entry-ticket__title {
-    font-family: Forum;
+    font-family: Forum, Verdana, Arial, sans-serif;
     font-size: 18px;
     line-height: 20px;
     font-weight: 300;
+    font-display: swap;
     color: #9D8665;
     margin: 0;
     padding-bottom: 5px;
@@ -989,10 +1015,11 @@ form {
   .booking-form-tickets:focus {
     outline: none; }
   .booking-form-tickets option {
-    font-family: Roboto-Light;
+    font-family: Roboto-Light, Verdana, Arial, sans-serif;
     font-size: 18px;
     line-height: 21px;
     font-weight: 300;
+    font-display: swap;
     display: block; }
     .booking-form-tickets option:first-child {
       display: none; }
@@ -1032,25 +1059,28 @@ form {
 
 .form-overview-header {
   background: url(../assets/img/formlouvre.jpg) no-repeat right top;
-  font-family: Roboto-Light;
+  font-family: Roboto-Light, Verdana, Arial, sans-serif;
   font-size: 18px;
   line-height: 21px;
-  font-weight: 300; }
+  font-weight: 300;
+  font-display: swap; }
   @media screen and (max-width: 600px) {
     .form-overview-header {
       background-size: 120px 96px; } }
   .form-overview-header .form-overview__title-overview {
-    font-family: Roboto-Medium;
+    font-family: Roboto-Medium, Verdana, Arial, sans-serif;
     font-size: 32px;
     line-height: 38px;
     font-weight: 500;
+    font-display: swap;
     letter-spacing: 0;
     text-transform: none; }
   .form-overview-header .form-overview__title-louvre {
-    font-family: Roboto-Medium;
+    font-family: Roboto-Medium, Verdana, Arial, sans-serif;
     font-size: 22px;
     line-height: 26px;
     font-weight: 500;
+    font-display: swap;
     margin: 2px 0 10px 0; }
   .form-overview-header .form-overview__text {
     position: relative;
@@ -1072,15 +1102,17 @@ form {
     background: url(../assets/svg/form/check.svg); }
 
 .form-overview-ticket-price {
-  font-family: Roboto-Regular;
+  font-family: Roboto-Regular, Verdana, Arial, sans-serif;
   font-size: 22px;
   line-height: 26px;
-  font-weight: 300; }
+  font-weight: 300;
+  font-display: swap; }
   .form-overview-ticket-price .ticket-description__count {
-    font-family: Roboto-Regular;
+    font-family: Roboto-Regular, Verdana, Arial, sans-serif;
     font-size: 18px;
     line-height: 21px;
     font-weight: 300;
+    font-display: swap;
     padding: 0 11px;
     margin-right: 10px;
     width: 32px;
@@ -1111,15 +1143,17 @@ form {
           justify-content: space-between;
   padding: 10px 0;
   border-top: 2px solid #740C11;
-  font-family: Roboto-Regular;
+  font-family: Roboto-Regular, Verdana, Arial, sans-serif;
   font-size: 32px;
   line-height: 38px;
-  font-weight: 300; }
+  font-weight: 300;
+  font-display: swap; }
   .form-overview-total-price .form-overview-total-price__euro {
-    font-family: Roboto-Medium;
+    font-family: Roboto-Medium, Verdana, Arial, sans-serif;
     font-size: 32px;
     line-height: 38px;
-    font-weight: 500; }
+    font-weight: 500;
+    font-display: swap; }
 
 .card-front {
   max-width: 360px;
@@ -1127,10 +1161,11 @@ form {
   z-index: 1;
   padding: 15px 20px 5px;
   background: #BCBCBC;
-  font-family: Roboto-Regular;
+  font-family: Roboto-Regular, Verdana, Arial, sans-serif;
   font-size: 12px;
   line-height: 14px;
-  font-weight: 300; }
+  font-weight: 300;
+  font-display: swap; }
   .card-front .card-front__number::-webkit-inner-spin-button, .card-front .card-front__number::-webkit-outer-spin-button {
     display: none; }
   .card-front input {
@@ -1198,19 +1233,21 @@ form {
     width: 100%;
     height: 35px; }
   .cvv .cvv__text {
-    font-family: Roboto-Regular;
+    font-family: Roboto-Regular, Verdana, Arial, sans-serif;
     font-size: 12px;
     line-height: 14px;
     font-weight: 300;
+    font-display: swap;
     text-align: center;
     margin-bottom: 5px; }
   .cvv .cvv__instruction {
     width: 55px;
     margin: 6px auto 0;
-    font-family: Roboto-Regular;
+    font-family: Roboto-Regular, Verdana, Arial, sans-serif;
     font-size: 10px;
     line-height: 12px;
-    font-weight: 300; }
+    font-weight: 300;
+    font-display: swap; }
 
 .cards .cards__visa {
   width: 55px;
@@ -1223,10 +1260,11 @@ form {
   background: url(../assets/svg/form/mastercard.svg); }
 
 .form-button {
-  font-family: Roboto-Regular;
+  font-family: Roboto-Regular, Verdana, Arial, sans-serif;
   font-size: 22px;
   line-height: 26px;
   font-weight: 300;
+  font-display: swap;
   color: #ffffff;
   margin-top: 56px;
   padding: 11px 85px;
@@ -1241,10 +1279,11 @@ form {
     background: #9D8665; }
   @media screen and (max-width: 1000px) {
     .form-button {
-      font-family: Roboto-Regular;
+      font-family: Roboto-Regular, Verdana, Arial, sans-serif;
       font-size: 20px;
       line-height: 23px;
-      font-weight: 300; } }
+      font-weight: 300;
+      font-display: swap; } }
   @media screen and (max-width: 600px) {
     .form-button {
       margin-top: 40px; } }
@@ -1388,50 +1427,57 @@ form {
         letter-spacing: 3px; } }
     @media screen and (max-width: 420px) {
       .card .card__title {
-        font-family: Forum;
+        font-family: Forum, Verdana, Arial, sans-serif;
         font-size: 18px;
         line-height: 20px;
         font-weight: 400;
+        font-display: swap;
         letter-spacing: 5px; } }
   @media screen and (min-width: 769px) and (max-width: 1024px) {
     .card .royal__title, .card .greek__title, .card .denon__title {
       letter-spacing: 5px; } }
   .card .card__virtual-tour {
-    font-family: Roboto-Thin;
+    font-family: Roboto-Thin, Verdana, Arial, sans-serif;
     font-size: 22px;
     line-height: 26px;
     font-weight: 100;
+    font-display: swap;
     margin-top: 20px; }
     @media screen and (max-width: 1024px) {
       .card .card__virtual-tour {
-        font-family: Roboto-Thin;
+        font-family: Roboto-Thin, Verdana, Arial, sans-serif;
         font-size: 20px;
         line-height: 23px;
-        font-weight: 100; } }
+        font-weight: 100;
+        font-display: swap; } }
     @media screen and (max-width: 768px) {
       .card .card__virtual-tour {
-        font-family: Roboto-Thin;
+        font-family: Roboto-Thin, Verdana, Arial, sans-serif;
         font-size: 18px;
         line-height: 21px;
         font-weight: 100;
+        font-display: swap;
         margin-top: 22px; } }
     @media screen and (max-width: 420px) {
       .card .card__virtual-tour {
-        font-family: Roboto-Thin;
+        font-family: Roboto-Thin, Verdana, Arial, sans-serif;
         font-size: 16px;
         line-height: 19px;
-        font-weight: 100; } }
+        font-weight: 100;
+        font-display: swap; } }
   .card .card__panorama-view {
-    font-family: Roboto-Thin;
+    font-family: Roboto-Thin, Verdana, Arial, sans-serif;
     font-size: 18px;
     line-height: 21px;
-    font-weight: 100; }
+    font-weight: 100;
+    font-display: swap; }
     @media screen and (max-width: 1024px) {
       .card .card__panorama-view {
-        font-family: Roboto-Thin;
+        font-family: Roboto-Thin, Verdana, Arial, sans-serif;
         font-size: 16px;
         line-height: 19px;
-        font-weight: 100; } }
+        font-weight: 100;
+        font-display: swap; } }
   @media screen and (max-width: 1024px) {
     .card {
       width: 34%; } }
@@ -1490,60 +1536,68 @@ form {
   width: -moz-fit-content;
   width: fit-content; }
   .address-container .address__title {
-    font-family: Roboto-Medium;
+    font-family: Roboto-Medium, Verdana, Arial, sans-serif;
     font-size: 28px;
     line-height: 33px;
     font-weight: 500;
+    font-display: swap;
     letter-spacing: 0;
     color: #000000;
     margin-bottom: 50px;
     text-transform: none; }
     @media screen and (max-width: 1024px) {
       .address-container .address__title {
-        font-family: Roboto-Medium;
+        font-family: Roboto-Medium, Verdana, Arial, sans-serif;
         font-size: 24px;
         line-height: 28px;
         font-weight: 500;
+        font-display: swap;
         margin-bottom: 35px; } }
     @media screen and (max-width: 768px) {
       .address-container .address__title {
-        font-family: Roboto-Medium;
+        font-family: Roboto-Medium, Verdana, Arial, sans-serif;
         font-size: 20px;
         line-height: 23px;
         font-weight: 500;
+        font-display: swap;
         margin-bottom: 40px; } }
     @media screen and (max-width: 420px) {
       .address-container .address__title {
-        font-family: Roboto-Medium;
+        font-family: Roboto-Medium, Verdana, Arial, sans-serif;
         font-size: 16px;
         line-height: 19px;
-        font-weight: 500; } }
+        font-weight: 500;
+        font-display: swap; } }
 
 .address {
-  font-family: Roboto-Light;
+  font-family: Roboto-Light, Verdana, Arial, sans-serif;
   font-size: 22px;
   line-height: 26px;
   font-weight: 300;
+  font-display: swap;
   color: #000000;
   font-style: normal; }
   @media screen and (max-width: 1024px) {
     .address {
-      font-family: Roboto-Light;
+      font-family: Roboto-Light, Verdana, Arial, sans-serif;
       font-size: 20px;
       line-height: 23px;
-      font-weight: 300; } }
+      font-weight: 300;
+      font-display: swap; } }
   @media screen and (max-width: 768px) {
     .address {
-      font-family: Roboto-Light;
+      font-family: Roboto-Light, Verdana, Arial, sans-serif;
       font-size: 18px;
       line-height: 21px;
-      font-weight: 300; } }
+      font-weight: 300;
+      font-display: swap; } }
   @media screen and (max-width: 420px) {
     .address {
-      font-family: Roboto-Light;
+      font-family: Roboto-Light, Verdana, Arial, sans-serif;
       font-size: 16px;
       line-height: 19px;
-      font-weight: 300; } }
+      font-weight: 300;
+      font-display: swap; } }
   .address .address__link {
     color: #000000;
     margin-top: 25px; }
@@ -1615,10 +1669,11 @@ form {
       margin-bottom: 63px; } }
 
 .explore__text {
-  font-family: Roboto-Light;
+  font-family: Roboto-Light, Verdana, Arial, sans-serif;
   font-size: 22px;
   line-height: 38.5px;
   font-weight: 300;
+  font-display: swap;
   margin: 23px 0; }
   .explore__text .explore__text_yellow {
     color: #CAAA7D; }
@@ -1791,10 +1846,11 @@ form {
 
 .payment-title {
   text-align: right;
-  font-family: Roboto-Bold;
+  font-family: Roboto-Bold, Verdana, Arial, sans-serif;
   font-size: 28px;
   line-height: 33px;
   font-weight: bold;
+  font-display: swap;
   letter-spacing: 0;
   margin-bottom: 50px;
   text-transform: none; }
@@ -1808,10 +1864,11 @@ form {
   @media screen and (max-width: 420px) {
     .payment-title {
       margin-bottom: 20px;
-      font-family: Roboto-Bold;
+      font-family: Roboto-Bold, Verdana, Arial, sans-serif;
       font-size: 16px;
       line-height: 19px;
       font-weight: bold;
+      font-display: swap;
       text-align: center; } }
 
 .ticket-payment-title {
@@ -1862,10 +1919,11 @@ form {
 .ticket-type .ticket-type__label {
   display: block;
   margin-top: 25px;
-  font-family: Roboto-Light;
+  font-family: Roboto-Light, Verdana, Arial, sans-serif;
   font-size: 22px;
   line-height: 26px;
   font-weight: 300;
+  font-display: swap;
   cursor: pointer;
   position: relative; }
 .ticket-type .ticket-type__radio {
@@ -1912,32 +1970,36 @@ form {
 
 .amount {
   width: 150px;
-  font-family: Roboto-Light;
+  font-family: Roboto-Light, Verdana, Arial, sans-serif;
   font-size: 22px;
   line-height: 26px;
-  font-weight: 300; }
+  font-weight: 300;
+  font-display: swap; }
   @media screen and (max-width: 1024px) {
     .amount {
       width: 175px; } }
   @media screen and (max-width: 420px) {
     .amount {
-      font-family: Roboto-Light;
+      font-family: Roboto-Light, Verdana, Arial, sans-serif;
       font-size: 16px;
       line-height: 19px;
-      font-weight: 300; } }
+      font-weight: 300;
+      font-display: swap; } }
 
 .amount-price {
-  font-family: Roboto-Bold;
+  font-family: Roboto-Bold, Verdana, Arial, sans-serif;
   font-size: 28px;
   line-height: 33px;
   font-weight: 700;
+  font-display: swap;
   letter-spacing: 1.65px; }
   @media screen and (max-width: 420px) {
     .amount-price {
-      font-family: Roboto-Bold;
+      font-family: Roboto-Bold, Verdana, Arial, sans-serif;
       font-size: 16px;
       line-height: 19px;
       font-weight: 700;
+      font-display: swap;
       text-align: center;
       letter-spacing: 0; } }
   @media screen and (max-width: 1024px) {
@@ -1977,10 +2039,11 @@ form {
     color: #000000;
     text-align: center;
     border: none;
-    font-family: Roboto-Light;
+    font-family: Roboto-Light, Verdana, Arial, sans-serif;
     font-size: 22px;
     line-height: 26px;
-    font-weight: 300; }
+    font-weight: 300;
+    font-display: swap; }
   @media screen and (max-width: 1024px) {
     .amount-number-buttons {
       width: 175px;
@@ -2210,10 +2273,11 @@ input[type="range"] {
         width: 100%;
         margin-top: 0; } }
   .video-description .video-description__text {
-    font-family: Roboto-Light;
+    font-family: Roboto-Light, Verdana, Arial, sans-serif;
     font-size: 22px;
     line-height: 38.5px;
     font-weight: 300;
+    font-display: swap;
     color: #000000;
     width: 50%; }
     @media screen and (max-width: 1024px) {
@@ -2328,10 +2392,11 @@ input[type="range"] {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  font-family: Roboto-Thin;
+  font-family: Roboto-Thin, Verdana, Arial, sans-serif;
   font-size: 22px;
   line-height: 26px;
   font-weight: 200;
+  font-display: swap;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -2395,32 +2460,36 @@ input[type="range"] {
     .welcome-block .welcome-block__title {
       text-align: center; } }
   .welcome-block .welcome-block__text {
-    font-family: Roboto-Light;
+    font-family: Roboto-Light, Verdana, Arial, sans-serif;
     font-size: 28px;
     line-height: 33px;
     font-weight: 300;
+    font-display: swap;
     margin: 25px 0 75px;
     letter-spacing: 2px; }
     @media screen and (max-width: 1024px) {
       .welcome-block .welcome-block__text {
-        font-family: Roboto-Light;
+        font-family: Roboto-Light, Verdana, Arial, sans-serif;
         font-size: 24px;
         line-height: 28px;
         font-weight: 300;
+        font-display: swap;
         margin: 25px 0 50px; } }
     @media screen and (max-width: 768px) {
       .welcome-block .welcome-block__text {
         text-align: center;
-        font-family: Roboto-Light;
+        font-family: Roboto-Light, Verdana, Arial, sans-serif;
         font-size: 20px;
         line-height: 23px;
-        font-weight: 300; } }
+        font-weight: 300;
+        font-display: swap; } }
     @media screen and (max-width: 420px) {
       .welcome-block .welcome-block__text {
-        font-family: Roboto-Light;
+        font-family: Roboto-Light, Verdana, Arial, sans-serif;
         font-size: 16px;
         line-height: 19px;
-        font-weight: 300; } }
+        font-weight: 300;
+        font-display: swap; } }
 
 .welcome-block-link {
   width: -webkit-fit-content;
@@ -2430,10 +2499,11 @@ input[type="range"] {
   background-color: #710707;
   border-radius: 10px;
   color: #FFFFFF;
-  font-family: Roboto-Thin;
+  font-family: Roboto-Thin, Verdana, Arial, sans-serif;
   font-size: 22px;
   line-height: 26px;
   font-weight: 300;
+  font-display: swap;
   letter-spacing: 2px;
   cursor: pointer;
   -webkit-transition: background-color 1s;
@@ -2443,10 +2513,11 @@ input[type="range"] {
   @media screen and (max-width: 1024px) {
     .welcome-block-link {
       padding: 18px 45px;
-      font-family: Roboto-Thin;
+      font-family: Roboto-Thin, Verdana, Arial, sans-serif;
       font-size: 20px;
       line-height: 23px;
-      font-weight: 300; } }
+      font-weight: 300;
+      font-display: swap; } }
   @media screen and (max-width: 768px) {
     .welcome-block-link {
       display: none; } }
@@ -2511,22 +2582,25 @@ input[type="range"] {
       padding: 20px 0; } }
 
 .welcome-slide-num {
-  font-family: Roboto;
+  font-family: Roboto, Verdana, Arial, sans-serif;
   font-size: 22px;
   line-height: 40px;
-  font-weight: 400; }
+  font-weight: 400;
+  font-display: swap; }
   @media screen and (max-width: 1024px) {
     .welcome-slide-num {
-      font-family: Roboto;
+      font-family: Roboto, Verdana, Arial, sans-serif;
       font-size: 20px;
       line-height: 40px;
-      font-weight: 400; } }
+      font-weight: 400;
+      font-display: swap; } }
   @media screen and (max-width: 420px) {
     .welcome-slide-num {
-      font-family: Roboto;
+      font-family: Roboto, Verdana, Arial, sans-serif;
       font-size: 16px;
       line-height: 40px;
-      font-weight: 400; } }
+      font-weight: 400;
+      font-display: swap; } }
   .welcome-slide-num .welcome-slide-num__separator {
     padding: 0 10px; }
     @media screen and (max-width: 420px) {
