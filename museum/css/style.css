@@ -2582,21 +2582,21 @@ input[type="range"] {
       padding: 20px 0; } }
 
 .welcome-slide-num {
-  font-family: Roboto, Verdana, Arial, sans-serif;
+  font-family: Roboto-Regular, Verdana, Arial, sans-serif;
   font-size: 22px;
   line-height: 40px;
   font-weight: 400;
   font-display: swap; }
   @media screen and (max-width: 1024px) {
     .welcome-slide-num {
-      font-family: Roboto, Verdana, Arial, sans-serif;
+      font-family: Roboto-Regular, Verdana, Arial, sans-serif;
       font-size: 20px;
       line-height: 40px;
       font-weight: 400;
       font-display: swap; } }
   @media screen and (max-width: 420px) {
     .welcome-slide-num {
-      font-family: Roboto, Verdana, Arial, sans-serif;
+      font-family: Roboto-Regular, Verdana, Arial, sans-serif;
       font-size: 16px;
       line-height: 40px;
       font-weight: 400;

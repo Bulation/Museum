@@ -129,12 +129,12 @@
 }
 
 .welcome-slide-num {
-    @include font(Roboto, 22px, 40px, 400);
+    @include font(Roboto-Regular, 22px, 40px, 400);
     @media screen and (max-width: 1024px) {
-        @include font(Roboto, 20px, 40px, 400);
+        @include font(Roboto-Regular, 20px, 40px, 400);
     }
     @media screen and (max-width: 420px) {
-        @include font(Roboto, 16px, 40px, 400);
+        @include font(Roboto-Regular, 16px, 40px, 400);
     }
     .welcome-slide-num__separator {
         padding: 0 10px;
