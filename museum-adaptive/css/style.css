@@ -2248,9 +2248,6 @@ input[type="range"] {
   @media screen and (max-width: 1024px) {
     input[type="range"] {
       height: 5px; } }
-  @media screen and (max-width: 420px) {
-    input[type="range"] {
-      height: 4px; } }
 
 .video-bar {
   background: -webkit-gradient(linear, left top, right top, from(#710707), color-stop(54%, #710707), color-stop(54%, #C4C4C4), to(#C4C4C4));
@@ -2356,20 +2353,12 @@ input[type="range"] {
     background: url(../assets/svg/previous.svg);
     margin: 0 10px;
     cursor: pointer; }
-    @media screen and (max-width: 420px) {
-      .video-slider-pagination .video-slider__previous-slide {
-        width: 7px;
-        height: 8px; } }
   .video-slider-pagination .video-slider__next-slide {
     width: 10px;
     height: 12px;
     margin: 0 10px;
     background: url(../assets/svg/next.svg);
     cursor: pointer; }
-    @media screen and (max-width: 420px) {
-      .video-slider-pagination .video-slider__next-slide {
-        width: 7px;
-        height: 8px; } }
   @media screen and (min-width: 421px) and (max-width: 768px) {
     .video-slider-pagination {
       margin-bottom: 40px; } }

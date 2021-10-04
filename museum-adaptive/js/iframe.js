@@ -1,4 +1,4 @@
-function findVideos() {
+export function findVideos() {
   let videos = document.querySelectorAll(".video-frame");
 
   for (let i = 0; i < videos.length; i++) {
@@ -6,7 +6,7 @@ function findVideos() {
   }
 }
 
-function setupVideo(video) {
+export function setupVideo(video) {
   let link = video.querySelector(".video__link");
   let control = video.querySelector(".video-control");
   let media = video.querySelector(".video__media");
@@ -22,7 +22,7 @@ function setupVideo(video) {
   link.removeAttribute("href");
 }
 
-function parseMediaURL(media) {
+export function parseMediaURL(media) {
   let regexp =
     /https:\/\/img\.youtube\.com\/vi\/([a-zA-Z0-9_-]+)\/mqdefault\.jpg/i;
   let url = media.src;
@@ -31,7 +31,7 @@ function parseMediaURL(media) {
   return match[1];
 }
 
-function createIframe(id) {
+export function createIframe(id) {
   let iframe = document.createElement("iframe");
 
   iframe.setAttribute("allowfullscreen", "");
@@ -42,10 +42,9 @@ function createIframe(id) {
   return iframe;
 }
 
-function generateURL(id) {
+export function generateURL(id) {
   let query = "?rel=0&showinfo=0&autoplay=1";
 
   return "https://www.youtube.com/embed/" + id + query;
 }
-
 findVideos();

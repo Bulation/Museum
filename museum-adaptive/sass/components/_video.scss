@@ -122,9 +122,6 @@ input[type="range"] {
     @media screen and (max-width: 1024px) {
         height: 5px;
     }
-    @media screen and (max-width: 420px) {
-        height: 4px;
-    }
 }
 .video-bar {
     background: linear-gradient(to right, $color-bg-video-active 0%, $color-bg-video-active 54%, $color-bg-video 54%, $color-bg-video 100%);
@@ -219,10 +216,6 @@ input[type="range"] {
         background: url(../assets/svg/previous.svg);
         margin: 0 10px;
         cursor: pointer;
-        @media screen and (max-width: 420px) {
-            width: 7px;
-            height: 8px;
-        }
     }
     .video-slider__next-slide {
         width: 10px;
@@ -230,10 +223,6 @@ input[type="range"] {
         margin: 0 10px;
         background: url(../assets/svg/next.svg);
         cursor: pointer;
-        @media screen and (max-width: 420px) {
-            width: 7px;
-            height: 8px;
-        }
     }
     @media screen and (min-width: 421px) and (max-width: 768px) {
         margin-bottom: 40px;
