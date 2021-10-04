@@ -2,7 +2,7 @@
     color: #FFFFFF;
     letter-spacing: 5px;
     position: relative;
-    z-index: 3;
+    z-index: 1000;
     width: fit-content;
     text-transform: uppercase;
     position: relative;
@@ -41,6 +41,7 @@
     }
 }
 .footer-logo-link {
+    z-index: 1;
     &:before {
         @media screen and (min-width: 421px) and (max-width: 768px) {
             top: 10px;
