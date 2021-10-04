@@ -12,6 +12,7 @@
     position: absolute;
     z-index:1;
     left: 0;
+    transition: opacity 0.3s;
     padding-top: 150px;
     @media screen and (max-width: 1024px) {
         padding-top: 50px;
@@ -47,8 +48,11 @@
             @include font(Roboto-Light, 16px, 19px, 300);
         }
     }
+    
 }
-
+.opacity {
+    opacity: 0;
+}
 .welcome-block-link {
     width: fit-content;
     padding: 25px 64px;

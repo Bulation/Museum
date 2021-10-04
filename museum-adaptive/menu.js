@@ -3,6 +3,7 @@ const hamburgerLine = document.querySelector('.hamburger__line')
 const sideMenu = document.querySelector(".header-nav");
 const sideMenuItems = document.querySelectorAll(".header-nav-list__item");
 const socials = document.querySelector('.socials')
+const welcome = document.querySelector('.welcome-block');
 
 hamburger.addEventListener("click", toggleHamburger);
 window.addEventListener("click", hideMenuByClickOnBody);
@@ -12,6 +13,7 @@ function toggleHamburger(e) {
   hamburgerLine.classList.toggle("hamburger__line");
   hamburgerLine.classList.toggle("close");
   sideMenu.classList.toggle("transform");
+  welcome.classList.toggle('opacity');
   for (let item of sideMenuItems)
     item.addEventListener("click", toggleHamburger);
 }
