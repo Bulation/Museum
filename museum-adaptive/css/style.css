@@ -1438,9 +1438,6 @@ form {
         font-weight: 400;
         font-display: swap;
         letter-spacing: 5px; } }
-  @media screen and (min-width: 769px) and (max-width: 1024px) {
-    .card .royal__title, .card .greek__title, .card .denon__title {
-      letter-spacing: 5px; } }
   .card .card__virtual-tour {
     font-family: Roboto-Thin, Verdana, Arial, sans-serif;
     font-size: 22px;

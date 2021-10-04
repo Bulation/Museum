@@ -31,11 +31,6 @@
             letter-spacing: 5px;
         }
     }
-    .royal__title, .greek__title, .denon__title {
-        @media screen and (min-width: 769px) and (max-width: 1024px) {
-            letter-spacing: 5px;
-        }
-    }
     .card__virtual-tour {
         @include font(Roboto-Thin, 22px, 26px, 100);
         margin-top: 20px;
