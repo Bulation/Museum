@@ -51,6 +51,7 @@
 }
 .close {
     position: relative;
+    top: -5px;
     width: 30px;
     height: 31px;
     z-index: 1003;
@@ -86,7 +87,6 @@
     }
     @media screen and (max-width: 420px) {
         width: 310px;
-        margin-left: 20px;
         justify-content: center;
         padding-bottom: 20px;
         margin-bottom: 24px;

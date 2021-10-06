@@ -27,9 +27,11 @@
 .gallery-img-container {
     display: flex;
     flex-flow: column wrap;
+    align-content: flex-start;
+    column-gap: 18px;
     row-gap: 24px;
     img {
-        width: 31.66%;
+        width: calc(33.3% - 23px);
         &:first-child, &:nth-child(3) {
             margin-top: 50px;
         }
@@ -43,7 +45,7 @@
             order: 3;
         }
         @media screen and (max-width: 768px) {
-            width: 46.5%;
+            width: calc(50% - 12px);
             &:nth-child(2n+1) {
                 order: 1;
             }
@@ -68,5 +70,8 @@
             width: 0;
             order: 2;
         }
+    }
+    @media screen and (max-width: 768px) {
+        column-gap: 12px;
     }
 }
