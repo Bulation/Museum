@@ -16,7 +16,7 @@ export let images = [
   `<img src="assets/img/gallery/galery14.webp" loading="lazy" alt="La Belle Ferronnière">`,
   `<img src="assets/img/gallery/galery15.webp" loading="lazy" alt="Louvre outer">`,
 ];
-gallery.innerHTML = '';
+
 
 export function shuffle(array) {
   let result = [];
@@ -28,5 +28,3 @@ export function shuffle(array) {
 export function getRandom(min, max) {
   return Math.floor(Math.random() * (max - min));
 }
-
-shuffle(images).map((img) => (gallery.innerHTML += img));

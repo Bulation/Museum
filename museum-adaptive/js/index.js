@@ -22,9 +22,13 @@ progress.volumeBar.addEventListener("input", (e) =>
 
 import * as select from "./select.js";
 select.selectContainer.addEventListener("click", select.changeBackground);
-select.window.addEventListener("click", select.defaultSelectBackground);
+window.addEventListener("click", select.defaultSelectBackground);
 
 import * as gal from "./shuffle.js";
+gal.gallery.innerHTML = "";
+gal.shuffle(gal.images).map((img) => (gal.gallery.innerHTML += img));
+
+import * as map from "./map.js";
 
 console.log(`Вёрстка соответствует макету. Ширина экрана 1024px +40
 
