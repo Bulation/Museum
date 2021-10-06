@@ -8,6 +8,8 @@ form.ticketsBuyButton.addEventListener("click", form.showForm);
 form.closingForm.addEventListener("click", form.showForm);
 form.overlay.addEventListener("click", form.showForm);
 form.bookButton.addEventListener("click", form.showRipple);
+form.time.addEventListener('focus', form.activeTiming);
+form.date.addEventListener('focus', form.activeTiming);
 
 import * as iframe from "./iframe.js";
 iframe.findVideos();
@@ -20,9 +22,12 @@ progress.volumeBar.addEventListener("input", (e) =>
   progress.changeProgress(e, 100)
 );
 
-import * as select from "./select.js";
-select.selectContainer.addEventListener("click", select.changeBackground);
-window.addEventListener("click", select.defaultSelectBackground);
+import * as Select from "./select.js";
+let flag = false;
+Select.select.addEventListener("focus", Select.changeOnFocus);
+Select.select.addEventListener("blur", Select.changeOnBlur);
+Select.select.addEventListener("change", Select.chooseOption);
+window.addEventListener("click", Select.defaultSelectBackground);
 
 import * as gal from "./shuffle.js";
 gal.gallery.innerHTML = "";

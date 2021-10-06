@@ -879,6 +879,7 @@ form {
     left: 45px;
     top: 13px; }
   .booking-form-timing::-webkit-datetime-edit {
+    padding-left: 45px;
     opacity: 0; }
   @media screen and (max-width: 1000px) {
     .booking-form-timing {
@@ -908,6 +909,11 @@ form {
   @media screen and (max-width: 600px) {
     .booking-form-time {
       margin-top: 20px; } }
+
+.booking-form-timing-active::before {
+  content: ""; }
+.booking-form-timing-active::-webkit-datetime-edit {
+  opacity: 1; }
 
 .booking-form-main {
   padding-top: 60px; }
@@ -1000,48 +1006,50 @@ form {
 
 .select-container {
   position: relative;
-  margin: 20px 0; }
-  .select-container::after {
-    position: absolute;
-    content: '';
-    width: 17px;
-    height: 17px;
-    right: 15px;
-    top: 15px;
-    background: url(../assets/svg/form/date.svg); }
+  padding: 13px 0 13px 45px;
+  outline: 1px solid #000000;
+  margin: 20px 0;
+  height: 45px;
+  background: url(../assets/svg/form/ticket.svg) no-repeat, url(../assets/svg/form/date.svg) no-repeat;
+  background-position: 15px 15px, 98% 15px; }
 
 .booking-form-tickets {
   display: block;
   width: 100%;
-  position: relative;
-  z-index: 1;
-  border: 1px solid #030303;
-  padding: 13px 0 13px 45px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding-left: 45px;
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
-  background: url(../assets/svg/form/ticket.svg) no-repeat;
-  background-position: 15px 15px; }
+  line-height: 45px;
+  background-color: transparent;
+  overflow: visible; }
   .booking-form-tickets:focus {
-    outline: none; }
+    top: 45px;
+    outline: 1px solid #000000;
+    padding-left: 0;
+    background-color: #ffffff; }
   .booking-form-tickets option {
     font-family: Roboto-Light, Verdana, Arial, sans-serif;
     font-size: 18px;
     line-height: 21px;
     font-weight: 300;
     font-display: swap;
-    display: block; }
+    display: block;
+    -webkit-appearance: none;
+    padding: 12.5px 44px;
+    background-color: #fff; }
+    .booking-form-tickets option:hover, .booking-form-tickets option:focus, .booking-form-tickets option:active, .booking-form-tickets option[selected] {
+      -webkit-appearance: none;
+      background-color: #e7e7e7; }
     .booking-form-tickets option:first-child {
       display: none; }
 
-.select-container-focus::after {
-  position: absolute;
-  content: '';
-  width: 17px;
-  height: 17px;
-  right: 15px;
-  top: 15px;
-  background: url(../assets/svg/form/date_active.svg); }
+.select-container-focus {
+  background: url(../assets/svg/form/ticket.svg) no-repeat, url(../assets/svg/form/date_active.svg) no-repeat;
+  background-position: 15px 15px, 98% 15px; }
 
 .select-list {
   position: relative;

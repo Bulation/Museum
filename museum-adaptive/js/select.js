@@ -1,6 +1,7 @@
 export const select = document.querySelector("select");
 export const selectContainer = document.querySelector(".select-container");
-
+export const selectTitle = document.querySelector(".select-title");
+export let flag = false;
 export function changeBackground() {
   selectContainer.classList.toggle("select-container-focus");
 }
@@ -11,4 +12,23 @@ export function defaultSelectBackground(e) {
     selectContainer.classList.contains("select-container-focus")
   )
     changeBackground();
+}
+
+export function changeOnFocus()  {
+  this.setAttribute("size", 3);
+  changeBackground();
+  selectTitle.style.display = "block";
+}
+
+export function changeOnBlur() {
+  this.setAttribute("size", 0);
+  changeBackground();
+  if (flag) selectTitle.style.display = "none";
+}
+
+export function chooseOption() {
+  flag = true;
+  this.setAttribute("size", 1);
+  this.blur();
+  selectTitle.style.display = "none";
 }
