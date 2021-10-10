@@ -1,6 +1,6 @@
-export const select = document.querySelector("select");
 export const selectContainer = document.querySelector(".select-container");
-export const selectTitle = document.querySelector(".select-title");
+export const select = selectContainer.querySelector("select");
+export const selectTitle = selectContainer.querySelector(".select-title");
 export let flag = false;
 export function changeBackground() {
   selectContainer.classList.toggle("select-container-focus");
@@ -14,7 +14,7 @@ export function defaultSelectBackground(e) {
     changeBackground();
 }
 
-export function changeOnFocus()  {
+export function changeOnFocus() {
   this.setAttribute("size", 3);
   changeBackground();
   selectTitle.style.display = "block";

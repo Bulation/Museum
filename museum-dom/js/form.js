@@ -1,11 +1,11 @@
-export const ticketsBuyButton = document.querySelector(".amount-buy");
 export const form = document.querySelector("form");
+export const ticketsBuyButton = document.querySelector(".amount-buy");
 export const overlay = document.querySelector(".overlay");
-export const closingForm = document.querySelector(".form-close");
-export const bookButton = document.querySelector(".form-button");
-export const circle = document.querySelector(".form-button span");
-export const date = document.querySelectorAll(".booking-form-timing")[0];
-export const time = document.querySelectorAll(".booking-form-timing")[1];
+export const closingForm = form.querySelector(".form-close");
+export const bookButton = form.querySelector(".form-button");
+export const circle = bookButton.querySelector(".form-button span");
+export const date = form.querySelectorAll(".booking-form-timing")[0];
+export const time = form.querySelectorAll(".booking-form-timing")[1];
 
 export function showForm() {
   form.classList.toggle("form_active");
@@ -21,5 +21,5 @@ export function showRipple(e) {
 }
 
 export function activeTiming() {
-    this.classList.add("booking-form-timing-active");
+  this.classList.add("booking-form-timing-active");
 }

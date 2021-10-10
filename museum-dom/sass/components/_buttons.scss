@@ -87,12 +87,12 @@ button {
 .mute {
     width: 36px;
     height: 36px;
-    background: url("assets/svg/video/mute.svg") no-repeat;
+    background: url("../assets/svg/video/mute.svg") no-repeat;
 }
 .pause {
-    width: 21px;
+    width: 25px;
     height: 30px;
-    background: url("assets/svg/video/pause.svg") no-repeat;
+    background: url("../assets/svg/video/pause.svg") no-repeat;
 }
 .fullscreen {
     width: 36px;
@@ -117,7 +117,7 @@ button {
 .exit {
     width: 36px;
     height: 36px;
-    background: url("assets/svg/video/fullscreen_exit.svg") no-repeat;
+    background: url("../assets/svg/video/fullscreen_exit.svg") no-repeat;
 }
 .amount-buy {
     padding: 12px 0;

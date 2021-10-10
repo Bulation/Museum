@@ -3,6 +3,12 @@ import * as menu from "./menu.js";
 menu.hamburger.addEventListener("click", menu.toggleHamburger);
 window.addEventListener("click", menu.hideMenuByClickOnBody);
 
+import * as Explore from "./explore.js";
+let mousedown = false;
+window.addEventListener("mousemove", (e) => mousedown && Explore.moveSlider(e));
+Explore.slider.addEventListener("mousedown", () => (mousedown = true));
+window.addEventListener("mouseup", () => (mousedown = false));
+
 import * as form from "./form.js";
 form.ticketsBuyButton.addEventListener("click", form.showForm);
 form.closingForm.addEventListener("click", form.showForm);
@@ -14,13 +20,33 @@ form.date.addEventListener('focus', form.activeTiming);
 import * as iframe from "./iframe.js";
 iframe.findVideos();
 
-import * as progress from "./progress.js";
-progress.videoBar.addEventListener("input", (e) =>
-  progress.changeProgress(e, 1)
+import * as Video from "./video.js";
+Video.videoBar.addEventListener("input", (e) => Video.changeProgress(e, 1));
+Video.volumeBar.addEventListener("input", (e) => Video.changeProgress(e, 100));
+Video.video.addEventListener("click", Video.togglePlay);
+Video.video.addEventListener("ended", Video.endingVideo);
+Video.video.addEventListener("timeupdate", Video.updateBar);
+Video.playButton.addEventListener("click", Video.togglePlay);
+Video.volumeBar.addEventListener("change", Video.changeVolume);
+Video.volumeBar.addEventListener("mousemove", Video.changeVolume);
+Video.volumeButton.addEventListener("click", Video.muteSound);
+Video.smallPlayButton.addEventListener("click", Video.togglePlay);
+Video.fullscreenButton.addEventListener("click", Video.toggleScreen);
+Video.videoBar.addEventListener("click", Video.changeVideoTime);
+Video.videoBar.addEventListener(
+  "mousemove",
+  (e) => mousedown && Video.changeVideoTime(e)
 );
-progress.volumeBar.addEventListener("input", (e) =>
-  progress.changeProgress(e, 100)
-);
+Video.videoBar.addEventListener("mousedown", () => (mousedown = true));
+Video.videoBar.addEventListener("mouseup", () => (mousedown = false));
+window.addEventListener("keydown", Video.togglePlay);
+window.addEventListener("keydown", Video.muteSound);
+window.addEventListener("keydown", Video.videoPlaybackRate);
+window.addEventListener("keydown", Video.toggleScreen);
+window.addEventListener("keydown", Video.skip);
+window.addEventListener("keydown", Video.changeVolume);
+window.addEventListener("keydown", Video.transitionToStartOrToFinish);
+window.addEventListener("keydown", Video.transitionToPartOfVideo);
 
 import * as Select from "./select.js";
 let flag = false;
@@ -32,15 +58,6 @@ window.addEventListener("click", Select.defaultSelectBackground);
 import * as gal from "./shuffle.js";
 gal.gallery.innerHTML = "";
 gal.shuffle(gal.images).map((img) => (gal.gallery.innerHTML += img));
-
-import * as Explore from "./explore.js";
-let mousedown = false;
-window.addEventListener(
-  "mousemove",
-  (e) => mousedown && Explore.moveSlider(e)
-);
-Explore.slider.addEventListener("mousedown", () => (mousedown = true));
-window.addEventListener("mouseup", () => (mousedown = false));
 
 import * as map from "./map.js";
 

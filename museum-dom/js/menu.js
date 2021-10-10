@@ -1,9 +1,7 @@
 export const hamburger = document.querySelector('.hamburger');
-export const hamburgerLine = document.querySelector(".hamburger__line");
+export const hamburgerLine = hamburger.querySelector(".hamburger__line");
 export const sideMenu = document.querySelector(".header-nav");
-export const sideMenuItems = document.querySelectorAll(
-  ".header-nav-list__item"
-);
+export const sideMenuItems = sideMenu.querySelectorAll(".header-nav-list__item");
 export const socials = document.querySelector(".socials");
 export const welcome = document.querySelector(".welcome-block");
 
