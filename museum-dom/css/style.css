@@ -1714,46 +1714,44 @@ form {
     @media screen and (max-width: 500px) {
       .explore-image .explore-image-container {
         width: 230px; } }
-  .explore-image::before {
-    content: '';
-    position: absolute;
-    top: 0px;
-    height: calc(50% - 16px);
-    left: 438px;
-    width: 5px;
-    z-index: 3;
-    background-color: #ffffff; }
-    @media screen and (max-width: 500px) {
-      .explore-image::before {
-        left: 230px;
-        width: 2px;
-        height: calc(50% - 10px); } }
-  .explore-image::after {
-    width: 5px;
-    bottom: 0;
-    height: calc(50% - 17px);
-    left: 438px;
-    content: '';
-    position: absolute;
-    background-color: #ffffff; }
-    @media screen and (max-width: 500px) {
-      .explore-image::after {
-        left: 230px;
-        width: 2px;
-        height: calc(50% - 10px); } }
+    .explore-image .explore-image-container::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: calc(50% - 16px);
+      width: 5px;
+      z-index: 3;
+      background-color: #ffffff; }
+      @media screen and (max-width: 500px) {
+        .explore-image .explore-image-container::before {
+          width: 2px;
+          height: calc(50% - 20px); } }
+    .explore-image .explore-image-container::after {
+      width: 5px;
+      bottom: 0;
+      right: 0;
+      height: calc(50% - 17px);
+      content: '';
+      position: absolute;
+      background-color: #ffffff; }
+      @media screen and (max-width: 500px) {
+        .explore-image .explore-image-container::after {
+          width: 2px;
+          height: 50%; } }
 
 .explore-slider {
   position: absolute;
-  left: 420px;
+  left: 418px;
   z-index: 4;
-  top: 47%;
+  top: calc(50% - 20px);
   width: 39px;
   height: 39px;
   border: 5px solid #ffffff;
   border-radius: 50%; }
   @media screen and (max-width: 500px) {
     .explore-slider {
-      left: 220px;
+      left: 218px;
       border-width: 2px;
       width: 20px;
       height: 20px; } }

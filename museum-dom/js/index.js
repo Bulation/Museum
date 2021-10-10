@@ -33,6 +33,15 @@ import * as gal from "./shuffle.js";
 gal.gallery.innerHTML = "";
 gal.shuffle(gal.images).map((img) => (gal.gallery.innerHTML += img));
 
+import * as Explore from "./explore.js";
+let mousedown = false;
+window.addEventListener(
+  "mousemove",
+  (e) => mousedown && Explore.moveSlider(e)
+);
+Explore.slider.addEventListener("mousedown", () => (mousedown = true));
+window.addEventListener("mouseup", () => (mousedown = false));
+
 import * as map from "./map.js";
 
 console.log(`Вёрстка соответствует макету. Ширина экрана 1024px +40
