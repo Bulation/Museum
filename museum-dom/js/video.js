@@ -11,6 +11,43 @@ export const volumeBar = videoControl.querySelector(".volume-bar");
 export let previousValue;
 export let timeout;
 
+export let options = {
+    root: null,
+    rootMargin: '0px',
+    threshold: 0
+}
+export function observeKeyCode() {
+    let observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry)=> {
+            if (entry.isIntersecting) {
+                window.addEventListener("keydown", togglePlay);
+                window.addEventListener("keydown", muteSound);
+                window.addEventListener("keydown", videoPlaybackRate);
+                window.addEventListener("keydown", toggleScreen);
+                window.addEventListener("keydown", skip);
+                window.addEventListener("keydown", changeVolume);
+                window.addEventListener("keydown", transitionToStartOrToFinish);
+                window.addEventListener("keydown", transitionToPartOfVideo);
+            }
+            else {
+                window.removeEventListener("keydown", togglePlay);
+                window.removeEventListener("keydown", muteSound);
+                window.removeEventListener("keydown", videoPlaybackRate);
+                window.removeEventListener("keydown", toggleScreen);
+                window.removeEventListener("keydown", skip);
+                window.removeEventListener("keydown", changeVolume);
+                window.removeEventListener(
+                  "keydown",
+                  transitionToStartOrToFinish
+                );
+                window.removeEventListener("keydown", transitionToPartOfVideo);
+            }
+        });
+    }, options);
+    observer.observe(video);
+}
+
+
 export function changeProgress(e, coef) {
   let value = e.target.value * coef;
   e.target.style.background = `linear-gradient(to right, #710707 0%, #710707 ${value}%, #C4C4C4 ${value}%, #C4C4C4 100%)`;
@@ -18,6 +55,7 @@ export function changeProgress(e, coef) {
 
 export function togglePlay(e) {
   e.preventDefault();
+  console.log(e);
   if (e.keyCode != 32 && e.keyCode != 75 && e.type != "click") {
     // определение типа события
     return;

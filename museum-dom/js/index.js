@@ -1,4 +1,3 @@
-
 import * as menu from "./menu.js";
 menu.hamburger.addEventListener("click", menu.toggleHamburger);
 window.addEventListener("click", menu.hideMenuByClickOnBody);
@@ -14,8 +13,8 @@ form.ticketsBuyButton.addEventListener("click", form.showForm);
 form.closingForm.addEventListener("click", form.showForm);
 form.overlay.addEventListener("click", form.showForm);
 form.bookButton.addEventListener("click", form.showRipple);
-form.time.addEventListener('focus', form.activeTiming);
-form.date.addEventListener('focus', form.activeTiming);
+form.time.addEventListener("focus", form.activeTiming);
+form.date.addEventListener("focus", form.activeTiming);
 
 import * as iframe from "./iframe.js";
 iframe.findVideos();
@@ -39,17 +38,9 @@ Video.videoBar.addEventListener(
 );
 Video.videoBar.addEventListener("mousedown", () => (mousedown = true));
 Video.videoBar.addEventListener("mouseup", () => (mousedown = false));
-window.addEventListener("keydown", Video.togglePlay);
-window.addEventListener("keydown", Video.muteSound);
-window.addEventListener("keydown", Video.videoPlaybackRate);
-window.addEventListener("keydown", Video.toggleScreen);
-window.addEventListener("keydown", Video.skip);
-window.addEventListener("keydown", Video.changeVolume);
-window.addEventListener("keydown", Video.transitionToStartOrToFinish);
-window.addEventListener("keydown", Video.transitionToPartOfVideo);
+window.addEventListener('load', Video.observeKeyCode)
 
 import * as Select from "./select.js";
-let flag = false;
 Select.select.addEventListener("focus", Select.changeOnFocus);
 Select.select.addEventListener("blur", Select.changeOnBlur);
 Select.select.addEventListener("change", Select.chooseOption);
@@ -58,6 +49,24 @@ window.addEventListener("click", Select.defaultSelectBackground);
 import * as gal from "./shuffle.js";
 gal.gallery.innerHTML = "";
 gal.shuffle(gal.images).map((img) => (gal.gallery.innerHTML += img));
+
+import * as Tickets from "./tickets.js";
+Tickets.amountContainer.addEventListener('click', (e) => Tickets.increaseAmount(e));
+Tickets.basicPrice.addEventListener("focus", () =>
+  Tickets.removeWarning()
+);
+Tickets.seniorPrice.addEventListener("focus", () =>
+  Tickets.removeWarning()
+);
+Tickets.basicPrice.addEventListener('blur', () => Tickets.validatePrice.call(Tickets.basicPrice));
+Tickets.seniorPrice.addEventListener(
+  "blur",
+  () => Tickets.validatePrice.call(Tickets.seniorPrice)
+);
+Tickets.basicPrice.addEventListener('input', () => Tickets.populateStorage)
+Tickets.seniorPrice.addEventListener("input", () => Tickets.populateStorage);
+document.addEventListener("DOMContentLoaded", Tickets.setStylesFromStorage);
+
 
 import * as map from "./map.js";
 

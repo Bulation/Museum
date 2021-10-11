@@ -112,12 +112,12 @@
     }
 }
 .amount {
-    width: 150px;
-    @media screen and (max-width: 1024px) {
-        width: 175px;
-    }
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
     @include font (Roboto-Light, 22px, 26px, 300);
     @media screen and (max-width: 420px) {
+        align-items: normal;
         @include font (Roboto-Light, 16px, 19px, 300);
     }
 }

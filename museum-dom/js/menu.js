@@ -4,10 +4,12 @@ export const sideMenu = document.querySelector(".header-nav");
 export const sideMenuItems = sideMenu.querySelectorAll(".header-nav-list__item");
 export const socials = document.querySelector(".socials");
 export const welcome = document.querySelector(".welcome-block");
+export const adaptiveImg = sideMenu.querySelector(".adaptive-menu-img-container");
 
 export function toggleHamburger(e) {
   socials.classList.toggle("socials-menu");
   hamburgerLine.classList.toggle("hamburger__line");
+  adaptiveImg.classList.toggle('hidden');
   hamburgerLine.classList.toggle("close");
   sideMenu.classList.toggle("transform");
   welcome.classList.toggle("opacity");
