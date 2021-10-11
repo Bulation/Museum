@@ -55,7 +55,6 @@ export function changeProgress(e, coef) {
 
 export function togglePlay(e) {
   e.preventDefault();
-  console.log(e);
   if (e.keyCode != 32 && e.keyCode != 75 && e.type != "click") {
     // определение типа события
     return;

@@ -2,7 +2,7 @@
     flex-direction: column;
     row-gap: 75px;
     height: 2200px;
-    overflow-y: hidden;
+    overflow: hidden;
     position: relative;
     @media screen and (max-width: 1024px) {
         height: 1460px;

@@ -1,34 +1,35 @@
-export const selectContainer = document.querySelector(".select-container");
-export const select = selectContainer.querySelector("select");
-export const selectTitle = selectContainer.querySelector(".select-title");
+export const typeSelectContainer = document.querySelector(".select-container");
+export const typeSelect = typeSelectContainer.querySelector("select");
+export const typeSelectTitle = typeSelectContainer.querySelector(".select-title");
+export const timeSelectContainer = document.querySelector(".booking-form-time");
+export const timeSelect = timeSelectContainer.querySelector("select");
+export const timeSelectTitle = timeSelectContainer.querySelector(".time__title");
 export let flag = false;
-export function changeBackground() {
-  selectContainer.classList.toggle("select-container-focus");
+export function changeBackground(container) {
+  container.classList.toggle("select-container-focus");
 }
 
-export function defaultSelectBackground(e) {
-  if (
-    !e.target.closest(".select-container") &&
-    selectContainer.classList.contains("select-container-focus")
-  )
-    changeBackground();
+export function defaultSelectBackground(e, container) {
+  if (!e.target.closest(".select-container") && container.classList.contains("select-container-focus"))
+    changeBackground(container);
 }
 
-export function changeOnFocus() {
-  this.setAttribute("size", 3);
-  changeBackground();
-  selectTitle.style.display = "block";
+export function changeOnFocus(select, title, num, container) {
+    console.log('11')
+  select.setAttribute("size", num);
+  changeBackground(container);
+  title.style.display = "block";
 }
 
-export function changeOnBlur() {
-  this.setAttribute("size", 0);
-  changeBackground();
-  if (flag) selectTitle.style.display = "none";
+export function changeOnBlur(select, title, container) {
+  select.setAttribute("size", 0);
+  changeBackground(container);
+  if (flag) title.style.display = "none";
 }
 
-export function chooseOption() {
+export function chooseOption(select, title) {
   flag = true;
-  this.setAttribute("size", 1);
-  this.blur();
-  selectTitle.style.display = "none";
+  select.setAttribute("size", 1);
+  select.blur();
+  title.style.display = "none";
 }

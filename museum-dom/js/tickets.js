@@ -18,8 +18,11 @@ export function increaseAmount(e) {
     if (e.target.className == 'amount-number-buttons__minus') {
         e.target.nextElementSibling.stepDown();
     } 
-    if (e.target.className == "amount-number-buttons__plus") {
+    else if (e.target.className == "amount-number-buttons__plus") {
         e.target.previousElementSibling.stepUp();
+    }
+    else {
+        return;
     }
     changePrice();
     removeWarning();

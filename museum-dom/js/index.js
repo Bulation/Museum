@@ -13,7 +13,6 @@ form.ticketsBuyButton.addEventListener("click", form.showForm);
 form.closingForm.addEventListener("click", form.showForm);
 form.overlay.addEventListener("click", form.showForm);
 form.bookButton.addEventListener("click", form.showRipple);
-form.time.addEventListener("focus", form.activeTiming);
 form.date.addEventListener("focus", form.activeTiming);
 
 import * as iframe from "./iframe.js";
@@ -41,10 +40,42 @@ Video.videoBar.addEventListener("mouseup", () => (mousedown = false));
 window.addEventListener('load', Video.observeKeyCode)
 
 import * as Select from "./select.js";
-Select.select.addEventListener("focus", Select.changeOnFocus);
-Select.select.addEventListener("blur", Select.changeOnBlur);
-Select.select.addEventListener("change", Select.chooseOption);
-window.addEventListener("click", Select.defaultSelectBackground);
+Select.typeSelect.addEventListener("focus", () => Select.changeOnFocus(Select.typeSelect, Select.typeSelectTitle, 3, Select.typeSelectContainer));
+Select.typeSelect.addEventListener("blur", ()=> Select.changeOnBlur(Select.typeSelect, Select.typeSelectTitle, Select.typeSelectContainer));
+Select.typeSelect.addEventListener("change", () =>
+  Select.chooseOption(
+    Select.typeSelect,
+    Select.typeSelectTitle,
+    Select.typeSelectContainer
+  )
+);
+window.addEventListener("click", (e) => Select.defaultSelectBackground(e, Select.typeSelectContainer));
+Select.timeSelect.addEventListener("focus", () =>
+  Select.changeOnFocus(
+    Select.timeSelect,
+    Select.timeSelectTitle,
+    19,
+    Select.timeSelectContainer
+  )
+);
+Select.timeSelect.addEventListener("blur", () =>
+  Select.changeOnBlur(
+    Select.timeSelect,
+    Select.timeSelectTitle,
+    Select.timeSelectContainer
+  )
+);
+Select.timeSelect.addEventListener("change", () =>
+  Select.chooseOption(
+    Select.timeSelect,
+    Select.timeSelectTitle,
+    Select.timeSelectContainer
+  )
+);
+window.addEventListener(
+  "click", (e) =>
+  Select.defaultSelectBackground(e, Select.timeSelectContainer)
+);
 
 import * as gal from "./shuffle.js";
 gal.gallery.innerHTML = "";
@@ -65,7 +96,7 @@ Tickets.seniorPrice.addEventListener(
 );
 Tickets.basicPrice.addEventListener('input', () => Tickets.populateStorage)
 Tickets.seniorPrice.addEventListener("input", () => Tickets.populateStorage);
-document.addEventListener("DOMContentLoaded", Tickets.setStylesFromStorage);
+Tickets.setStylesFromStorage();
 
 
 import * as map from "./map.js";
