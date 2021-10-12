@@ -6,7 +6,12 @@ export const timeSelect = timeSelectContainer.querySelector("select");
 export const timeSelectTitle = timeSelectContainer.querySelector(".time__title");
 export let flag = false;
 export function changeBackground(container) {
-  container.classList.toggle("select-container-focus");
+    if (container.classList.contains("booking-form-time")) {
+        container.classList.toggle("booking-form-time-focus");
+    }
+    else {
+        container.classList.toggle("select-container-focus");
+    }
 }
 
 export function defaultSelectBackground(e, container) {
@@ -15,7 +20,6 @@ export function defaultSelectBackground(e, container) {
 }
 
 export function changeOnFocus(select, title, num, container) {
-    console.log('11')
   select.setAttribute("size", num);
   changeBackground(container);
   title.style.display = "block";

@@ -4,6 +4,17 @@ export const totalPrice = amountContainer.querySelector(".amount-price__value");
 export const basicPrice = amountContainer.querySelectorAll(".amount-number-buttons__number")[0];
 export const seniorPrice = amountContainer.querySelectorAll(".amount-number-buttons__number")[1];
 export const radioButtons = Array.from(document.querySelectorAll(".ticket-type__label"));
+export const formTotalPrice = document.querySelector(
+  ".form-overview-total-price__euro"
+);
+export const formTicketsCount = document.querySelectorAll(".ticket-description__count");
+export const formPrices = document.querySelectorAll(".form-overview-ticket-price__text");
+export const formBasicPrice = document.querySelectorAll(
+  ".ticket-number-buttons__number"
+)[0];
+export const formSeniorPrice = document.querySelectorAll(
+  ".ticket-number-buttons__number"
+)[1];
 export let radioButtonIndex = 0;
 
 radioButtons.forEach((el, ind) => {
@@ -13,16 +24,19 @@ radioButtons.forEach((el, ind) => {
         changePrice();
     });
 });
-
 export function increaseAmount(e) {
-    if (e.target.className == 'amount-number-buttons__minus') {
-        e.target.nextElementSibling.stepDown();
-    } 
-    else if (e.target.className == "amount-number-buttons__plus") {
-        e.target.previousElementSibling.stepUp();
-    }
-    else {
-        return;
+    if (
+      e.target.className == "amount-number-buttons__minus" ||
+      e.target.className == "ticket-number-buttons__minus"
+    ) {
+      e.target.nextElementSibling.stepDown();
+    } else if (
+      e.target.className == "amount-number-buttons__plus" ||
+      e.target.className == "ticket-number-buttons__plus"
+    ) {
+      e.target.previousElementSibling.stepUp();
+    } else {
+      return;
     }
     changePrice();
     removeWarning();
@@ -51,6 +65,15 @@ export function removeWarning() {
 }
 export function changePrice() {
     totalPrice.innerHTML = prices[radioButtonIndex] * basicPrice.value + prices[radioButtonIndex] / 2 * seniorPrice.value;
+    formTotalPrice.innerHTML = totalPrice.innerHTML + " €";
+    formPrices[0].innerHTML =
+      prices[radioButtonIndex] * basicPrice.value + " €";
+    formPrices[1].innerHTML =
+      (prices[radioButtonIndex] / 2) * seniorPrice.value + " €";
+    formTicketsCount[0].innerHTML = basicPrice.value;
+    formTicketsCount[1].innerHTML = seniorPrice.value;
+    formBasicPrice.value = basicPrice.value;
+    formSeniorPrice.value = seniorPrice.value;
     populateStorage();
 }
 
@@ -60,6 +83,13 @@ export function setStylesFromStorage() {
     totalPrice.innerHTML = localStorage.getItem('totalprice');
     basicPrice.value = localStorage.getItem("basic");
     seniorPrice.value = localStorage.getItem('senior');
+    formTotalPrice.innerHTML = totalPrice.innerHTML + " €";
+    formPrices[0].innerHTML =
+      prices[radioButtonIndex] * basicPrice.value + " €";
+    formPrices[1].innerHTML =
+      (prices[radioButtonIndex] / 2) * seniorPrice.value + " €";
+    formTicketsCount[0].innerHTML = basicPrice.value;
+    formTicketsCount[1].innerHTML = seniorPrice.value;
 }
 
 export function populateStorage() {

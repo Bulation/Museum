@@ -8,12 +8,7 @@ window.addEventListener("mousemove", (e) => mousedown && Explore.moveSlider(e));
 Explore.slider.addEventListener("mousedown", () => (mousedown = true));
 window.addEventListener("mouseup", () => (mousedown = false));
 
-import * as form from "./form.js";
-form.ticketsBuyButton.addEventListener("click", form.showForm);
-form.closingForm.addEventListener("click", form.showForm);
-form.overlay.addEventListener("click", form.showForm);
-form.bookButton.addEventListener("click", form.showRipple);
-form.date.addEventListener("focus", form.activeTiming);
+
 
 import * as iframe from "./iframe.js";
 iframe.findVideos();
@@ -98,67 +93,25 @@ Tickets.basicPrice.addEventListener('input', () => Tickets.populateStorage)
 Tickets.seniorPrice.addEventListener("input", () => Tickets.populateStorage);
 Tickets.setStylesFromStorage();
 
+import * as form from "./form.js";
+form.form.addEventListener("click", (e) => Tickets.increaseAmount(e));
+form.ticketsBuyButton.addEventListener("click", form.showForm);
+form.closingForm.addEventListener("click", form.showForm);
+form.overlay.addEventListener("click", form.showForm);
+form.bookButton.addEventListener("click", form.showRipple);
+form.date.addEventListener("focus", form.activeTiming);
+
 
 import * as map from "./map.js";
 
-console.log(`Вёрстка соответствует макету. Ширина экрана 1024px +40
-
-Блок header +4
-Секция Welcome +4
-Секция Visiting +4
-Секция Explore +4
-Секция Video +4
-Секция Gallery +4
-Секция Tickets +4
-Форма покупки билетов +4
-Секция Contacts +4
-Блок footer +4
-
-Вёрстка соответствует макету. Ширина экрана 768px +40
-
-Блок header +4
-Секция Welcome +4
-Секция Visiting +4
-Секция Explore +4
-Секция Video +4
-Секция Gallery +4
-Секция Tickets +4
-Форма покупки билетов +4
-Секция Contacts +4
-Блок footer +4
-
-Вёрстка соответствует макету. Ширина экрана 420px +40
-
-Блок header +4
-Секция Welcome +4
-Секция Visiting +4
-Секция Explore +4
-Секция Video +4
-Секция Gallery +4
-Секция Tickets +4
-Форма покупки билетов +4
-Секция Contacts +4
-Блок footer +4
-
-Ни на одном из разрешений до 320px включительно не появляется горизонтальная полоса прокрутки +6
-
-Совмещается адаптивная и респонсивная вёрстка +14 При изменении ширины экрана плавно изменяются размеры:
-
-слайдера в секции Welcome +2
-слайдера в секции Explore +2
-кастомного видеоплеера в секции Video +2
-слайдера в секции Video +2
-YouTube-видео в плейлисте в секции Video +2
-галереи изображений и изображений в ней +2
-карты +2
-
-На ширине экрана 1024рх и меньше реализовано адаптивное меню +12
-
-при нажатии на бургер-иконку меню появляется, плавно выдвигаясь слева, бургер-иконка изменяется на крестик. При нажатии на крестик меню исчезает, плавно возвращаясь назад, иконка крестика превращается в бургер-иконку +2
-ссылки в меню работают, обеспечивая плавную прокрутку по якорям +2
-при клике по ссылке в адаптивном меню, или при клике по любому месту сайта, кроме самого адаптивного меню, меню закрывается +2
-вёрстка меню соответствует макету на всех проверяемых разрешениях +6
-
-Оптимизация скорости загрузки страницы +8: Результат проверки скорости сайта - 99/100
-
-Итого 160 баллов`);
+console.log(`
+при клике по самому слайду или кнопке Play в центре слайда, внутри слайда проигрывается видео с YouTube. Никакие изменения с основным видео при этом не происходят +2
+Кастомный видеоплеер +36
+Слайдер сравнения изображений в секции Explore +10
+когда при клике по кнопке Buy now открывается форма, она уже содержит данные, указанные на странице сайта - количество билетов, их тип, общая цена за них +1/2 (частично)
+нельзя выбрать дату в прошлом +2
+время можно выбирать с 9:00 до 18:00 с интервалом в 30 минут +2
+Калькулятор продажи билетов в секции Tiskets +10
+Интерактивная карта в секции Contacts +12
+Итого 75/160 баллов
+`);
