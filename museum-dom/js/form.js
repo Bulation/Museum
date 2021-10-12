@@ -25,6 +25,9 @@ export const formInputSeniorPrice = form.querySelectorAll(
 )[1];
 export const formTicketType = form.querySelector(".form-overview__ticket");
 export const formTicketTime = form.querySelector(".form-overview__time");
+export const nameInput = form.querySelector(".booking-form-name");
+export const emailInput = form.querySelector(".booking-form-email");
+export const phoneInput = form.querySelector(".booking-form-phone");
 export const dateInput = form.querySelector(".booking-form-date");
 export const formTicketDate = form.querySelector(".form-overview__date");
 
@@ -98,4 +101,38 @@ export function changeDate() {
       day: "numeric",
     };
     formTicketDate.innerHTML = date.toLocaleDateString("en-US", options);
+}
+let warnings = {
+  text: "Name must contains from 3 to 15 latin or russian characters",
+  email:
+    "email username must contains from 3 to 15 characters (letters, numbers, underscore, hyphen), must not contains spaces, must contains @, first level domain with as minimum 4 characters, top-level domain with as minimum 2 characters",
+  date: 'Date must not be in past',
+  tel: 'the number contains only numbers; without division or with division into two or three digits; separation of numbers can be separated by a hyphen or a space; with a limit on the number of digits no more than 10 digits'
+};
+export function validateInput(input) {
+    let pattern = new RegExp(input.pattern);
+    if (!pattern.test(input.value)) {
+        Tickets.createWarning(input, warnings[input.type]);
+        input.style.border = '3px solid red';
+    }
+}
+
+export function validateDate(input) {
+    let date1 = new Date();
+    let date2 = new Date(input.value)
+    if (date1 - date2 > 0) {
+      Tickets.createWarning(input, warnings[input.type]);
+      input.style.border = "3px solid red";
+    }
+}
+
+export function validatePhone(input) {
+    let str = input.value;
+    let strWithoutDigits = str.replace(/\d/gm,'');
+    console.log(str.length - strWithoutDigits.length);
+    let reg = /^(\d{2,3}[-\s])+\d{2,3}$/;
+    if (str.length-strWithoutDigits.length < 1 || str.length-strWithoutDigits.length > 10 || !reg.test(input.value)) {
+        Tickets.createWarning(input, warnings[input.type]);
+        input.style.border = "3px solid red";
+    }
 }

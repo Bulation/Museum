@@ -49,22 +49,22 @@ export function increaseAmount(e) {
 export function validatePrice() {
   if (this.value < 0 || this.value > 20 || isNaN(this.value)) {
     this.value = 1;
-    createWarning(this.parentElement);
+    createWarning(this.parentElement, "Amount must be between 0 and 20");
   }
   changePrice();
 }
 
-export function createWarning(parent) {
+export function createWarning(parent, text) {
   let warning = document.createElement("p");
   warning.style.color = "red";
   warning.style.fontSize = "14px";
-  warning.style.maxWidth = "150px";
-  warning.className = "price-warning";
-  warning.innerHTML = "Amount must be between 0 and 20";
+  warning.style.maxWidth = parent.style.width;
+  warning.className = "warning";
+  warning.innerHTML = text;
   parent.after(warning);
 }
 export function removeWarning() {
-  let warning = document.querySelector(".price-warning");
+  let warning = document.querySelector(".warning");
   if (warning) warning.remove();
 }
 export function changePrice() {

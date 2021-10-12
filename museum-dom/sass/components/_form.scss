@@ -13,6 +13,7 @@ form {
 .form_active {
     left: 50%;
 }
+
 .form-container {
     display: flex;
     position: relative;
@@ -40,7 +41,9 @@ form {
         width: calc(100% - 60px);
     }
 }
-
+.invalid {
+    border: 3px solid red;
+}
 .booking-form-header {
     border-bottom: 3px solid #740C11;
     .booking-form-header__text {

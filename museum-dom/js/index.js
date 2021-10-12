@@ -115,6 +115,34 @@ form.overlay.addEventListener("click", form.showForm);
 form.bookButton.addEventListener("click", form.showRipple);
 form.date.addEventListener("focus", form.activeTiming);
 form.dateInput.addEventListener('change', form.changeDate);
+form.dateInput.addEventListener("focus", () => {
+  Tickets.removeWarning();
+  form.dateInput.style.border = "1px solid #030303";
+});
+form.phoneInput.addEventListener("focus", () => {
+  Tickets.removeWarning();
+  form.phoneInput.style.border = "1px solid #030303";
+});
+form.nameInput.addEventListener("focus", () => {
+  Tickets.removeWarning();
+  form.nameInput.style.border = '1px solid #030303';
+});
+form.emailInput.addEventListener("focus", () =>{
+  Tickets.removeWarning();
+  form.emailInput.style.border = "1px solid #030303";
+});
+form.dateInput.addEventListener('blur', () => {
+    form.validateDate(form.dateInput)
+});
+form.phoneInput.addEventListener("blur", () => {
+  form.validatePhone(form.phoneInput);
+});
+form.nameInput.addEventListener("blur", () =>
+  form.validateInput(form.nameInput)
+);
+form.emailInput.addEventListener("blur", () =>
+  form.validateInput(form.emailInput)
+);
 
 import * as map from "./map.js";
 
@@ -122,10 +150,9 @@ console.log(`
 при клике по самому слайду или кнопке Play в центре слайда, внутри слайда проигрывается видео с YouTube. Никакие изменения с основным видео при этом не происходят +2
 Кастомный видеоплеер +36
 Слайдер сравнения изображений в секции Explore +10
-когда при клике по кнопке Buy now открывается форма, она уже содержит данные, указанные на странице сайта - количество билетов, их тип, общая цена за них +1/2 (частично)
-нельзя выбрать дату в прошлом +2
-время можно выбирать с 9:00 до 18:00 с интервалом в 30 минут +2
 Калькулятор продажи билетов в секции Tiskets +10
+Калькулятор продажи билетов в форме продажи билетов +14
+Валидация формы +16
 Интерактивная карта в секции Contacts +12
-Итого 75/160 баллов
+Итого 100/160 баллов
 `);

@@ -313,10 +313,10 @@
                                 </div>
                                 <div class="booking-form-main">
                                     <div class="booking-time-container">
-                                        <input type="date" class="booking-form-timing booking-form-date">
+                                        <input type="date" class="booking-form-timing booking-form-date" required>
                                         <div class="booking-form-timing booking-form-time">
                                             <p class="time__title">Time</p>
-                                            <select name="time">
+                                            <select name="time" required>
                                                 <option class="time-select-option" value="0">&nbsp;</option>
                                                 <option class="time-select-option" value="09 : 00">09 : 00</option>
                                                 <option class="time-select-option" value="09 : 30">09 : 30</option>
@@ -340,12 +340,12 @@
                                             </select>
                                         </div>
                                     </div>
-                                    <input type="text" class="booking-form__input booking-form-name" placeholder="Name" autocomplete="off">
-                                    <input type="email" class="booking-form__input booking-form-email" placeholder="E-mail">
-                                    <input type="tel" class="booking-form__input booking-form-phone" placeholder="Phone">
+                                    <input type="text" pattern='^[A-Za-zА-Яа-яЁё\s]{3,15}$'class="booking-form__input booking-form-name" placeholder="Name" required>
+                                    <input type="email" pattern='^[-_A-Za-zА-Яа-яЁё\d]{3,15}@[A-Za-z]{4,}.[A-Za-z]{2,}$'class="booking-form__input booking-form-email" placeholder="E-mail" required>
+                                    <input type="tel" class="booking-form__input booking-form-phone" placeholder="Phone" required>
                                     <div class="select-container">
                                         <p class="select-title">Ticket Type</p>
-                                        <select name="Ticket Type" class="booking-form-tickets">
+                                        <select name="Ticket Type" class="booking-form-tickets" required>
                                             <option></option>
                                             <option value="Permanent exhibition">Permanent exhibition</option>
                                             <option value="Temporary exhibition">Temporary exhibition</option>

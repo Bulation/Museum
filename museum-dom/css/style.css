@@ -849,6 +849,9 @@ form {
               flex-direction: column;
       width: calc(100% - 60px); } }
 
+.invalid {
+  border: 3px solid red; }
+
 .booking-form-header {
   border-bottom: 3px solid #740C11; }
   .booking-form-header .booking-form-header__text {
