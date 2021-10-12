@@ -34,6 +34,9 @@ date.min = `${stringDate.getFullYear()}-${
 }-${stringDate.getDate()}`;
 
 export function showForm() {
+  if (form.classList.contains('form_active')) {
+      Select.typeSelect.selectedIndex = Tickets.radioButtonIndex+1;
+  }
   form.classList.toggle("form_active");
   overlay.classList.toggle("overlay_active");
 }

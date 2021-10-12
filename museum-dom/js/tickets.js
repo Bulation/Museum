@@ -19,10 +19,10 @@ export let radioButtonIndex = 0;
 
 radioButtons.forEach((el, ind) => {
   el.addEventListener("click", (e) => {
-    Select.changePriceByType();
     radioButtonIndex = ind;
     Select.typeSelect.selectedIndex = ind + 1;
     Select.typeSelectTitle.style.display = "none";
+    Select.changePriceByType();
     populateStorage();
     changePrice();
   });
