@@ -36,7 +36,15 @@ window.addEventListener('load', Video.observeKeyCode)
 
 import * as Select from "./select.js";
 Select.typeSelect.addEventListener("focus", () => Select.changeOnFocus(Select.typeSelect, Select.typeSelectTitle, 3, Select.typeSelectContainer));
-Select.typeSelect.addEventListener("blur", ()=> Select.changeOnBlur(Select.typeSelect, Select.typeSelectTitle, Select.typeSelectContainer));
+Select.typeSelect.addEventListener("blur", () =>
+  Select.changeOnBlur(
+    Select.typeSelect,
+    Select.typeSelectTitle,
+    Select.typeSelectContainer,
+    form.formTicketType
+  )
+);
+Select.typeSelect.addEventListener("blur", Select.changePriceByType);
 Select.typeSelect.addEventListener("change", () =>
   Select.chooseOption(
     Select.typeSelect,
@@ -57,7 +65,8 @@ Select.timeSelect.addEventListener("blur", () =>
   Select.changeOnBlur(
     Select.timeSelect,
     Select.timeSelectTitle,
-    Select.timeSelectContainer
+    Select.timeSelectContainer,
+    form.formTicketTime
   )
 );
 Select.timeSelect.addEventListener("change", () =>
@@ -96,11 +105,16 @@ Tickets.setStylesFromStorage();
 import * as form from "./form.js";
 form.form.addEventListener("click", (e) => Tickets.increaseAmount(e));
 form.ticketsBuyButton.addEventListener("click", form.showForm);
+form.ticketsBuyButton.addEventListener(
+  "click",
+  form.updateDataOnFormFromTickets
+);
+form.ticketsBuyButton.addEventListener("click", form.updateSelect);
 form.closingForm.addEventListener("click", form.showForm);
 form.overlay.addEventListener("click", form.showForm);
 form.bookButton.addEventListener("click", form.showRipple);
 form.date.addEventListener("focus", form.activeTiming);
-
+form.dateInput.addEventListener('change', form.changeDate);
 
 import * as map from "./map.js";
 
