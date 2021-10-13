@@ -741,35 +741,47 @@ button {
   -webkit-column-gap: 18px;
           column-gap: 18px;
   row-gap: 24px; }
-  .gallery-img-container img {
-    width: calc(33.3% - 23px); }
-    .gallery-img-container img:first-child, .gallery-img-container img:nth-child(3) {
+  .gallery-img-container .gallery__img {
+    display: block;
+    width: calc(33.3% - 25px);
+    -webkit-transform: translate(0px, 50px);
+            transform: translate(0px, 50px);
+    -webkit-transition: opacity 0.5s, -webkit-transform 0.5s;
+    transition: opacity 0.5s, -webkit-transform 0.5s;
+    transition: transform 0.5s, opacity 0.5s;
+    transition: transform 0.5s, opacity 0.5s, -webkit-transform 0.5s;
+    opacity: 0; }
+    .gallery-img-container .gallery__img:first-child, .gallery-img-container .gallery__img:nth-child(3) {
       margin-top: 50px; }
-    .gallery-img-container img:nth-child(3n+1) {
+    .gallery-img-container .gallery__img:nth-child(3n+1) {
       -webkit-box-ordinal-group: 2;
           -ms-flex-order: 1;
               order: 1; }
-    .gallery-img-container img:nth-child(3n+2) {
+    .gallery-img-container .gallery__img:nth-child(3n+2) {
       -webkit-box-ordinal-group: 3;
           -ms-flex-order: 2;
               order: 2; }
-    .gallery-img-container img:nth-child(3n) {
+    .gallery-img-container .gallery__img:nth-child(3n) {
       -webkit-box-ordinal-group: 4;
           -ms-flex-order: 3;
               order: 3; }
     @media screen and (max-width: 768px) {
-      .gallery-img-container img {
+      .gallery-img-container .gallery__img {
         width: calc(50% - 12px); }
-        .gallery-img-container img:nth-child(2n+1) {
+        .gallery-img-container .gallery__img:nth-child(2n+1) {
           -webkit-box-ordinal-group: 2;
               -ms-flex-order: 1;
                   order: 1; }
-        .gallery-img-container img:nth-child(2n) {
+        .gallery-img-container .gallery__img:nth-child(2n) {
           -webkit-box-ordinal-group: 3;
               -ms-flex-order: 2;
                   order: 2; }
-        .gallery-img-container img:nth-child(3) {
+        .gallery-img-container .gallery__img:nth-child(3) {
           margin-top: 0; } }
+    .gallery-img-container .gallery__img_active {
+      -webkit-transform: translate(0px, 0px);
+              transform: translate(0px, 0px);
+      opacity: 1; }
   .gallery-img-container:before {
     content: "";
     -ms-flex-preferred-size: 100%;

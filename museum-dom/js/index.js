@@ -81,9 +81,13 @@ window.addEventListener(
   Select.defaultSelectBackground(e, Select.timeSelectContainer)
 );
 
-import * as gal from "./shuffle.js";
-gal.gallery.innerHTML = "";
-gal.shuffle(gal.images).map((img) => (gal.gallery.innerHTML += img));
+import * as Gallery from "./gallery.js";
+Gallery.gallery.innerHTML = "";
+Gallery.shuffle(Gallery.images).map(
+  (img) => (Gallery.gallery.innerHTML += img)
+);
+window.addEventListener("scroll", Gallery.slideOn)
+window.addEventListener("load", Gallery.slideOn);
 
 import * as Tickets from "./tickets.js";
 Tickets.amountContainer.addEventListener('click', (e) => Tickets.increaseAmount(e));
@@ -154,5 +158,6 @@ console.log(`
 Калькулятор продажи билетов в форме продажи билетов +14
 Валидация формы +16
 Интерактивная карта в секции Contacts +12
-Итого 100/160 баллов
+Анимация при прокрутке изображений в секции Galery +8
+Итого 108/160 баллов
 `);
