@@ -1,3 +1,5 @@
+"use strict";
+
 import * as menu from "./menu.js";
 menu.hamburger.addEventListener("click", menu.toggleHamburger);
 window.addEventListener("click", menu.hideMenuByClickOnBody);
@@ -97,11 +99,12 @@ Tickets.basicPrice.addEventListener("focus", () =>
 Tickets.seniorPrice.addEventListener("focus", () =>
   Tickets.removeWarning()
 );
-Tickets.basicPrice.addEventListener('blur', () => Tickets.validatePrice.call(Tickets.basicPrice));
-Tickets.seniorPrice.addEventListener(
-  "blur",
-  () => Tickets.validatePrice.call(Tickets.seniorPrice)
-);
+Tickets.basicPrice.addEventListener('blur', function () { 
+    Tickets.validatePrice(this); 
+});
+Tickets.seniorPrice.addEventListener("blur", function () { 
+    Tickets.validatePrice(this); 
+});
 Tickets.basicPrice.addEventListener('input', () => Tickets.populateStorage)
 Tickets.seniorPrice.addEventListener("input", () => Tickets.populateStorage);
 Tickets.setStylesFromStorage();
@@ -147,6 +150,31 @@ form.nameInput.addEventListener("blur", () =>
 form.emailInput.addEventListener("blur", () =>
   form.validateInput(form.emailInput)
 );
+
+import * as Welcome from "./welcome.js";
+Welcome.welcomeSlider.cloneAppend(0);
+Welcome.welcomeSlider.clonePrepend(1);
+Welcome.sliderContainer.addEventListener("transitionstart", ()=> {
+    Welcome.welcomeSlider.enableSliding();
+});
+Welcome.sliderContainer.addEventListener('transitionend', () => {
+    Welcome.welcomeSlider.enableSliding();
+    Welcome.sliderContainer.classList.remove('transition-slider');
+})
+Welcome.bulletsContainer.addEventListener('click', (e) => {
+    if (e.target.classList.contains('slide__bullet'))
+        Welcome.welcomeSlider.slideElements(Number(e.target.dataset.count), Welcome.welcomeSlider);
+});
+
+Welcome.arrows[0].addEventListener("click", () => {
+  if (Welcome.welcomeSlider.isEnabled)
+        Welcome.welcomeSlider.slideElements(Welcome.welcomeSlider.currentSlide - 1, Welcome.welcomeSlider)
+});
+Welcome.arrows[1].addEventListener("click", () =>  {
+    if (Welcome.welcomeSlider.isEnabled)
+        Welcome.welcomeSlider.slideElements(Welcome.welcomeSlider.currentSlide + 1, Welcome.welcomeSlider);
+});
+Welcome.welcomeSlider.swipeDetect(Welcome.sliderContainer)
 
 import * as map from "./map.js";
 

@@ -121,7 +121,7 @@ export function validateDate(input) {
     let date1 = new Date();
     let date2 = new Date(input.value)
     if (date1 - date2 > 0) {
-      Tickets.createWarning(input, warnings[input.type]);
+      Tickets.createWarning(input.parentElement, warnings[input.type]);
       input.style.border = "3px solid red";
     }
 }
@@ -131,8 +131,9 @@ export function validatePhone(input) {
     let strWithoutDigits = str.replace(/\d/gm,'');
     console.log(str.length - strWithoutDigits.length);
     let reg = /^(\d{2,3}[-\s])+\d{2,3}$/;
-    if (str.length-strWithoutDigits.length < 1 || str.length-strWithoutDigits.length > 10 || !reg.test(input.value)) {
+    if ((str.length-strWithoutDigits.length < 1 || str.length-strWithoutDigits.length > 10) || (strWithoutDigits.length != 0 && !reg.test(input.value))){
         Tickets.createWarning(input, warnings[input.type]);
         input.style.border = "3px solid red";
     }
+    
 }

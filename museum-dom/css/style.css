@@ -2112,6 +2112,9 @@ form {
     .amount-price .amount-price__value {
       padding-left: 3px; } }
 
+.amount-number {
+  width: 150px; }
+
 .amount-number-basic {
   margin-top: -25px; }
   @media screen and (max-width: 1024px) {
@@ -2120,7 +2123,6 @@ form {
       margin-top: 0; } }
 
 .amount-number-buttons {
-  width: 150px;
   height: 50px;
   background-color: #ffffff;
   border: 1px solid #000000;
@@ -2660,7 +2662,8 @@ input[type="range"] {
 .welcome-block {
   letter-spacing: 2px;
   position: absolute;
-  z-index: 1;
+  pointer-events: none;
+  z-index: 2;
   left: 0;
   -webkit-transition: opacity 0.3s;
   transition: opacity 0.3s;
@@ -2748,12 +2751,19 @@ input[type="range"] {
       display: none; } }
 
 .welcome-block-slider-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   position: relative;
+  overflow: hidden;
+  cursor: -webkit-grab;
+  cursor: grab;
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: -webkit-transform 0.5s;
+  transition: transform 0.5s;
+  transition: transform 0.5s, -webkit-transform 0.5s;
   max-width: 69.44%; }
   .welcome-block-slider-container img {
-    display: none; }
-  .welcome-block-slider-container .active {
-    display: inline;
     max-width: 100%; }
   @media screen and (max-width: 1024px) {
     .welcome-block-slider-container {
@@ -2763,6 +2773,7 @@ input[type="range"] {
       max-width: 100%; } }
   .welcome-block-slider-container::before {
     content: '';
+    z-index: 1;
     position: absolute;
     top: 0;
     left: 0;
@@ -2774,6 +2785,20 @@ input[type="range"] {
     @media screen and (max-width: 768px) {
       .welcome-block-slider-container::before {
         width: 0; } }
+
+.welcome-block-slider {
+  width: 100%;
+  -webkit-transform: translate3d(-100%, 0, 0);
+          transform: translate3d(-100%, 0, 0);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+
+.transition-slider {
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: -webkit-transform 0.5s;
+  transition: transform 0.5s;
+  transition: transform 0.5s, -webkit-transform 0.5s; }
 
 .slider-pagination-container {
   background-color: #000000;

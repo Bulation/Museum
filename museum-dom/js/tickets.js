@@ -46,10 +46,10 @@ export function increaseAmount(e) {
   form.changePriceOnForm();
   removeWarning();
 }
-export function validatePrice() {
-  if (this.value < 0 || this.value > 20 || isNaN(this.value)) {
-    this.value = 1;
-    createWarning(this.parentElement, "Amount must be between 0 and 20");
+export function validatePrice(input) {
+  if (input.value < 0 || input.value > 20 || isNaN(input.value)) {
+    input.value = 1;
+    createWarning(input.parentElement, "Amount must be between 0 and 20");
   }
   changePrice();
 }
@@ -58,7 +58,7 @@ export function createWarning(parent, text) {
   let warning = document.createElement("p");
   warning.style.color = "red";
   warning.style.fontSize = "14px";
-  warning.style.maxWidth = parent.style.width;
+  warning.style.width = parent.style.width;
   warning.className = "warning";
   warning.innerHTML = text;
   parent.after(warning);

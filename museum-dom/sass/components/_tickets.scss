@@ -138,6 +138,9 @@
         }
     }
 }
+.amount-number {
+    width: 150px;
+}
 .amount-number-basic {
     margin-top: -25px;
     @media screen and (max-width: 1024px) {
@@ -146,7 +149,6 @@
     }
 }
 .amount-number-buttons {
-    width: 150px;
     height: 50px;
     background-color: #ffffff;
     border: 1px solid #000000;

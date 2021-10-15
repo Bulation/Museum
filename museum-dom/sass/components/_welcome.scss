@@ -10,7 +10,8 @@
 .welcome-block {
     letter-spacing: 2px;
     position: absolute;
-    z-index:1;
+    pointer-events: none;
+    z-index:2;
     left: 0;
     transition: opacity 0.3s;
     padding-top: 150px;
@@ -75,13 +76,13 @@
     }
 }
 .welcome-block-slider-container {
+    display: flex;
     position: relative;
+    overflow: hidden;
+    cursor: grab;
+    transition: transform 0.5s;
     max-width: 69.44%;
     img {
-        display: none;
-    }
-    .active {
-        display: inline;
         max-width: 100%;
     }
     @media screen and (max-width: 1024px) {
@@ -92,6 +93,7 @@
     }
     &::before {
         content: '';
+        z-index: 1;
         position: absolute;
         top: 0;
         left: 0;
@@ -103,6 +105,15 @@
             width: 0;
         }
     }
+}
+.welcome-block-slider {
+    width: 100%;
+    transform: translate3d(-100%, 0, 0);
+    
+    display: flex;
+}
+.transition-slider {
+    transition: transform 0.5s;
 }
 .slider-pagination-container {
     background-color: #000000;

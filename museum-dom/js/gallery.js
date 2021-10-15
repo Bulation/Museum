@@ -31,7 +31,6 @@ export function getRandom(min, max) {
 
 
 export function slideOn() {
-    console.log(1)
     images = Array.from(document.querySelectorAll(".gallery__img"));
     for (let i = 0; i < images.length; i++) {
         let height = images[i].offsetHeight;
