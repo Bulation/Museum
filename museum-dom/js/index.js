@@ -10,8 +10,6 @@ window.addEventListener("mousemove", (e) => mousedown && Explore.moveSlider(e));
 Explore.slider.addEventListener("mousedown", () => (mousedown = true));
 window.addEventListener("mouseup", () => (mousedown = false));
 
-
-
 import * as iframe from "./iframe.js";
 iframe.findVideos();
 
@@ -34,10 +32,17 @@ Video.videoBar.addEventListener(
 );
 Video.videoBar.addEventListener("mousedown", () => (mousedown = true));
 Video.videoBar.addEventListener("mouseup", () => (mousedown = false));
-window.addEventListener('load', Video.observeKeyCode)
+window.addEventListener("load", Video.observeKeyCode);
 
 import * as Select from "./select.js";
-Select.typeSelect.addEventListener("focus", () => Select.changeOnFocus(Select.typeSelect, Select.typeSelectTitle, 3, Select.typeSelectContainer));
+Select.typeSelect.addEventListener("focus", () =>
+  Select.changeOnFocus(
+    Select.typeSelect,
+    Select.typeSelectTitle,
+    3,
+    Select.typeSelectContainer
+  )
+);
 Select.typeSelect.addEventListener("blur", () =>
   Select.changeOnBlur(
     Select.typeSelect,
@@ -54,7 +59,9 @@ Select.typeSelect.addEventListener("change", () =>
     Select.typeSelectContainer
   )
 );
-window.addEventListener("click", (e) => Select.defaultSelectBackground(e, Select.typeSelectContainer));
+window.addEventListener("click", (e) =>
+  Select.defaultSelectBackground(e, Select.typeSelectContainer)
+);
 Select.timeSelect.addEventListener("focus", () =>
   Select.changeOnFocus(
     Select.timeSelect,
@@ -78,8 +85,7 @@ Select.timeSelect.addEventListener("change", () =>
     Select.timeSelectContainer
   )
 );
-window.addEventListener(
-  "click", (e) =>
+window.addEventListener("click", (e) =>
   Select.defaultSelectBackground(e, Select.timeSelectContainer)
 );
 
@@ -88,24 +94,22 @@ Gallery.gallery.innerHTML = "";
 Gallery.shuffle(Gallery.images).map(
   (img) => (Gallery.gallery.innerHTML += img)
 );
-window.addEventListener("scroll", Gallery.slideOn)
+window.addEventListener("scroll", Gallery.slideOn);
 window.addEventListener("load", Gallery.slideOn);
 
 import * as Tickets from "./tickets.js";
-Tickets.amountContainer.addEventListener('click', (e) => Tickets.increaseAmount(e));
-Tickets.basicPrice.addEventListener("focus", () =>
-  Tickets.removeWarning()
+Tickets.amountContainer.addEventListener("click", (e) =>
+  Tickets.increaseAmount(e)
 );
-Tickets.seniorPrice.addEventListener("focus", () =>
-  Tickets.removeWarning()
-);
-Tickets.basicPrice.addEventListener('blur', function () { 
-    Tickets.validatePrice(this); 
+Tickets.basicPrice.addEventListener("focus", () => Tickets.removeWarning());
+Tickets.seniorPrice.addEventListener("focus", () => Tickets.removeWarning());
+Tickets.basicPrice.addEventListener("blur", function () {
+  Tickets.validatePrice(this);
 });
-Tickets.seniorPrice.addEventListener("blur", function () { 
-    Tickets.validatePrice(this); 
+Tickets.seniorPrice.addEventListener("blur", function () {
+  Tickets.validatePrice(this);
 });
-Tickets.basicPrice.addEventListener('input', () => Tickets.populateStorage)
+Tickets.basicPrice.addEventListener("input", () => Tickets.populateStorage);
 Tickets.seniorPrice.addEventListener("input", () => Tickets.populateStorage);
 Tickets.setStylesFromStorage();
 
@@ -121,7 +125,7 @@ form.closingForm.addEventListener("click", form.showForm);
 form.overlay.addEventListener("click", form.showForm);
 form.bookButton.addEventListener("click", form.showRipple);
 form.date.addEventListener("focus", form.activeTiming);
-form.dateInput.addEventListener('change', form.changeDate);
+form.dateInput.addEventListener("change", form.changeDate);
 form.dateInput.addEventListener("focus", () => {
   Tickets.removeWarning();
   form.dateInput.style.border = "1px solid #030303";
@@ -132,14 +136,14 @@ form.phoneInput.addEventListener("focus", () => {
 });
 form.nameInput.addEventListener("focus", () => {
   Tickets.removeWarning();
-  form.nameInput.style.border = '1px solid #030303';
+  form.nameInput.style.border = "1px solid #030303";
 });
-form.emailInput.addEventListener("focus", () =>{
+form.emailInput.addEventListener("focus", () => {
   Tickets.removeWarning();
   form.emailInput.style.border = "1px solid #030303";
 });
-form.dateInput.addEventListener('blur', () => {
-    form.validateDate(form.dateInput)
+form.dateInput.addEventListener("blur", () => {
+  form.validateDate(form.dateInput);
 });
 form.phoneInput.addEventListener("blur", () => {
   form.validatePhone(form.phoneInput);
@@ -154,27 +158,83 @@ form.emailInput.addEventListener("blur", () =>
 import * as Welcome from "./welcome.js";
 Welcome.welcomeSlider.cloneAppend(0);
 Welcome.welcomeSlider.clonePrepend(1);
-Welcome.sliderContainer.addEventListener("transitionstart", ()=> {
-    Welcome.welcomeSlider.enableSliding();
+Welcome.welcomeSliderContainer.addEventListener("transitionstart", () => {
+  Welcome.welcomeSlider.enableSliding();
 });
-Welcome.sliderContainer.addEventListener('transitionend', () => {
-    Welcome.welcomeSlider.enableSliding();
-    Welcome.sliderContainer.classList.remove('transition-slider');
-})
-Welcome.bulletsContainer.addEventListener('click', (e) => {
-    if (e.target.classList.contains('slide__bullet'))
-        Welcome.welcomeSlider.slideElements(Number(e.target.dataset.count), Welcome.welcomeSlider);
+Welcome.welcomeSliderContainer.addEventListener("transitionend", () => {
+  Welcome.welcomeSlider.enableSliding();
+  Welcome.welcomeSliderContainer.classList.remove("transition-slider");
+});
+Welcome.welcomeBulletsContainer.addEventListener("click", (e) => {
+  if (e.target.classList.contains("slide__bullet"))
+    Welcome.welcomeSlider.slideElements(
+      Number(e.target.dataset.count),
+      Welcome.welcomeSlider
+    );
 });
 
-Welcome.arrows[0].addEventListener("click", () => {
+Welcome.welcomeArrows[0].addEventListener("click", () => {
   if (Welcome.welcomeSlider.isEnabled)
-        Welcome.welcomeSlider.slideElements(Welcome.welcomeSlider.currentSlide - 1, Welcome.welcomeSlider)
+    Welcome.welcomeSlider.slideElements(
+      Welcome.welcomeSlider.currentSlide - 1
+    );
 });
-Welcome.arrows[1].addEventListener("click", () =>  {
-    if (Welcome.welcomeSlider.isEnabled)
-        Welcome.welcomeSlider.slideElements(Welcome.welcomeSlider.currentSlide + 1, Welcome.welcomeSlider);
+Welcome.welcomeArrows[1].addEventListener("click", () => {
+  if (Welcome.welcomeSlider.isEnabled)
+    Welcome.welcomeSlider.slideElements(
+      Welcome.welcomeSlider.currentSlide + 1
+    );
 });
-Welcome.welcomeSlider.swipeDetect(Welcome.sliderContainer)
+Welcome.welcomeSlider.swipeDetect(Welcome.welcomeSliderContainer);
+
+Welcome.videoSlider.cloneAppend(0);
+Welcome.videoSlider.cloneAppend(1);
+Welcome.videoSlider.cloneAppend(2);
+Welcome.videoSlider.clonePrepend(1);
+window.addEventListener('load', checkWindow);
+window.addEventListener('resize', checkWindow);
+function checkWindow() {
+    if (document.documentElement.clientWidth <= 420) {
+        Welcome.videoSlider.transformPercent = 55;
+    }
+    else if (document.documentElement.clientWidth <= 768) {
+        Welcome.videoSlider.transformPercent = 51;
+    }
+    else {
+        Welcome.videoSlider.transformPercent = 35;
+    }
+    Welcome.videoSliderContainer.style.transform = `translate(${
+      -Welcome.videoSlider.transformPercent * Welcome.videoSlider.currentSlide
+    }%, 0)`;
+}
+Welcome.videoSliderContainer.addEventListener("transitionstart", () => {
+  Welcome.videoSlider.enableSliding();
+});
+Welcome.videoSliderContainer.addEventListener("transitionend", () => {
+  Welcome.videoSlider.enableSliding();
+  Welcome.videoSliderContainer.classList.remove("transition-slider");
+});
+Welcome.videoBulletsContainer.addEventListener("click", (e) => {
+  if (e.target.classList.contains("video-slider__slide")) {
+    Welcome.videoSlider.slideElements(
+      Number(e.target.dataset.count)
+    );
+    Video.changeSrc(Number(e.target.dataset.count));
+    }
+});
+
+Welcome.videoArrows[0].addEventListener("click", () => {
+  if (Welcome.videoSlider.isEnabled) {
+    Welcome.videoSlider.slideElements(Welcome.videoSlider.currentSlide - 1);
+    Video.changeSrc(Welcome.videoSlider.currentSlide);
+  }
+});
+Welcome.videoArrows[1].addEventListener("click", () => {
+  if (Welcome.videoSlider.isEnabled) {
+    Welcome.videoSlider.slideElements(Welcome.videoSlider.currentSlide + 1);
+    Video.changeSrc(Welcome.videoSlider.currentSlide);
+  }
+});
 
 import * as map from "./map.js";
 

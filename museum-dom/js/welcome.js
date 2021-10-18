@@ -1,19 +1,29 @@
-export const sliderContainer = document.querySelector(
+export const welcomeSliderContainer = document.querySelector(
   ".welcome-block-slider"
 );
-export const sliderImages = document.querySelectorAll('.slide');
-export const bulletsContainer = document.querySelector(".carousel-pagination");
-export const bullets = bulletsContainer.querySelectorAll('.slide__bullet')
-export const arrows = document.querySelectorAll(".arrows__arrow");
+export const videoSliderContainer = document.querySelector(".youtube-videos-slider");
+export const welcomeSliderImages = document.querySelectorAll(".slide");
+export const videoSliderVideos = document.querySelectorAll(".video-frame");
+export const welcomeBulletsContainer = document.querySelector(".carousel-pagination");
+export const videoBulletsContainer = document.querySelector(
+  ".video-slider-pagination"
+);
+export const welcomeBullets = welcomeBulletsContainer.querySelectorAll(".slide__bullet");
+export const videoBullets = videoBulletsContainer.querySelectorAll(
+  ".video-slider__slide"
+);
+export const welcomeArrows = document.querySelectorAll(".arrows__arrow");
+export const videoArrows = document.querySelectorAll(".video-slider__arrow");
 export let currentNum = document.querySelector(".welcome-slide-num__current-num");
-
+export let videoItemsLength = videoSliderVideos.length;
 
 
 export class Slider {
     previousSlide;
     currentSlide = 1;
     isEnabled = true;
-    constructor(container, items, bulletsContainer, bullets, arrows, currentNum = null, activeClass) {
+    currentNum = null;
+    constructor(container, items, bulletsContainer, bullets, arrows, currentNum, activeClass, transformPercent) {
         this.container = container;
         this.items = items;
         this.itemsLength = items.length
@@ -22,6 +32,7 @@ export class Slider {
         this.arrows = arrows;
         this.currentNum = currentNum;
         this.activeClass = activeClass;
+        this.transformPercent = transformPercent;
     }
     clonePrepend(ind) {
         this.container.prepend(this.items[this.items.length - ind].cloneNode(true));
@@ -33,11 +44,14 @@ export class Slider {
         this.previousSlide = this.currentSlide;
         this.currentSlide = n;
         this.activateBullet(this.previousSlide, this.currentSlide);
-        this.changeSlideNumber(this.currentSlide);
+        if (this.currentNum != null) 
+            this.changeSlideNumber(this.currentSlide);
         this.container.classList.add("transition-slider");
-        this.container.style.transform = `translate(${-100*this.currentSlide}%, 0)`;
+        this.container.style.transform = `translate(${
+          -this.transformPercent * this.currentSlide
+        }%, 0)`;
         if (this.currentSlide == this.itemsLength + 1 || this.currentSlide == 0) {
-            this.container.addEventListener("transitionend", this.InfiniteLoop.bind(this));
+            this.container.addEventListener("transitionend", this.InfiniteLoop.bind(this), {once: true});
         }
     }
 
@@ -57,20 +71,15 @@ export class Slider {
 
     InfiniteLoop() {
         if (this.currentSlide == 0) {
-            this.container.style.transform = `translate(${-100 * this.itemsLength}%, 0)`;
+            this.container.style.transform = `translate(${
+              -this.transformPercent * this.itemsLength
+            }%, 0)`;
             this.currentSlide = this.itemsLength;
-            console.log(this.container);
         } 
         else if (this.currentSlide == this.itemsLength + 1) {
-            this.container.style.transform = `translate(${-100 * 1}%, 0)`;
+            this.container.style.transform = `translate(${-this.transformPercent * 1}%, 0)`;
             this.currentSlide = 1;
-            console.log(this.container);
         }
-        console.log(this.container, this.currentSlide)
-        this.container.removeEventListener(
-          "transitionend",
-          this.InfiniteLoop.bind(this)
-        );
     }
 
     enableSliding() {
@@ -110,13 +119,26 @@ export class Slider {
         })
     }
 }
-export let activeClass = "slide__bullet_active";
+let videoTransformPercent = 35;
+export let welcomeActiveClass = "slide__bullet_active";
+export let videoActiveClass = "video-slider__slide_active";
 export let welcomeSlider = new Slider(
-  sliderContainer,
-  sliderImages,
-  bulletsContainer,
-  bullets,
-  arrows,
+  welcomeSliderContainer,
+  welcomeSliderImages,
+  welcomeBulletsContainer,
+  welcomeBullets,
+  welcomeArrows,
   currentNum,
-  activeClass
+  welcomeActiveClass,
+  100
+);
+export let videoSlider = new Slider(
+  videoSliderContainer,
+  videoSliderVideos,
+  videoBulletsContainer,
+  videoBullets,
+  videoArrows,
+  null,
+  videoActiveClass,
+  35
 );

@@ -1,3 +1,4 @@
+import * as Welcome from "./welcome.js";
 export const videoPlayer = document.querySelector(".video-player");
 export const video = videoPlayer.querySelector(".video");
 export const videoControl = videoPlayer.querySelector(".video-buttons");
@@ -15,6 +16,13 @@ export let options = {
     root: null,
     rootMargin: '0px',
     threshold: 0
+}
+export function changeSrc(n) {
+    if (n == Welcome.videoItemsLength + 1) n = 1;
+    if (n == 0) n = Welcome.videoItemsLength;
+    video.src = `../assets/videos/${n}.mp4`;
+    video.poster = `../assets/img/posters/${n}.jpg`;
+    endingVideo();
 }
 export function observeKeyCode() {
     let observer = new IntersectionObserver((entries) => {
@@ -49,6 +57,7 @@ export function observeKeyCode() {
 
 
 export function changeProgress(e, coef) {
+    console.log('11')
   let value = e.target.value * coef;
   e.target.style.background = `linear-gradient(to right, #710707 0%, #710707 ${value}%, #C4C4C4 ${value}%, #C4C4C4 100%)`;
 }
@@ -96,6 +105,7 @@ export function changeVolume(e) {
 }
 
 export function muteSound(e) {
+    console.log("11");
   if (e.keyCode != 77 && e.type != "click") {
     return;
   }
@@ -122,6 +132,8 @@ export function endingVideo() {
   smallPlayButton.classList.remove("pause");
   playButton.classList.remove("hidden");
   videoControl.classList.remove("hide");
+  videoBar.value = "0";
+  videoBar.style.background = `linear-gradient(to right, #710707 0%, #710707 ${videoBar.value}%, #C4C4C4 ${videoBar.value}%, #C4C4C4 100%)`;
   video.playbackRate = 1;
   if (volumeBar.value == "0") {
     volumeBar.value = previousValue;
@@ -157,15 +169,30 @@ export function videoPlaybackRate(e) {
     video.playbackRate += 0.25;
     showAndHideControl();
   }
-  if (e.keyCode == 188 && video.playbackRate > 0.25) {
+  else if (e.keyCode == 188 && video.playbackRate > 0.25) {
     video.playbackRate -= 0.25;
     showAndHideControl();
   }
+  else {
+      return;
+  }
+  createSpeed(video.playbackRate);
+}
+
+export function createSpeed(coef) {
+    let speed = document.createElement('div');
+    speed.innerHTML = coef + 'x';
+    videoPlayer.append(speed);
+    speed.classList.add('speed');
+    setTimeout(()=> {
+        speed.remove();
+    }, 1000)
 }
 
 export function updateBar() {
-  videoBar.value = (video.currentTime / video.duration) * 100;
-  videoBar.style.background = `linear-gradient(to right, #710707 0%, #710707 ${videoBar.value}%, #C4C4C4 ${videoBar.value}%, #C4C4C4 100%)`;
+    if ((video.currentTime / video.duration) * 100)
+        videoBar.value = (video.currentTime / video.duration) * 100;
+    videoBar.style.background = `linear-gradient(to right, #710707 0%, #710707 ${videoBar.value}%, #C4C4C4 ${videoBar.value}%, #C4C4C4 100%)`;
 }
 
 export function changeVideoTime(e) {

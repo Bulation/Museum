@@ -23,8 +23,12 @@ export function setupVideo(video) {
 }
 
 export function parseMediaURL(media) {
-  let regexp =
-    /https:\/\/img\.youtube\.com\/vi\/([a-zA-Z0-9_-]+)\/mqdefault\.jpg/i;
+    let regexp;
+  if (media.src.includes('Vi5D6FKhRmo'))
+    return 'Vi5D6FKhRmo';
+  else
+    regexp =
+      /https:\/\/img\.youtube\.com\/vi\/([a-zA-Z0-9_-]+)\/maxresdefault\.jpg/i;
   let url = media.src;
   let match = url.match(regexp);
 

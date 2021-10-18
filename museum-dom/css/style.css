@@ -2179,6 +2179,7 @@ form {
 .video {
   width: 100%;
   height: 100%;
+  position: relative;
   -o-object-fit: fill;
      object-fit: fill;
   cursor: pointer; }
@@ -2191,6 +2192,22 @@ form {
   @media screen and (max-width: 420px) {
     .video {
       height: 172px; } }
+
+.speed {
+  width: 100px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  background-color: black;
+  color: white;
+  text-align: center;
+  font-family: Roboto-Light, Verdana, Arial, sans-serif;
+  font-size: 22px;
+  line-height: 38.5px;
+  font-weight: 300;
+  font-display: swap; }
 
 .video-player {
   display: -webkit-box;
@@ -2404,13 +2421,27 @@ input[type="range"] {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  position: relative;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  overflow: hidden;
   margin: 40px 0; }
   @media screen and (min-width: 421px) and (max-width: 768px) {
     .youtube-videos {
       margin: 20px 0; } }
+
+.youtube-videos-slider {
+  width: 100%;
+  -webkit-transform: translate3d(-35%, 0, 0);
+          transform: translate3d(-35%, 0, 0);
+  gap: 42px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+  @media screen and (max-width: 768px) {
+    .youtube-videos-slider {
+      gap: 20px; } }
 
 .video-slider-pagination {
   display: -webkit-box;
@@ -2460,8 +2491,11 @@ input[type="range"] {
 .video-frame {
   position: relative;
   cursor: pointer;
-  width: 31.5%;
-  height: 254px; }
+  width: 32%;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  height: 254px;
+  border: none; }
   .video-frame:hover .video__button-shape {
     fill: #ff0000;
     fill-opacity: 1; }
