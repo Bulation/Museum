@@ -20,8 +20,8 @@ export let options = {
 export function changeSrc(n) {
     if (n == Welcome.videoItemsLength + 1) n = 1;
     if (n == 0) n = Welcome.videoItemsLength;
-    video.src = `../assets/videos/${n}.mp4`;
-    video.poster = `../assets/img/posters/${n}.jpg`;
+    video.src = `assets/videos/${n}.mp4`;
+    video.poster = `assets/img/posters/${n}.jpg`;
     endingVideo();
 }
 export function observeKeyCode() {
