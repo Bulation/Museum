@@ -1,0 +1,191 @@
+.tickets-wrapper {
+    flex-direction: column;
+}
+.tickets__title {
+    width: 100%;
+}
+.payment-title {
+    text-align: right;
+    @include font (Roboto-Bold, 28px, 33px, bold);
+    letter-spacing: 0;
+    margin-bottom: 50px;
+    text-transform: none;
+    @media screen and (max-width: 1024px) {
+        text-align: left;
+        margin-bottom: 29px;
+    }
+    @media screen and (max-width: 768px) {
+        margin-bottom: 39px;
+    }
+    @media screen and (max-width: 420px) {
+        margin-bottom: 20px;
+        @include font (Roboto-Bold, 16px, 19px, bold);
+        text-align: center;
+    }
+}
+.ticket-payment-title {
+    text-align: left;
+}
+.tickets-container {
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    padding-top: 103px;
+    gap: 60px;
+    @media screen and (max-width: 1024px) {
+        padding-top: 83px;
+    }
+    @media screen and (max-width: 768px) {
+        padding-top: 63px;
+        gap: 60px;
+    }
+    @media screen and (max-width: 420px) {
+        flex-wrap: wrap;
+        gap: 40px;
+    }
+}
+.tickets-img-container {
+    width: 720px;
+    .tickets-img-container__img {
+        object-fit: contain;
+        max-width: 100%;
+    }
+    @media screen and (max-width: 1024px) {
+        max-width: 73%;
+    }
+    @media screen and (max-width: 768px) {
+        max-width: 62%;
+    }
+    @media screen and (max-width: 420px) {
+        max-width: 100%;
+    }
+}
+.ticket-type {
+    @media screen and (max-width: 1024px) {
+        display: none;
+    }
+    .ticket-type__label {
+        display: block;
+        margin-top: 25px;
+        @include font (Roboto-Light, 22px, 26px, 300);
+        cursor: pointer;
+        position: relative;
+    }
+    .ticket-type__radio {
+        margin-right: 23px;
+        opacity: 0;
+        &:checked ~ .ticket-type__checkmark:after {
+            content: '';
+            position: absolute;
+            top: 3px;
+            left: 3px;
+            width: 7px;
+            height: 7px;
+            border-radius: 50%;
+            background-color: #000000;
+        }
+    }
+    .ticket-type__checkmark {
+        position: absolute;
+        top: 3px;
+        left: 0;
+        width: 17px;
+        height: 17px;
+        border-radius: 50%;
+        border: 2px solid #000000
+    }
+
+}
+.payment {
+    display: flex;
+    width: 46%;
+    justify-content: space-between;
+    @media screen and (max-width: 1024px) {
+        width: 20%;
+    }
+    @media screen and (max-width: 768px) {
+        width: 49%;
+    }
+    @media screen and (max-width: 420px) {
+        width: 100%;
+        justify-content: center;
+    }
+}
+.amount {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    @include font (Roboto-Light, 22px, 26px, 300);
+    @media screen and (max-width: 420px) {
+        align-items: normal;
+        @include font (Roboto-Light, 16px, 19px, 300);
+    }
+}
+.amount-price {
+    @include font (Roboto-Bold, 28px, 33px, 700);
+    letter-spacing: 1.65px;
+    @media screen and (max-width: 420px) {
+        @include font (Roboto-Bold, 16px, 19px, 700);
+        text-align: center;
+        letter-spacing: 0;
+    }
+    .amount-price__value {
+        @media screen and (max-width: 1024px) {
+            padding-left: 13px;
+        }
+        @media screen and (max-width: 420px) {
+            padding-left: 3px;
+        }
+    }
+}
+.amount-number {
+    width: 150px;
+}
+.amount-number-basic {
+    margin-top: -25px;
+    @media screen and (max-width: 1024px) {
+        text-align: left;
+        margin-top: 0;
+    }
+}
+.amount-number-buttons {
+    height: 50px;
+    background-color: #ffffff;
+    border: 1px solid #000000;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 15px;
+    input[type="number"]::-webkit-outer-spin-button,
+    input[type="number"]::-webkit-inner-spin-button {
+	    display: none;
+    }
+    .amount-number-buttons__number {
+        width: 85px;
+        background-color: #ffffff;
+        color: #000000;
+        text-align: center;
+        border: none;
+        @include font(Roboto-Light, 22px, 26px, 300)
+    }
+    @media screen and (max-width: 1024px) {
+        width: 175px;
+        margin-top: 10px;
+    }
+    @media screen and (max-width: 420px) {
+        margin-top: 15px;
+    }
+}
+.amount-number-senior {
+    margin-top: 10px;
+    margin-bottom: 50px;
+    @media screen and (max-width: 1024px) {
+        margin: 25px 0;
+    }
+    @media screen and (max-width: 768px) {
+        margin-bottom: 40px;
+    }
+    @media screen and (max-width: 420px) {
+        margin-top: 20px;
+    }
+}

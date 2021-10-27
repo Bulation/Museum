@@ -1,0 +1,560 @@
+form {
+    background: #fff;
+    position: fixed;
+    left: -51%;
+    top:50%;
+    width: 100%;
+    transition: all 0.3s;
+    transform: translate(-50%, -50%);
+    z-index: 4;
+    overflow-y: scroll;
+    max-height: 100vh;
+}
+.form_active {
+    left: 50%;
+}
+
+.form-container {
+    display: flex;
+    position: relative;
+    max-width: 970px;
+    padding: 75px 0;
+    margin: 0 auto;
+    justify-content: center;
+    color: #030303;
+    @include font(Roboto-Regular, 18px, 21px, 300);
+    input {
+        border: 1px solid #030303;
+        &:focus {
+            outline: none;
+            &::placeholder {
+                color: transparent;
+            }
+        }
+    }
+    label {
+        display: block;
+        width: 100%;
+    }
+    @media screen and (max-width: 1000px) {
+        flex-direction: column;
+        width: calc(100% - 60px);
+    }
+}
+.invalid {
+    border: 3px solid red;
+}
+.booking-form-header {
+    border-bottom: 3px solid #740C11;
+    .booking-form-header__text {
+        margin-bottom: 10px;
+        color: #710707;
+
+    }
+    .booking-form-header__title {
+        letter-spacing: 0;
+        position: relative;
+        @include font(Forum, 50px, 55px, 300);
+        @media screen and (max-width: 420px) {
+            @include font(Forum, 32px, 35px, 300)
+        }
+        &::before {
+            content: '';
+            width: 85px;
+            height: 41px;
+            position: absolute;
+            top: -41px;
+            background: url(../assets/svg/form/formlogo.svg);
+        }
+        margin-bottom: 15px;
+    }
+}
+.booking-time-container {
+    width: 100%;
+    display: flex;
+}
+.booking-form-timing {
+    height: 45px;
+    position: relative;
+    &::before {
+        position: absolute;
+        left: 45px;
+        top: 13px;
+    }
+    &::-webkit-datetime-edit {
+        padding-left: 45px;
+        opacity: 0;
+    }
+    @media screen and (max-width: 1000px) {
+        width: 251px;
+    }
+    @media screen and (max-width: 600px) {
+        width: 100%;
+    }
+}
+.booking-form-date {
+    width: 50%;
+    margin-right: 20px;
+    background: url(../assets/svg/form/calendar.svg) no-repeat 15px 15px;
+    &::before {
+        content: "Date";
+    }
+    &::-webkit-calendar-picker-indicator {
+        background: url(../assets/svg/form/date.svg) no-repeat 0 5px;
+    }
+    @media screen and (max-width: 1000px) {
+        margin-right: 23px;
+    }
+}
+.booking-form-time {
+    width: 50%;
+    position: relative;
+    padding: 13px 0 13px 45px;
+    background: url(../assets/svg/form/clock.svg), url(../assets/svg/form/date.svg);
+    background-repeat: no-repeat;
+    background-position: 15px 15px, 95% 15px;
+    border: 1px solid #030303;
+    &::-webkit-calendar-picker-indicator {
+        background: url(../assets/svg/form/date.svg) no-repeat 0px 5px;
+        width: 22px;
+    }
+    select {
+        display: block;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        padding-left: 45px;
+        appearance: none;
+        line-height: 45px;
+        background-color: transparent;
+        &:focus {
+            top: 45px;
+            height: 400px;
+            z-index: 100;
+            overflow: scroll;
+            outline: 1px solid #000000;
+            padding-left: 0;
+            background-color: #ffffff;
+        }
+        option {
+            @include font(Roboto-Light, 18px, 21px, 300);
+            display: block;
+            -webkit-appearance: none;
+            padding: 12.5px 44px;
+            background-color: #fff;
+            &:hover, &:focus, &:active, &[selected] {
+                -webkit-appearance: none;
+                background-color: #e7e7e7;
+            }
+            &:first-child {
+                display: none;
+            }
+        }
+    }
+}
+
+.booking-form-timing-active {
+    &::before {
+        content: "";
+    }
+    &::-webkit-datetime-edit {
+        opacity: 1;
+    }
+}
+.booking-form-main {
+    padding-top: 60px;
+    .booking-form__input {
+        margin-top: 20px;
+        padding: 11px 0 11px 43px;
+        width: 100%;
+    }
+    .booking-form__input::placeholder {
+        color: #030303;
+    }
+    @media screen and (max-width: 1000px) {
+        padding-top: 40px;
+    }
+}
+.booking {
+    padding-top: 41px;
+    max-width: 400px;
+    margin-right: 40px;
+    @media screen and (max-width: 1000px) {
+        max-width: 530px;
+        margin: 0 auto;
+        padding-bottom: 51px;
+    }
+    @media screen and (max-width: 600px) {
+        width: 100%;
+    }
+}
+.booking-form-name {
+    background: url(../assets/svg/form/name.svg) no-repeat 15px 15px;
+}
+.booking-form-email {
+    background: url(../assets/svg/form/email.svg) no-repeat 15px 17px;
+}
+.booking-form-phone {
+    background: url(../assets/svg/form/phone.svg) no-repeat 15px 11px;
+}
+.form-entry-ticket {
+    border: 1px solid #030303;
+    padding: 10px 15px 15px;
+    .form-entry-ticket__title {
+        @include font(Forum, 18px, 20px, 300);
+        color: $color-primary;
+        margin: 0;
+        padding-bottom: 5px;
+        border-bottom: 2px solid #740C11;
+    }
+}
+
+.ticket-basic {
+    display: flex;
+    justify-content: space-between;
+    margin: 15px 0 18px 0;
+}
+.ticket-number-buttons {
+    display: flex;
+    .ticket-number-buttons__minus {
+        width: 35px;
+        height: 25px;
+        color: #ffffff;
+        background-color: #000000;
+    }
+    .ticket-number-buttons__number {
+        width: 35px;
+        height: 25px;
+        color: #000000;
+        text-align: center;
+        background-color: #ffffff;
+        &::-webkit-inner-spin-button {
+            display: none;
+        }
+    }
+    .ticket-number-buttons__plus {
+        @extend .ticket-number-buttons__minus;
+    }
+}
+.ticket-senior {
+    display: flex;
+    justify-content: space-between;
+}
+
+.select-container {
+    position: relative;
+    padding: 13px 0 13px 45px;
+    outline: 1px solid #000000;
+    margin: 20px 0;
+    height: 45px;
+    background: url(../assets/svg/form/ticket.svg) no-repeat, url(../assets/svg/form/date.svg) no-repeat;
+    background-position: 15px 15px, 98% 15px;
+}
+.booking-form-tickets {
+    display: block;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding-left: 45px;
+    appearance: none;
+    line-height: 45px;
+    background-color: transparent;
+    overflow: visible;
+    &:focus {
+        top: 45px;
+        outline: 1px solid #000000;
+        padding-left: 0;
+        background-color: #ffffff;
+    }
+    option {
+        @include font(Roboto-Light, 18px, 21px, 300);
+        display: block;
+        -webkit-appearance: none;
+        padding: 12.5px 44px;
+        background-color: #fff;
+        &:hover, &:focus, &:active, &[selected] {
+            -webkit-appearance: none;
+            background-color: #e7e7e7;
+        }
+        &:first-child {
+            display: none;
+        }
+    }
+
+}
+.select-container-focus {
+    background: url(../assets/svg/form/ticket.svg) no-repeat, url(../assets/svg/form/date_active.svg) no-repeat;
+    background-position: 15px 15px, 98% 15px;
+}
+.booking-form-time-focus {
+    background: url(../assets/svg/form/clock.svg) no-repeat, url(../assets/svg/form/date_active.svg) no-repeat;
+    background-position: 15px 15px, 95% 15px;
+}
+.select-list {
+    position: relative;
+    top: 45px;
+    left: 0;
+}
+.form-overview {
+    padding: 25px 30px;
+    width: 530px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #030303;
+    @media screen and (max-width: 1000px) {
+        padding: 25px 15px;
+    }
+    @media screen and (max-width: 600px) {
+        width: 100%;
+    }
+}
+
+.form-overview-header {
+    background: url(../assets/img/formlouvre.jpg) no-repeat right top;
+    @include font(Roboto-Light, 18px, 21px, 300);
+    @media screen and (max-width: 600px) {
+        background-size: 120px 96px;
+    }
+    .form-overview__title-overview {
+        @include font(Roboto-Medium, 32px, 38px, 500);
+        letter-spacing: 0;
+        text-transform: none;
+    }
+    .form-overview__title-louvre {
+        @include font(Roboto-Medium, 22px, 26px, 500);
+        margin: 2px 0 10px 0;
+    }
+    .form-overview__text {
+        position: relative;
+        padding-left: 30px;
+        &::before {
+            position: absolute;
+            top: 0;
+            left: 0;
+            content: '';
+            width: 15px;
+            height: 15px;
+        }
+    }
+    .form-overview__date {
+        &::before {
+            background: url(../assets/svg/form/calendar.svg);
+        }
+    }
+    .form-overview__time {
+        margin: 5px 0;
+        &::before {
+            background: url(../assets/svg/form/clock.svg);
+        }
+    }
+    .form-overview__ticket {
+        &::before {
+            background: url(../assets/svg/form/check.svg);
+        }
+    }
+}
+
+.form-overview-ticket-price {
+    @include font(Roboto-Regular, 22px, 26px, 300);
+    .ticket-description__count {
+        @include font(Roboto-Regular, 18px, 21px, 300);
+        padding: 0 11px;
+        margin-right: 10px;
+        width: 32px;
+        height: 20px;
+        background-color: #030303;
+        border-radius: 5px;
+        color: #A4A4A3;
+        text-align: center;
+    }
+}
+
+.form-overview-ticket {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 9px;
+}
+
+.form-overview-ticket-basic {
+    margin: 22px 0 7px 0;
+}
+
+.form-overview-total-price {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-top: 2px solid #740C11;
+    @include font(Roboto-Regular, 32px, 38px, 300);
+    .form-overview-total-price__euro {
+        @include font(Roboto-Medium, 32px, 38px, 500);
+    }
+}
+
+.card-front {
+    max-width: 360px;
+    position: relative;
+    z-index: 1;
+    padding: 15px 20px 5px;
+    background: #BCBCBC;
+    @include font(Roboto-Regular, 12px, 14px, 300);
+    .card-front__number::-webkit-inner-spin-button, .card-front__number::-webkit-outer-spin-button {
+        display: none;
+    }
+    input {
+        width: 100%;
+        height: 35px;
+        margin: 5px 0 10px 0;
+        padding-left: 10px;
+    }
+    .card-front__date {
+        width: 100px;
+    }
+    .card-front__date::-webkit-inner-spin-button, .card-front__date::-webkit-outer-spin-button {
+        appearance: none;
+        opacity: 1;
+        background: url(../assets/svg/form/datearrows.svg);
+        width: 28px; 
+        height: 35px;
+    }
+    @media screen and (max-width: 600px) {
+        max-width: 330px;
+    }
+}
+.card-front-main {
+    display: flex;
+    justify-content: space-between;
+}
+.cards-container {
+    position: relative;
+}
+.card-back {
+    position: absolute;
+    display: flex;
+    padding: 25px 0 15px 0;
+    flex-direction: column;
+    width: 360px;
+    background: #939393;
+    top: 30px;
+    left: 110px;
+    .card-back__magnet-stripe {
+        height: 45px;
+        background: #000000;
+    }
+    @media screen and (max-width: 1000px) {
+        left: 140px;
+    }
+    @media screen and (max-width: 600px) {
+        position: static;
+        max-width: 330px;
+        margin-top: 25px;
+        width: 100%;
+    }
+}
+
+.cvv {
+    width: 75px;
+    align-self: flex-end;
+    margin: 15px 20px 0 0;
+    .cvv__input {
+        width: 100%;
+        height: 35px;
+    }
+    .cvv__text {
+        @include font(Roboto-Regular, 12px, 14px, 300);
+        text-align: center;
+        margin-bottom: 5px;
+    }
+    .cvv__instruction {
+        width: 55px;
+        margin: 6px auto 0;
+        @include font(Roboto-Regular, 10px, 12px, 300);
+    }
+}
+
+.cards {
+    .cards__visa {
+        width: 55px;
+        height: 16px;
+        margin: 20px 0 15px;
+        background: url(../assets/svg/form/visa.svg);
+    }
+    .cards__mastercard {
+        width: 53px;
+        height: 32px;
+        background: url(../assets/svg/form/mastercard.svg);
+    }
+}
+
+.form-button {
+    @include font(Roboto-Regular, 22px, 26px, 300);
+    color: #ffffff;
+    margin-top: 56px;
+    padding: 11px 85px;
+    background: #710707;
+    align-self: flex-end;
+    position: relative;
+    overflow: hidden;
+    transition: background 0.3s;
+    &:hover {
+        background: $color-primary;
+    }
+    @media screen and (max-width: 1000px) {
+        @include font(Roboto-Regular, 20px, 23px, 300);
+    }
+    @media screen and (max-width: 600px) {
+        margin-top: 40px;
+    }
+}
+.overlay {
+    display: none;
+    position: fixed; 
+    left: 0;  top: 0; right: 0; bottom: 0;
+    background: rgba(0, 0, 0, 0.8);
+}
+.overlay_active {
+    display: block;
+} 
+.form-close {
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    right: 30px;
+    top: 30px;
+    &::before {
+        content: '';
+        position: absolute;
+        transform: rotate(-45deg);
+        width: 1px;
+        left: 15px;
+        height: 31px;
+        background: #030303;
+    }
+    &::after {
+        content: '';
+        position: absolute;
+        transform: rotate(45deg);
+        width: 1px;
+        left: 15px;
+        height: 31px;
+        background: #030303;
+    }
+}
+
+.ripple {
+    position: absolute;
+    background-color: #ffffff;
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    animation: scale 0.5s ease-out;
+}
+@keyframes scale {
+    to {
+        transform: translate(-50%, -50%) scale(2);
+        opacity: 0;
+    }
+}

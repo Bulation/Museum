@@ -1,0 +1,82 @@
+.card {
+    color: #000000;
+    width: 30.5%;
+    .card__text {
+        margin-top: 10px;
+    }
+    .card__title {
+        width: 100%;
+        position: relative;
+        margin-top: 25px;
+        &::before {
+            content: "";
+            position: absolute;
+            width: 70%;
+            height: 2px;
+            bottom: -10px;
+            background-color: $color-primary;
+            transition: width 1s;
+            @media screen and (max-width: 1024px) {
+                width: 45%;
+            }
+            @media screen and (max-width: 768px) {
+                width: 55%;
+            }
+        }
+        @media screen and (max-width: 1024px) {
+            letter-spacing: 3px;
+        }
+        @media screen and (max-width: 420px) {
+            @include font(Forum, 18px, 20px, 400);
+            letter-spacing: 5px;
+        }
+    }
+    .card__virtual-tour {
+        @include font(Roboto-Thin, 22px, 26px, 100);
+        margin-top: 20px;
+        @media screen and (max-width: 1024px) {
+            @include font(Roboto-Thin, 20px, 23px, 100);
+        }
+        @media screen and (max-width: 768px) {
+            @include font(Roboto-Thin, 18px, 21px, 100);
+            margin-top: 22px;
+        }
+        @media screen and (max-width: 420px) {
+            @include font(Roboto-Thin, 16px, 19px, 100);
+        }
+    }
+    .card__panorama-view {
+        @include font(Roboto-Thin, 18px, 21px, 100);
+        @media screen and (max-width: 1024px) {
+            @include font(Roboto-Thin, 16px, 19px, 100);
+        }
+    }
+    @media screen and (max-width: 1024px) {
+        width: 34%;
+    }
+    @media screen and (max-width: 768px) {
+        width: 38.5%;
+    }
+    @media screen and (max-width: 420px) {
+        width: 280px;
+    }
+    &:hover {
+        .card__title {
+            &::before {
+                width: 100%;
+            }
+        }
+        .img-container__img {
+            transform: scale(1.1);
+        }
+    }
+}
+.img-container {
+    width: 100%;
+    .img-container__img {
+        display: block;
+        max-width: 100%;
+        transition: transform 1s;
+    }
+}
+

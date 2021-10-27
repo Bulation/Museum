@@ -1,0 +1,120 @@
+.header-nav {
+    @media screen and (max-width: 1024px) {
+        position: fixed;
+        padding-top: 166px;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        height: 100vh;
+        transform: translateX(-200%);
+        transition: transform 0.3s;
+        z-index: 100;
+        background: #000000;
+        width: 300px;
+    }
+    @media screen and (max-width: 768px) {
+        width: 100%;
+        padding-top: 155px;
+    }
+    @media screen and (max-width: 420px) {
+        padding-top: 120px;
+    }
+}
+.transform {
+    transform: translateX(0%);
+}
+.header-nav-list {
+    @extend %nav;
+    gap: 55px;
+    @include font(Roboto-Thin, 22px, 26px, 100);
+    @media screen and (max-width: 1024px) {
+        flex-direction: column;
+        align-items: flex-start;
+        width: calc(100% - 110px);
+        margin: 0 auto;
+        gap: 23px;
+        @include font(Roboto-Light, 20px, 23px, 300);
+    }
+    @media screen and (max-width: 420px) {
+        width: 310px;
+    }
+}
+.header-nav-list__item {
+    position: relative;
+    @media screen and (max-width: 1024px) {
+        width: 100%;
+        &::before {
+            content: '';
+            background-color: #ffffff;
+            position: absolute;
+            top: 6px;
+            left: 117px;
+            width: 1px;
+            height: 7px;
+            transform: rotate(-45deg);
+        }
+        &::after {
+            content: '';
+            background-color: #ffffff;
+            position: absolute;
+            left: 117px;
+            top: 11px;
+            width: 1px;
+            height: 7px;
+            transform: rotate(-135deg);
+        }
+    }
+}
+.header-nav-list__link {
+    width: 100%;
+    color: #fff;
+    border: 1px solid transparent;
+    transition: color 1s,
+                border-bottom 1s;
+    @media screen and (min-width: 1024px) {
+        &:hover {
+            @include hover($color-primary);
+        }
+    }
+}
+.footer-nav {
+    width: 45%;
+    @media screen and (max-width: 1024px) {
+        width: 49%;
+    }
+    @media screen and (max-width: 768px) {
+        padding-top: 20px;
+        width: 100%;
+    }
+    @media screen and (max-width: 420px) {
+        padding-top: 0;
+    }
+}
+.footer-nav-list {
+    column-count: 2;
+    letter-spacing: 2px;
+    @include font(Roboto-Thin, 22px, 26px, 100);
+    @media screen and (max-width: 768px) {
+        column-gap: 75px;
+        @include font(Roboto-Thin, 18px, 21px, 100);
+    }
+    @media screen and (max-width: 420px) {
+        column-gap: 19%;
+        column-count: 3;
+        @include font(Roboto-Thin, 16px, 19px, 100);
+    }
+    .footer-nav-list__item {
+        margin-bottom: 25px;
+        width: fit-content;
+    }
+    .footer-nav-list__link {
+        width: fit-content;
+        color: #fff;
+        border: 1px solid transparent;
+        transition: color 1s,
+                    border-bottom 1s;
+        &:hover {
+            @include hover($color-primary);
+        }
+    }
+}

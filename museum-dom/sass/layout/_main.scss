@@ -1,0 +1,30 @@
+.main {
+    width: 100%;
+    background-color: #000000;
+}
+.section {
+    color: #FFFFFF;
+}
+.section_white {
+    background-color: #FFFFFF;
+    color: #000000;
+    h2 {
+        color: $color-primary;
+    }
+}
+.wrapper {
+    width: $width;
+    max-width: 1440px;
+    padding: 75px 0;
+    display: flex;
+    margin: 0 auto;
+    @media screen and (max-width: 1280px) {
+        width: calc(100% - 40px);
+    }
+    @media screen and (max-width: 1024px) {
+        padding: 60px 0;
+    }
+    @media screen and (max-width: 768px) {
+        padding: 40px 0;
+    }
+}

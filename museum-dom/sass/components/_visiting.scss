@@ -1,0 +1,37 @@
+.visiting-wrapper {
+    flex-direction: column;
+    @media screen and (min-width:421px) and (max-width: 768px) {
+        padding-bottom: 80px;
+    }
+}
+.title-underline::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    bottom: -25px;
+    height: 3px;
+    background-color: #710707;
+    @media screen and (max-width: 1024px) {
+        bottom: -20px;
+    }
+}
+.visiting-flex-container {
+    display: flex;
+    @include font(Roboto-Thin, 22px, 26px, 200);
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    flex-wrap: wrap;
+    padding-top: 103px;
+    align-items: flex-start;
+    gap: 75px 0;
+    @media screen and (max-width: 1024px) {
+        justify-content: space-evenly;
+        padding-top: 83px;
+        gap: 60px 0;
+    }
+    @media screen and (max-width: 768px) {
+        gap: 40px 0;
+        padding-top: 63px;
+    }
+}

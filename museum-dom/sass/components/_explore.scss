@@ -1,0 +1,122 @@
+.explore-wrapper {
+    justify-content: space-between;
+    @media screen and (max-width: 1440px) {
+        flex-direction: column;
+    }
+}
+.explore-description {
+    width: 45.6%;
+    margin-right: 60px;
+    @media screen and (max-width: 1440px) {
+        width: 100%;
+        margin-right: 0;
+    }
+    @media screen and (max-width: 1024px) {
+        margin-bottom: 62px;
+    }
+    @media screen and (max-width: 768px) {
+        width: calc(100% - 40px);
+        margin: 0;
+    }
+    p:last-child {
+        @media screen and (max-width: 1024px) {
+            display: none;
+        }
+    }
+}
+.explore__title {
+    margin-bottom: 103px;
+    @media screen and (max-width: 1024px) {
+        margin-bottom: 83px;
+    }
+    @media screen and (max-width: 768px) {
+        margin-bottom: 63px;
+    }
+}
+.explore__text {
+    @include font(Roboto-Light, 22px, 38.5px, 300);
+    margin: 23px 0;
+    .explore__text_yellow {
+        color: $color-span;
+    }
+    @media screen and (max-width: 1024px) {
+        font-size: 20px;
+        margin: 0;
+    }
+    @media screen and (max-width: 768px) {
+        display: none;
+    }
+}
+.explore-image {
+    width: 50%;
+    position: relative;
+    height: auto;
+    @media screen and (max-width: 1500px) {
+        width: fit-content;
+        margin: 0 auto;
+    }
+    img {
+        display: block;
+        width: 720px;
+        height: 700px;
+        @media screen and (max-width: 768px) {
+            width: calc(100vw - 40px);
+            height: auto;
+        }
+    }
+    .explore-image-container {
+        position: absolute;
+        height: 100%;
+        overflow:hidden;
+        width: 440px;
+        top: 0;
+        @media screen and (max-width: 500px) {
+            width: 230px;
+        }
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            height: calc(50% - 16px);
+            width: 5px;
+            z-index: 3;
+            background-color: #ffffff;
+            @media screen and (max-width: 500px) {
+                width: 2px;
+                height: calc(50% - 20px);
+            }
+        }
+        &::after {
+            width: 5px;
+            bottom: 0;
+            right: 0;
+            height: calc(50% - 17px);
+            content: '';
+            position: absolute;
+            background-color: #ffffff;
+            @media screen and (max-width: 500px) {
+                width: 2px;
+                height: 50%;
+            }
+        }
+    }
+    
+}
+.explore-slider {
+    position: absolute;
+    cursor: ew-resize;
+    left: 418px;
+    z-index: 4;
+    top: calc(50% - 20px);
+    width: 39px;
+    height: 39px;
+    border: 5px solid #ffffff;
+    border-radius: 50%;
+    @media screen and (max-width: 500px) {
+        left: 218px;
+        border-width: 2px;
+        width: 20px;
+        height: 20px;
+    }
+}

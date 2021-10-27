@@ -1,0 +1,75 @@
+.footer {
+    background-color: $color-bg;
+    width: 100%;
+    .logo-link {
+        align-self: flex-start;
+    }
+}
+.footer-container {
+    @extend %layout;
+    flex-wrap: nowrap;
+    padding: 75px 0 25px;
+    @media screen and (max-width: 1024px) {
+        gap: 45px;
+        padding-top: 60px;
+    }
+    @media screen and (max-width: 768px) {
+        gap: 80px;
+        padding: 40px 0;
+    }
+    @media screen and (max-width: 700px) {
+        flex-wrap: wrap;
+    }
+    @media screen and (max-width: 420px) {
+        gap: 40px;
+    }
+}
+.copyrights {
+    width: 100%;
+    @include font(Roboto-Thin, 22px, 22px, 100);
+    letter-spacing: 2px;
+    color: #fff;
+    a {
+        color: #fff;
+    }
+    border-top: 3px solid #666666;
+    @media screen and (max-width: 768px) {
+        border-top: 1px solid #666666;
+    }
+    @media screen and (max-width: 420px) {
+        @include font(Roboto-Thin, 16px, 22px, 100);
+    }
+}
+.copyrights-wrapper {
+    justify-content: space-between;
+    padding: 50px 0;
+    @media screen and (max-width: 768px) {
+        padding: 40px 0;
+    }
+    .copyrights-wrapper__school {
+        @media screen and (max-width: 600px) {
+            display: none;
+        }
+    }
+    a {
+        border: 1px solid transparent;
+        transition: color 1s,
+                    border-bottom 1s;
+        &:hover {
+            @include hover($color-primary);
+        }
+    }
+}
+.link-wrapper {
+    width: 76.5%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 40px;
+    @media screen and (max-width: 768px) {
+        width: 59%;
+    }
+    @media screen and (max-width: 700px) {
+        width: 100%;
+    }
+}

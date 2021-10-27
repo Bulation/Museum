@@ -1,0 +1,39 @@
+.logo-link__title {
+    @include font(Forum, 28px, 31px, 400);
+    @media screen and (max-width: 768px) {
+        @include font(Forum, 28px, 50px, 400);
+    }
+    @media screen and (max-width: 420px) {
+        @include font(Forum, 16px, 18px, 400);
+    }
+    text-transform: uppercase;
+}
+h2 {
+    @include font(Forum, 80px, 90px, 400);
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    position: relative;
+    @media screen and (max-width: 1024px) {
+        @include font(Forum, 50px, 75px, 400);
+    }
+    @media screen and (max-width: 768px) {
+        @include font(Forum, 40px, 60px, 400);
+    }
+    @media screen and (max-width: 420px) {
+        @include font(Forum, 28px, 40px, 400);
+    }
+}
+h3 {
+    @include font(Forum, 32px, 35px, 400);
+    letter-spacing: 5px;
+    @media screen and (max-width: 1024px) {
+        @include font(Forum, 28px, 31px, 400);
+    }
+    @media screen and (max-width: 768px) {
+        @include font(Forum, 22px, 24px, 400);
+    }
+    @media screen and (max-width: 420px) {
+        @include font(Forum, 16px, 35px, 400);
+    }
+    text-transform: uppercase;
+}

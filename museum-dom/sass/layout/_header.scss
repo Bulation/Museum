@@ -1,0 +1,121 @@
+.header {
+    background-color: $color-bg;
+    width: 100%;
+}
+.header-container {
+    @extend %layout;
+    padding: 60px 0;
+    @media screen and (max-width: 1024px) {
+        padding: 50px 0;
+    }
+    @media screen and (max-width: 768px) {
+        padding: 25px 0;
+    }
+    @media screen and (max-width: 420px) {
+        padding: 35px 0;
+    }
+}
+.hamburger {
+    display: none;
+    width: 32px;
+    height: 18px;
+    @media screen and (max-width: 1024px) {
+        display: inline-block;
+    }
+}
+.hamburger__line {
+    display: inline-block;
+    background: #ffffff;
+    border-radius: 5px;
+    width: 32px;
+    height: 2px;
+    position: relative;
+    &::before {
+        content: '';
+        position: absolute;
+        top: -8px;
+        width: 32px;
+        height: 2px;
+        background: #ffffff;
+        border-radius: 5px;
+    }
+    &::after {
+        content: '';
+        position: absolute;
+        width: 32px;
+        height: 2px;
+        bottom: -8px;
+        background: #ffffff;
+        border-radius: 5px;
+    }
+}
+.close {
+    position: relative;
+    top: -5px;
+    width: 30px;
+    height: 31px;
+    z-index: 1003;
+    &::before {
+        content: '';
+        position: absolute;
+        transform: rotate(-45deg);
+        width: 3px;
+        left: 15px;
+        height: 31px;
+        background: #ffffff;
+        border-radius: 5px;
+    }
+    &::after {
+        content: '';
+        position: absolute;
+        transform: rotate(45deg);
+        width: 3px;
+        left: 15px;
+        height: 31px;
+        background: #ffffff;
+    }
+}
+.adaptive-menu-img-container {
+    width: calc(100% - 110px);
+    margin: 35px auto;
+    padding-bottom: 35px;
+    border-bottom: 1px solid #ffffff;
+    display: flex;
+    flex-wrap: wrap;
+    @media screen and (min-width: 769px) {
+        display: none;
+    }
+    @media screen and (max-width: 420px) {
+        width: 310px;
+        justify-content: center;
+        padding-bottom: 20px;
+        margin-bottom: 24px;
+        gap: 12px;
+    }
+    img {
+        max-width: 50%;
+        @media screen and (max-width: 420px) {
+            max-width: 100%;
+        }
+    }
+    img:last-child {
+        padding-left: 20px;
+    }
+    .adaptive-menu__long-img {
+        margin-bottom: 20px;
+        max-width: 100%;
+        @media screen and (max-width: 420px) {
+            display: none;
+        }
+    }
+    .adaptive-menu__img420 {
+        @media screen and (min-width: 421px) {
+            display: none;
+        }
+    }
+    .adaptive-menu__img {
+        @media screen and (max-width: 420px) {
+            display: none;
+        }
+    }
+}
