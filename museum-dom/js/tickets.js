@@ -77,13 +77,17 @@ export function changePrice() {
 
 
 export function setStylesFromStorage() {
-  radioButtonIndex = +localStorage.getItem("radio");
+  if (localStorage.getItem("radio"))
+    radioButtonIndex = +localStorage.getItem("radio");
   Select.typeSelect.selectedIndex = radioButtonIndex + 1;
   Select.typeSelectTitle.style.display = "none";
   radioButtons[radioButtonIndex].children[0].checked = true;
-  totalPrice.innerHTML = localStorage.getItem("totalprice");
-  basicPrice.value = localStorage.getItem("basic");
-  seniorPrice.value = localStorage.getItem("senior");
+  if (localStorage.getItem("totalprice"))
+    totalPrice.innerHTML = localStorage.getItem("totalprice");
+  if (localStorage.getItem("basic"))
+    basicPrice.value = localStorage.getItem("basic");
+  if (localStorage.getItem("senior"))
+    seniorPrice.value = localStorage.getItem("senior");
 }
 
 export function populateStorage() {
