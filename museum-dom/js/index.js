@@ -1,5 +1,33 @@
 "use strict";
 
+import * as Welcome from "./welcome.js";
+Welcome.welcomeSlider.cloneAppend(0);
+Welcome.welcomeSlider.clonePrepend(1);
+Welcome.welcomeSliderContainer.addEventListener("transitionstart", () => {
+  Welcome.welcomeSlider.enableSliding();
+});
+Welcome.welcomeSliderContainer.addEventListener("transitionend", () => {
+  Welcome.welcomeSlider.enableSliding();
+  Welcome.welcomeSliderContainer.classList.remove("transition-slider");
+});
+Welcome.welcomeBulletsContainer.addEventListener("click", (e) => {
+  if (e.target.classList.contains("slide__bullet"))
+    Welcome.welcomeSlider.slideElements(
+      Number(e.target.dataset.count),
+      Welcome.welcomeSlider
+    );
+});
+
+Welcome.welcomeArrows[0].addEventListener("click", () => {
+  if (Welcome.welcomeSlider.isEnabled)
+    Welcome.welcomeSlider.slideElements(Welcome.welcomeSlider.currentSlide - 1);
+});
+Welcome.welcomeArrows[1].addEventListener("click", () => {
+  if (Welcome.welcomeSlider.isEnabled)
+    Welcome.welcomeSlider.slideElements(Welcome.welcomeSlider.currentSlide + 1);
+});
+Welcome.welcomeSlider.swipeDetect(Welcome.welcomeSliderContainer);
+
 import * as map from "./map.js";
 import * as menu from "./menu.js";
 menu.hamburger.addEventListener("click", menu.toggleHamburger);
@@ -167,37 +195,7 @@ form.emailInput.addEventListener("blur", () =>
   form.validateInput(form.emailInput)
 );
 
-import * as Welcome from "./welcome.js";
-Welcome.welcomeSlider.cloneAppend(0);
-Welcome.welcomeSlider.clonePrepend(1);
-Welcome.welcomeSliderContainer.addEventListener("transitionstart", () => {
-  Welcome.welcomeSlider.enableSliding();
-});
-Welcome.welcomeSliderContainer.addEventListener("transitionend", () => {
-  Welcome.welcomeSlider.enableSliding();
-  Welcome.welcomeSliderContainer.classList.remove("transition-slider");
-});
-Welcome.welcomeBulletsContainer.addEventListener("click", (e) => {
-  if (e.target.classList.contains("slide__bullet"))
-    Welcome.welcomeSlider.slideElements(
-      Number(e.target.dataset.count),
-      Welcome.welcomeSlider
-    );
-});
 
-Welcome.welcomeArrows[0].addEventListener("click", () => {
-  if (Welcome.welcomeSlider.isEnabled)
-    Welcome.welcomeSlider.slideElements(
-      Welcome.welcomeSlider.currentSlide - 1
-    );
-});
-Welcome.welcomeArrows[1].addEventListener("click", () => {
-  if (Welcome.welcomeSlider.isEnabled)
-    Welcome.welcomeSlider.slideElements(
-      Welcome.welcomeSlider.currentSlide + 1
-    );
-});
-Welcome.welcomeSlider.swipeDetect(Welcome.welcomeSliderContainer);
 
 Welcome.videoSlider.cloneAppend(0);
 Welcome.videoSlider.cloneAppend(1);
