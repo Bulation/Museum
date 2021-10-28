@@ -1,5 +1,6 @@
 "use strict";
 
+import * as map from "./map.js";
 import * as menu from "./menu.js";
 menu.hamburger.addEventListener("click", menu.toggleHamburger);
 window.addEventListener("click", menu.hideMenuByClickOnBody);
@@ -245,7 +246,7 @@ Welcome.videoArrows[1].addEventListener("click", () => {
   }
 });
 
-import * as map from "./map.js";
+
 
 console.log(`
 при клике по самому слайду или кнопке Play в центре слайда, внутри слайда проигрывается видео с YouTube. Никакие изменения с основным видео при этом не происходят +2
