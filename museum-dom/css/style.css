@@ -1694,6 +1694,9 @@ form {
 .contacts-container__map {
   width: 66.66%;
   height: 620px; }
+  @media screen and (max-width: 1024px) {
+    .contacts-container__map {
+      width: 100%; } }
 
 .mapboxgl-ctrl-attrib-inner {
   display: -webkit-box;

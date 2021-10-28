@@ -6,9 +6,20 @@ window.addEventListener("click", menu.hideMenuByClickOnBody);
 
 import * as Explore from "./explore.js";
 let mousedown = false;
-window.addEventListener("mousemove", (e) => mousedown && Explore.moveSlider(e));
+window.addEventListener("mousemove", (e) => {
+    e.preventDefault(); 
+    if (mousedown) 
+        Explore.moveSlider(e)
+});
 Explore.slider.addEventListener("mousedown", () => (mousedown = true));
 window.addEventListener("mouseup", () => (mousedown = false));
+Explore.slider.addEventListener("touchstart", () => (mousedown = true));
+window.addEventListener("touchmove", (e) => {
+    e.preventDefault(); 
+    if (mousedown)
+        Explore.moveSlider(e.changedTouches[0])
+});
+window.addEventListener("touchend", () => (mousedown = false));
 
 import * as iframe from "./iframe.js";
 iframe.findVideos();
@@ -219,20 +230,18 @@ Welcome.videoBulletsContainer.addEventListener("click", (e) => {
     Welcome.videoSlider.slideElements(
       Number(e.target.dataset.count)
     );
-    Video.changeSrc(Number(e.target.dataset.count));
     }
 });
+Welcome.videoSlider.swipeDetect(Welcome.videoSliderContainer);
 
 Welcome.videoArrows[0].addEventListener("click", () => {
   if (Welcome.videoSlider.isEnabled) {
     Welcome.videoSlider.slideElements(Welcome.videoSlider.currentSlide - 1);
-    Video.changeSrc(Welcome.videoSlider.currentSlide);
   }
 });
 Welcome.videoArrows[1].addEventListener("click", () => {
   if (Welcome.videoSlider.isEnabled) {
     Welcome.videoSlider.slideElements(Welcome.videoSlider.currentSlide + 1);
-    Video.changeSrc(Welcome.videoSlider.currentSlide);
   }
 });
 

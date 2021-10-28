@@ -2,7 +2,6 @@ export const imgContainer = document.querySelector(".explore-image");
 export const slider = imgContainer.querySelector(".explore-slider");
 export const firstImg = imgContainer.querySelector(".explore-image-container");
 export function moveSlider(e) {
-    e.preventDefault();
     let coordinate =
       e.pageX - firstImg.getBoundingClientRect().left;
     if (coordinate < 5) {

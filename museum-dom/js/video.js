@@ -1,4 +1,3 @@
-import * as Welcome from "./welcome.js";
 export const videoPlayer = document.querySelector(".video-player");
 export const video = videoPlayer.querySelector(".video");
 export const videoControl = videoPlayer.querySelector(".video-buttons");
@@ -16,13 +15,6 @@ export let options = {
     root: null,
     rootMargin: '0px',
     threshold: 0
-}
-export function changeSrc(n) {
-    if (n == Welcome.videoItemsLength + 1) n = 1;
-    if (n == 0) n = Welcome.videoItemsLength;
-    video.src = `assets/videos/${n}.mp4`;
-    video.poster = `assets/img/posters/${n}.jpg`;
-    endingVideo();
 }
 export function observeKeyCode() {
     let observer = new IntersectionObserver((entries) => {
@@ -57,7 +49,6 @@ export function observeKeyCode() {
 
 
 export function changeProgress(e, coef) {
-    console.log('11')
   let value = e.target.value * coef;
   e.target.style.background = `linear-gradient(to right, #710707 0%, #710707 ${value}%, #C4C4C4 ${value}%, #C4C4C4 100%)`;
 }
